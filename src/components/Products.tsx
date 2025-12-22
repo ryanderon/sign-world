@@ -1,51 +1,93 @@
 import { useRef } from "react";
 import { useGsapFadeIn } from "../hooks/useGsapFadeIn";
 
-const products = [
+const productCategories = [
   {
-    category: "Signage",
-    title: "Neon Box, Billboard & Letter Signs",
-    desc: "Production & installation services with a wide range of materials: stainless steel, galvanil, brass, bronze, copper, acrylic, aluminum, and wood.",
-    featured: true,
-    color: "cyan",
-    images: [
-      { src: "https://images.unsplash.com/photo-1563906267088-b029e7101114?w=600&h=800&fit=crop", alt: "Neon Box" },
-      { src: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=600&h=800&fit=crop", alt: "Billboard" },
-      { src: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&h=800&fit=crop", alt: "Letter Sign" },
-      { src: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=800&fit=crop", alt: "Building Sign" },
+    id: "signage-ready",
+    title: "Signage Siap Pakai",
+    subtitle: "Stok Signage Akrilik",
+    desc: "Butuh papan buka–tutup, tanda kantor, penunjuk APAR, atau kebutuhan signage kecil lainnya? Kami bisa bantu cetak di akrilik berkualitas tinggi.",
+    features: [
+      "Request desain custom",
+      "Pilih ukuran & warna",
+      "Template siap pakai",
     ],
+    images: [
+      "https://images.unsplash.com/photo-1563906267088-b029e7101114?w=400&h=300&fit=crop",
+      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop",
+      "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400&h=300&fit=crop",
+    ],
+    cta: "Lihat Katalog",
+    highlight: true,
   },
   {
-    category: "LED Display",
-    title: "Slim LED Box & Lightbox Fabric",
-    desc: "Ultra-thin at 1.5cm with neutral density light. Knitted 100% polyester fabric, wrinkle-resistant. Perfect for retail POP, banners, and backdrops.",
-    color: "magenta",
-    images: [
-      { src: "https://images.unsplash.com/photo-1497215842964-222b430dc094?w=600&h=800&fit=crop", alt: "Slim LED Box" },
-      { src: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=600&h=800&fit=crop", alt: "Lightbox Fabric" },
-      { src: "https://images.unsplash.com/photo-1551135049-8a33b5883817?w=600&h=800&fit=crop", alt: "LED Display" },
-      { src: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=600&h=800&fit=crop", alt: "Retail LED" },
-    ],
+    id: "custom-materials",
+    title: "Material Custom",
+    subtitle: "Berbagai Pilihan Bahan",
+    desc: "Kami bekerja dengan beragam bahan seperti akrilik, stainless, galvanis, PVC, dan lainnya untuk menyesuaikan kebutuhan desain dan lokasi Anda.",
+    materials: ["Akrilik", "Stainless Steel", "Galvanis", "PVC", "Aluminium", "Kayu"],
   },
   {
-    category: "Wrapping",
-    title: "Vehicle & Building Wrap",
-    desc: "From coffee machines to vehicles to entire buildings. Cutting sticker, vinyl, sunblast, one-way, and flexy materials available.",
-    color: "orange",
-    images: [
-      { src: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&h=800&fit=crop", alt: "Building Wrap" },
-      { src: "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=600&h=800&fit=crop", alt: "Vehicle Wrap" },
-      { src: "https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?w=600&h=800&fit=crop", alt: "Bus Wrap" },
-      { src: "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=600&h=800&fit=crop", alt: "Car Wrap" },
+    id: "led-solutions",
+    title: "Solusi LED",
+    subtitle: "Pencahayaan Premium",
+    desc: "Neon box, LED lightbox, dan solusi pencahayaan lainnya dengan teknologi hemat energi dan tampilan premium.",
+    specs: [
+      { label: "Ketebalan", value: "1.5cm" },
+      { label: "Hemat Energi", value: "85%" },
+      { label: "Garansi", value: "2 Tahun" },
     ],
   },
 ];
 
-const ledFeatures = [
-  { title: "Equitable Light", desc: "Even bright light with no shadows", icon: "💡" },
-  { title: "Easy Installation", desc: "Four-sided flip-flop frame system", icon: "🔧" },
-  { title: "No Heat", desc: "Surface stays cool — no cooling required", icon: "❄️" },
-  { title: "Ultra Thin", desc: "Down to 1.5cm for modern aesthetics", icon: "📐" },
+const galleryImages = [
+  {
+    src: "https://images.unsplash.com/photo-1563906267088-b029e7101114?w=600&h=400&fit=crop",
+    caption: "Huruf Timbul Stainless",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop",
+    caption: "Neon Box LED",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&h=400&fit=crop",
+    caption: "Office Signage",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1497215842964-222b430dc094?w=600&h=400&fit=crop",
+    caption: "Building Directory",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=600&h=400&fit=crop",
+    caption: "Reception Sign",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1551135049-8a33b5883817?w=600&h=400&fit=crop",
+    caption: "Retail Display",
+  },
+];
+
+const benefits = [
+  {
+    icon: "📦",
+    title: "Tanpa Minimal Pemesanan",
+    desc: "Pesan satuan hingga banyak, semua bisa kami layani.",
+  },
+  {
+    icon: "💬",
+    title: "Konsultasi Gratis",
+    desc: "Tim kami siap bantu untuk desain dan pengiriman Anda.",
+  },
+  {
+    icon: "🚚",
+    title: "Kirim Keseluruh Indonesia",
+    desc: "Kami kirim signage ke mana pun, cepat dan aman.",
+  },
+  {
+    icon: "💳",
+    title: "Pembayaran Fleksibel",
+    desc: "Transfer bank, e-wallet, dan kartu kredit.",
+  },
 ];
 
 export default function Products() {
@@ -53,217 +95,203 @@ export default function Products() {
   useGsapFadeIn(ref);
 
   return (
-    <div className="relative" ref={ref}>
-      {/* Background effects */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-cyan/5 rounded-full blur-[200px]" />
-        <div className="absolute bottom-0 right-1/4 w-[600px] h-[600px] bg-magenta/5 rounded-full blur-[200px]" />
+    <div className="relative bg-white" ref={ref}>
+      {/* Header Section */}
+      <div className="bg-cream py-20 md:py-28">
+        <div className="container">
+          <div className="max-w-3xl">
+            <span className="text-subheading mb-4 block">Produk Kami</span>
+            <h2 className="text-heading text-primary mb-6">
+              Stok Signage{" "}
+              <span className="text-accent">Siap Pakai</span>
+            </h2>
+            <p className="text-body-lg">
+              Kami juga sedia signage akrilik siap desain & pesan. Bisa request 
+              desain custom, ukuran, warna, atau pilih template siap pakai.
+            </p>
+          </div>
+        </div>
       </div>
 
-      <div className="container relative">
-        {/* Header */}
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
-          <div className="max-w-2xl">
-            <p className="text-subheading mb-6">Our Products</p>
-            <h2 className="text-heading text-text">
-              Quality solutions for{" "}
-              <span className="gradient-text">every space</span>
-            </h2>
-          </div>
-          <a href="#contact" className="btn-outline w-fit">
-            <span>Request Catalog</span>
-          </a>
-        </div>
-
-        {/* Products by Category */}
-        <div className="space-y-12">
-          {products.map((product) => (
-            <article
-              key={product.category}
-              className={`group relative rounded-3xl overflow-hidden ${
-                product.featured
-                  ? ""
-                  : ""
-              }`}
+      {/* Featured Product Section */}
+      <div className="py-20 md:py-28">
+        <div className="container">
+          {productCategories.filter(p => p.highlight).map((product) => (
+            <div
+              key={product.id}
+              className="grid lg:grid-cols-2 gap-12 items-center"
             >
-              {/* Card with gradient effect */}
-              <div 
-                className={`absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
-                style={{
-                  background: `linear-gradient(135deg, var(--color-${product.color})/10%, transparent)`,
-                }}
-              />
-              
-              <div className={`relative bg-surface border border-border rounded-3xl overflow-hidden group-hover:border-border-light transition-colors duration-300 ${
-                product.featured ? "ring-1 ring-cyan/20" : ""
-              }`}>
-                {/* Featured Badge */}
-                {product.featured && (
-                  <div 
-                    className="absolute top-4 right-4 md:top-6 md:right-6 flex items-center gap-2 px-4 py-2 rounded-full text-background z-10"
-                    style={{
-                      background: `linear-gradient(135deg, var(--color-${product.color}), var(--color-blue))`,
-                    }}
-                  >
-                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                    </svg>
-                    <span className="text-xs font-bold tracking-wider uppercase">Our Specialty</span>
+              {/* Images Grid */}
+              <div className="grid grid-cols-2 gap-4">
+                <div className="space-y-4">
+                  <div className="img-reveal aspect-[4/3]">
+                    <img
+                      src={product.images?.[0]}
+                      alt="Signage"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="img-reveal aspect-square">
+                    <img
+                      src={product.images?.[1]}
+                      alt="Signage"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
+                <div className="pt-8">
+                  <div className="img-reveal aspect-[3/4]">
+                    <img
+                      src={product.images?.[2]}
+                      alt="Signage"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              {/* Content */}
+              <div>
+                <span className="text-subheading mb-4 block">{product.subtitle}</span>
+                <h3 className="font-display text-3xl md:text-4xl font-bold text-primary mb-6">
+                  {product.title}
+                </h3>
+                <p className="text-text-muted text-lg leading-relaxed mb-8">
+                  {product.desc}
+                </p>
+
+                {/* Features */}
+                <ul className="space-y-4 mb-8">
+                  {product.features?.map((feature) => (
+                    <li key={feature} className="flex items-center gap-3">
+                      <div className="w-6 h-6 bg-accent/10 rounded-full flex items-center justify-center">
+                        <svg className="w-4 h-4 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                        </svg>
+                      </div>
+                      <span className="text-text">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <a href="#contact" className="btn">
+                  {product.cta}
+                  <svg className="w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Materials & LED Section */}
+      <div className="bg-surface py-20 md:py-28">
+        <div className="container">
+          <div className="grid md:grid-cols-2 gap-8">
+            {productCategories.filter(p => !p.highlight).map((product) => (
+              <div
+                key={product.id}
+                className="bg-white p-8 rounded-2xl border border-border hover:shadow-xl transition-all duration-300"
+              >
+                <span className="text-subheading mb-3 block">{product.subtitle}</span>
+                <h3 className="font-display text-2xl font-bold text-primary mb-4">
+                  {product.title}
+                </h3>
+                <p className="text-text-muted mb-6">{product.desc}</p>
+
+                {/* Materials list */}
+                {product.materials && (
+                  <div className="flex flex-wrap gap-2">
+                    {product.materials.map((material) => (
+                      <span
+                        key={material}
+                        className="px-4 py-2 bg-surface rounded-full text-sm font-medium text-text-muted"
+                      >
+                        {material}
+                      </span>
+                    ))}
                   </div>
                 )}
 
-                <div className="p-6 md:p-8">
-                  {/* Category Header */}
-                  <div className="mb-6">
-                    <span
-                      className="text-xs font-bold tracking-widest uppercase"
-                      style={{ color: `var(--color-${product.color})` }}
-                    >
-                      {product.category}
-                    </span>
-                    <h3
-                      className={`font-display font-bold text-text mt-2 mb-3 ${
-                        product.featured ? "text-2xl md:text-3xl" : "text-xl md:text-2xl"
-                      }`}
-                    >
-                      {product.title}
-                    </h3>
-                    <p
-                      className={`text-text-muted leading-relaxed ${
-                        product.featured ? "max-w-3xl text-base" : "max-w-2xl text-sm"
-                      }`}
-                    >
-                      {product.desc}
-                    </p>
-                  </div>
-
-                  {/* Images Grid */}
-                  <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-                    {product.images.map((image, index) => (
-                      <div
-                        key={index}
-                        className={`relative rounded-xl overflow-hidden cursor-pointer group/img ${
-                          product.featured
-                            ? "aspect-[3/4]"
-                            : "aspect-[3/4]"
-                        }`}
-                      >
-                        <img
-                          src={image.src}
-                          alt={image.alt}
-                          className="w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-110"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-60" />
-                        
-                        {/* Hover overlay */}
-                        <div 
-                          className="absolute inset-0 opacity-0 group-hover/img:opacity-100 transition-opacity duration-300"
-                          style={{
-                            background: `linear-gradient(135deg, var(--color-${product.color})/30%, transparent)`,
-                          }}
-                        />
-                        
-                        {/* Label */}
-                        <div className="absolute bottom-3 left-3">
-                          <span className="text-xs font-medium text-text bg-background/80 backdrop-blur-sm px-2 py-1 rounded-md">
-                            {image.alt}
-                          </span>
-                        </div>
+                {/* Specs */}
+                {product.specs && (
+                  <div className="grid grid-cols-3 gap-4 mt-4">
+                    {product.specs.map((spec) => (
+                      <div key={spec.label} className="text-center p-4 bg-surface rounded-xl">
+                        <p className="font-display text-2xl font-bold text-primary">{spec.value}</p>
+                        <p className="text-xs text-text-muted mt-1">{spec.label}</p>
                       </div>
                     ))}
                   </div>
-
-                  {/* Featured CTA */}
-                  {product.featured && (
-                    <div className="mt-8 flex flex-wrap items-center gap-4">
-                      <a href="#contact" className="btn">
-                        <span>Get a Quote for Signage</span>
-                      </a>
-                      <span className="flex items-center gap-2 text-sm text-text-muted">
-                        <span className="text-yellow">★</span>
-                        Most requested by our clients
-                      </span>
-                    </div>
-                  )}
-                </div>
+                )}
               </div>
-            </article>
-          ))}
-        </div>
-
-        {/* LED Features Section */}
-        <div className="mt-20 pt-16">
-          <div className="relative rounded-3xl overflow-hidden bg-surface border border-border">
-            {/* Background */}
-            <div className="absolute inset-0 bg-gradient-to-br from-magenta/10 via-transparent to-cyan/10" />
-            <div className="absolute inset-0 bg-grid opacity-30" />
-
-            <div className="relative grid md:grid-cols-2 gap-12 p-8 md:p-12 items-center">
-              <div>
-                <p className="text-subheading mb-4">Why Slim LED Box?</p>
-                <h3 className="font-display text-2xl md:text-3xl font-bold text-text mb-6">
-                  Technology for{" "}
-                  <span className="gradient-text">maximum impact</span>
-                </h3>
-                <p className="text-text-muted mb-8 leading-relaxed">
-                  Suitable for marketing tools and any variety of applications in public 
-                  areas: airports, malls, retail stores, bus stations, restaurants, banks, 
-                  hotels, cinemas, offices, schools, museums, and more.
-                </p>
-                <div className="grid grid-cols-2 gap-4">
-                  {ledFeatures.map((feature) => (
-                    <div key={feature.title} className="p-4 rounded-xl bg-surface-alt/50 border border-border hover:border-magenta/30 transition-colors duration-300">
-                      <span className="text-2xl mb-2 block">{feature.icon}</span>
-                      <h4 className="font-semibold text-text mb-1 text-sm">{feature.title}</h4>
-                      <p className="text-xs text-text-muted">{feature.desc}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-              
-              <div className="relative">
-                <div className="bg-surface-alt rounded-2xl p-8 md:p-12 border border-border text-center">
-                  <p className="font-display text-7xl md:text-8xl font-bold gradient-text mb-4">1.5cm</p>
-                  <p className="text-lg text-text font-semibold mb-2">Ultra Thin Profile</p>
-                  <p className="text-text-muted text-sm">
-                    Slim enough to display just about anywhere, making it incredibly easy 
-                    to integrate into any layout while giving a modern look.
-                  </p>
-                </div>
-                
-                {/* Decorative elements */}
-                <div className="absolute -top-4 -right-4 w-24 h-24 border border-magenta/20 rounded-full" />
-                <div className="absolute -bottom-4 -left-4 w-16 h-16 border border-cyan/20 rounded-xl rotate-12" />
-              </div>
-            </div>
+            ))}
           </div>
         </div>
+      </div>
 
-        {/* Bottom CTA */}
-        <div className="mt-16 py-8 border-t border-border flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
-          <p className="text-text-muted max-w-md">
-            Need custom materials or special finishes? We create tailored solutions 
-            for your specific requirements.
-          </p>
-          <a
-            href="#contact"
-            className="group inline-flex items-center gap-2 font-semibold text-cyan hover:text-magenta transition-colors duration-300"
-          >
-            Request Custom Quote
-            <svg
-              className="w-4 h-4 transform group-hover:translate-x-1 transition-transform"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
+      {/* Gallery Section */}
+      <div className="py-20 md:py-28">
+        <div className="container">
+          <div className="text-center max-w-2xl mx-auto mb-12">
+            <span className="text-subheading mb-4 block">Galeri Proyek</span>
+            <h3 className="text-heading text-primary">
+              Hasil Karya <span className="text-accent">Terbaik Kami</span>
+            </h3>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            {galleryImages.map((image, index) => (
+              <div
+                key={index}
+                className={`group relative overflow-hidden rounded-2xl cursor-pointer ${
+                  index === 0 ? "md:col-span-2 md:row-span-2" : ""
+                }`}
+              >
+                <div className={`${index === 0 ? "aspect-square" : "aspect-[4/3]"}`}>
+                  <img
+                    src={image.src}
+                    alt={image.caption}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                  <p className="text-white font-medium">{image.caption}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* View More */}
+          <div className="text-center mt-10">
+            <a
+              href="#contact"
+              className="inline-flex items-center gap-2 text-primary font-semibold hover:text-accent transition-colors"
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M17 8l4 4m0 0l-4 4m4-4H3"
-              />
-            </svg>
-          </a>
+              Lihat Lebih Banyak
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      {/* Benefits Grid */}
+      <div className="bg-primary text-text-light py-16">
+        <div className="container">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {benefits.map((benefit) => (
+              <div key={benefit.title} className="text-center">
+                <div className="text-4xl mb-4">{benefit.icon}</div>
+                <h4 className="font-display font-bold mb-2">{benefit.title}</h4>
+                <p className="text-text-light/60 text-sm">{benefit.desc}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>

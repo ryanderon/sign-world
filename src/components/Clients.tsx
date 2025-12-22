@@ -1,164 +1,270 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { useGsapFadeIn } from "../hooks/useGsapFadeIn";
 
 const clients = [
-  // Row 1 - Major Brands
+  { name: "BCA", logo: "BCA" },
+  { name: "AEON Mall", logo: "AEON" },
+  { name: "Unilever", logo: "UNILEVER" },
+  { name: "KFC", logo: "KFC" },
+  { name: "Huawei", logo: "HUAWEI" },
+  { name: "Indomaret", logo: "INDOMARET" },
+  { name: "Plaza Senayan", logo: "SENAYAN" },
+  { name: "Erajaya", logo: "ERAJAYA" },
+  { name: "Astra", logo: "ASTRA" },
+  { name: "WIKA", logo: "WIKA" },
+  { name: "MAP", logo: "MAP" },
+  { name: "KawanLama", logo: "KAWANLAMA" },
+];
+
+const testimonials = [
   {
-    name: "Agung Sedayu Group",
-    image: "https://upload.wikimedia.org/wikipedia/id/8/88/Screenshot_20231031_155650_Chrome_Beta.jpg",
+    id: 1,
+    name: "Dian Rachmawati",
+    role: "Owner Retail Store",
+    avatar: "DR",
+    rating: 5,
+    title: "Toko saya langsung eye-catching",
+    content: "Tim SignWorld sangat profesional. Dari proses desain sampai pemasangan, semuanya rapi dan cepat. Pelanggan jadi lebih mudah mengenali toko saya, bahkan dari jauh.",
   },
-  { name: "AEON Mall", image: "data:image/png;base64,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" },
-  { name: "Plaza Senayan", image: "/clients/plaza-senayan.png" },
-  { name: "Erajaya", image: "/clients/erajaya.png" },
-  { name: "Sarinah", image: "/clients/sarinah.png" },
-  { name: "BCA", image: "/clients/bca.png" },
-  // Row 2
-  { name: "Astra Life", image: "/clients/astra-life.png" },
-  { name: "WIKA", image: "/clients/wika.png" },
-  { name: "MAP", image: "/clients/map.png" },
-  { name: "Unilever", image: "/clients/unilever.png" },
-  { name: "KawanLama Group", image: "/clients/kawanlama-group.png" },
-  { name: "Gunung Sewu", image: "/clients/gunung-sewu.png" },
-  // Row 3
-  { name: "Indomaret", image: "/clients/indomaret.png" },
-  { name: "Huawei", image: "/clients/huawei.png" },
-  { name: "KFC", image: "/clients/kfc.png" },
-  { name: "Mitsubishi Electric", image: "/clients/mitsubishi-electric.png" },
-  { name: "Costa Cruises", image: "/clients/costa-cruises.png" },
-  { name: "Scuto", image: "/clients/scuto.png" },
-  // Row 4
-  { name: "Bank Artha Graha", image: "/clients/bank-artha-graha.png" },
-  { name: "Pigeon", image: "/clients/pigeon.png" },
-  { name: "Idemitsu", image: "/clients/idemitsu.png" },
-  { name: "Diamond", image: "/clients/diamond.png" },
-  { name: "Supreme", image: "/clients/supreme.png" },
-  { name: "UBM", image: "/clients/ubm.png" },
-  // Row 5
-  { name: "Hong Kong Tourism Board", image: "/clients/hong-kong-tourism-board.png" },
-  { name: "Tory Burch", image: "/clients/tory-burch.png" },
-  { name: "Marugame Udon", image: "/clients/marugame-udon.png" },
-  { name: "The Gunawarman Jakarta", image: "/clients/the-gunawarman-jakarta.png" },
-  { name: "2018 Indonesia ParaGames", image: "/clients/2018-indonesia-paragames.png" },
-  { name: "And Many More", image: "" },
+  {
+    id: 2,
+    name: "Andi Hermawan",
+    role: "Restaurant Manager",
+    avatar: "AH",
+    rating: 5,
+    title: "Huruf timbulnya tampil mewah banget",
+    content: "SignWorld bantu banget bikin tampilan restoran kami jadi lebih premium. Bahan akrilik dan finishing-nya rapi. Hasil akhirnya jauh melebihi ekspektasi.",
+  },
+  {
+    id: 3,
+    name: "Novita Widjaja",
+    role: "Salon Owner",
+    avatar: "NW",
+    rating: 5,
+    title: "Komunikatif, cepat, dan hasilnya keren",
+    content: "Saya cuma kasih brief singkat, dan mereka langsung ngerti arah branding-nya. Signage akrilik + LED yang dibuat bener-bener cocok sama konsep interior salon kami.",
+  },
+  {
+    id: 4,
+    name: "Tiara Lestari",
+    role: "Marketing Manager",
+    avatar: "TL",
+    rating: 5,
+    title: "Tim SignWorld tahu banget soal branding",
+    content: "Kami pesan beberapa signage untuk booth pameran, hasilnya clean dan rapi. Bahkan detil kecil seperti pencahayaan dan posisi huruf ditangani dengan presisi.",
+  },
 ];
 
 export default function Clients() {
   const ref = useRef<HTMLDivElement>(null!);
+  const [activeTestimonial, setActiveTestimonial] = useState(0);
   useGsapFadeIn(ref);
 
   return (
-    <div ref={ref} className="relative">
-      {/* Background effects */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-br from-cyan/5 via-transparent to-magenta/5 rounded-full blur-[200px]" />
-      </div>
+    <div ref={ref} className="relative bg-white">
+      {/* Clients Logo Section */}
+      <div className="py-20 md:py-28 bg-cream">
+        <div className="container">
+          <div className="text-center max-w-2xl mx-auto mb-16">
+            <span className="text-subheading mb-4 block">Dipercaya Oleh</span>
+            <h2 className="text-heading text-primary mb-6">
+              Puluhan Brand{" "}
+              <span className="text-accent">Ternama</span> di Indonesia
+            </h2>
+            <p className="text-text-muted">
+              Dari retail hingga korporasi, kami telah dipercaya untuk mengerjakan 
+              berbagai proyek signage dan visual branding.
+            </p>
+          </div>
 
-      <div className="container relative">
-        {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <p className="text-subheading mb-6">Trusted By</p>
-          <h2 className="text-heading text-text mb-6">
-            Powering brands across{" "}
-            <span className="gradient-text">industries</span>
-          </h2>
-          <p className="text-body-lg">
-            From retail giants to international events, we've partnered with
-            leading organizations to bring their vision to life.
-          </p>
-        </div>
-
-        {/* Client Logos Grid */}
-        <div className="relative rounded-3xl overflow-hidden bg-surface border border-border">
-          <div className="absolute inset-0 bg-grid opacity-20" />
-          
-          <div className="relative grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6">
-            {clients.map((client, index) => (
+          {/* Logos Grid */}
+          <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+            {clients.map((client) => (
               <div
                 key={client.name}
-                className={`group relative p-6 md:p-8 flex flex-col items-center justify-center min-h-[120px] transition-all duration-300 hover:bg-surface-alt/50 ${
-                  index !== clients.length - 1 ? "border-b border-r border-border" : ""
-                }`}
+                className="group bg-white p-6 rounded-xl border border-border hover:border-primary/30 hover:shadow-lg transition-all duration-300 flex items-center justify-center"
               >
-                {client.image && (
-                  <img
-                    src={client.image}
-                    alt={client.name}
-                    className="max-h-10 w-auto object-contain opacity-50 group-hover:opacity-100 transition-all duration-300 grayscale group-hover:grayscale-0"
-                  />
-                )}
-                <span
-                  className={`mt-2 text-xs text-center font-medium tracking-wide transition-colors duration-300 ${
-                    index === clients.length - 1
-                      ? "gradient-text font-bold"
-                      : "text-text-dim group-hover:text-text"
-                  }`}
-                >
-                  {client.name}
+                <span className="font-display font-bold text-lg text-text-muted group-hover:text-primary transition-colors">
+                  {client.logo}
                 </span>
-                
-                {/* Hover glow effect */}
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-                  <div className="absolute inset-0 bg-gradient-to-br from-cyan/5 to-magenta/5" />
+              </div>
+            ))}
+          </div>
+
+          {/* More clients indicator */}
+          <div className="text-center mt-8">
+            <span className="text-text-muted text-sm">
+              Dan masih banyak lagi...
+            </span>
+          </div>
+        </div>
+      </div>
+
+      {/* Testimonials Section */}
+      <div className="py-20 md:py-28">
+        <div className="container">
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
+            {/* Left: Header & Rating */}
+            <div className="lg:sticky lg:top-32">
+              <span className="text-subheading mb-4 block">Ulasan & Rating</span>
+              <h3 className="text-heading text-primary mb-6">
+                Apa Kata{" "}
+                <span className="text-accent">Klien Kami</span>
+              </h3>
+              
+              {/* Overall Rating */}
+              <div className="flex items-center gap-4 mb-8">
+                <div className="font-display text-6xl font-bold text-primary">4.9</div>
+                <div>
+                  <div className="stars mb-1">
+                    {[...Array(5)].map((_, i) => (
+                      <svg key={i} className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                      </svg>
+                    ))}
+                  </div>
+                  <p className="text-sm text-text-muted">dari 100+ ulasan klien</p>
                 </div>
+              </div>
+
+              <p className="text-text-muted leading-relaxed mb-8">
+                Kepuasan klien adalah prioritas utama kami. Setiap proyek dikerjakan 
+                dengan dedikasi tinggi untuk hasil terbaik.
+              </p>
+
+              <a href="#contact" className="btn">
+                Mulai Proyek Anda
+              </a>
+            </div>
+
+            {/* Right: Testimonial Cards */}
+            <div className="space-y-6">
+              {testimonials.map((testimonial, index) => (
+                <div
+                  key={testimonial.id}
+                  className={`testimonial-card cursor-pointer transition-all duration-300 ${
+                    activeTestimonial === index ? "ring-2 ring-accent shadow-lg" : ""
+                  }`}
+                  onClick={() => setActiveTestimonial(index)}
+                >
+                  {/* Header */}
+                  <div className="flex items-start justify-between mb-4">
+                    <div className="flex items-center gap-4">
+                      <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-text-light font-display font-bold">
+                        {testimonial.avatar}
+                      </div>
+                      <div>
+                        <h4 className="font-display font-bold text-primary">
+                          {testimonial.name}
+                        </h4>
+                        <p className="text-sm text-text-muted">{testimonial.role}</p>
+                      </div>
+                    </div>
+                    <div className="stars">
+                      {[...Array(testimonial.rating)].map((_, i) => (
+                        <svg key={i} className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Content */}
+                  <h5 className="font-display font-bold text-lg text-primary mb-2">
+                    "{testimonial.title}"
+                  </h5>
+                  <p className="text-text-muted leading-relaxed">
+                    {testimonial.content}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Stats Section */}
+      <div className="bg-primary text-text-light py-20">
+        <div className="container">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            {[
+              { number: "100+", label: "Brand Terpercaya" },
+              { number: "13+", label: "Tahun Pengalaman" },
+              { number: "1000+", label: "Proyek Selesai" },
+              { number: "24/7", label: "Support Tersedia" },
+            ].map((stat) => (
+              <div key={stat.label}>
+                <p className="font-display text-5xl md:text-6xl font-bold mb-2">
+                  {stat.number}
+                </p>
+                <p className="text-text-light/60">{stat.label}</p>
               </div>
             ))}
           </div>
         </div>
+      </div>
 
-        {/* Testimonial / Trust Badge */}
-        <div className="mt-20 relative rounded-3xl overflow-hidden">
-          {/* Background */}
-          <div className="absolute inset-0 bg-surface border border-border rounded-3xl" />
-          <div className="absolute inset-0 bg-gradient-to-br from-cyan/5 via-transparent to-magenta/5" />
-          
-          <div className="relative p-12 md:p-16 text-center">
-            {/* Quote icon */}
-            <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-cyan/20 to-magenta/20 mb-8">
-              <svg
-                className="w-8 h-8 text-cyan"
-                fill="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-              </svg>
-            </div>
-
-            <p className="font-display text-2xl md:text-3xl font-bold text-text leading-relaxed max-w-3xl mx-auto mb-8">
-              "We understand every project is different, and has its own
-              pressures. Deadlines can be tight. Colours need to match. Projects
-              can have small budgets but need{" "}
-              <span className="gradient-text">big results.</span>"
+      {/* Instagram Feed Preview */}
+      <div className="py-20 md:py-28 bg-cream">
+        <div className="container">
+          <div className="text-center mb-12">
+            <span className="text-subheading mb-4 block">Ikuti Kami</span>
+            <h3 className="text-heading text-primary mb-4">
+              @signworld.id
+            </h3>
+            <p className="text-text-muted">
+              Lihat update proyek terbaru dan inspirasi signage di Instagram kami
             </p>
-
-            <div className="divider mx-auto mb-6" />
-
-            <p className="text-text-muted">Our commitment since 2011</p>
           </div>
-        </div>
 
-        {/* Stats */}
-        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6">
-          {[
-            { number: "100+", label: "Trusted Clients", color: "cyan" },
-            { number: "13+", label: "Years Experience", color: "blue" },
-            { number: "4", label: "Core Services", color: "magenta" },
-            { number: "24/7", label: "Support", color: "orange" },
-          ].map((stat) => (
-            <div 
-              key={stat.label} 
-              className="group text-center p-6 rounded-2xl bg-surface border border-border hover:border-border-light transition-all duration-300"
-            >
-              <p 
-                className="font-display text-4xl md:text-5xl font-bold mb-2"
-                style={{ color: `var(--color-${stat.color})` }}
+          {/* Instagram Grid Mock */}
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-2">
+            {[
+              "https://images.unsplash.com/photo-1563906267088-b029e7101114?w=300&h=300&fit=crop",
+              "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=300&h=300&fit=crop",
+              "https://images.unsplash.com/photo-1497366216548-37526070297c?w=300&h=300&fit=crop",
+              "https://images.unsplash.com/photo-1497215842964-222b430dc094?w=300&h=300&fit=crop",
+              "https://images.unsplash.com/photo-1551135049-8a33b5883817?w=300&h=300&fit=crop",
+              "https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=300&h=300&fit=crop",
+            ].map((src, index) => (
+              <a
+                key={index}
+                href="https://instagram.com/signworld.id"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative aspect-square overflow-hidden rounded-lg"
               >
-                {stat.number}
-              </p>
-              <p className="text-sm text-text-muted tracking-wide">
-                {stat.label}
-              </p>
-            </div>
-          ))}
+                <img
+                  src={src}
+                  alt={`Instagram post ${index + 1}`}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/60 transition-colors duration-300 flex items-center justify-center">
+                  <svg
+                    className="w-8 h-8 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                  </svg>
+                </div>
+              </a>
+            ))}
+          </div>
+
+          <div className="text-center mt-8">
+            <a
+              href="https://instagram.com/signworld.id"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-outline"
+            >
+              <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073z"/>
+              </svg>
+              Follow @signworld.id
+            </a>
+          </div>
         </div>
       </div>
     </div>

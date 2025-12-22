@@ -7,25 +7,21 @@ import Footer from "./components/Footer";
 
 export default function App() {
   return (
-    <div className="relative bg-background noise-overlay">
+    <div className="relative bg-background">
       <Navbar />
       <main>
-        <section id="hero">
-          <Hero />
-        </section>
-        <section id="services" className="section-lg">
+        <Hero />
+        <section id="services">
           <Services />
         </section>
-        <section id="products" className="section-lg">
+        <section id="products">
           <Products />
         </section>
-        <section id="clients" className="section-lg">
+        <section id="clients">
           <Clients />
         </section>
       </main>
-      <footer id="contact">
-        <Footer />
-      </footer>
+      <Footer />
     </div>
   );
 }
