@@ -4,13 +4,11 @@ import { useGsapFadeIn } from "../hooks/useGsapFadeIn";
 // Image Marquee Component
 function ImageMarquee({ images, direction = "left" }: { images: string[]; direction?: "left" | "right" }) {
   const [isPaused, setIsPaused] = useState(false);
-  
-  // Duplicate images for seamless loop
   const duplicatedImages = [...images, ...images];
   
   return (
     <div 
-      className="overflow-hidden"
+      className="overflow-hidden rounded-lg"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
@@ -24,7 +22,7 @@ function ImageMarquee({ images, direction = "left" }: { images: string[]; direct
         {duplicatedImages.map((img, index) => (
           <div 
             key={index} 
-            className="shrink-0 w-24 h-16 md:w-32 md:h-20 overflow-hidden bg-surface-alt"
+            className="shrink-0 w-20 h-14 md:w-28 md:h-18 overflow-hidden rounded-lg bg-surface-alt"
           >
             <img 
               src={img} 
@@ -42,7 +40,7 @@ const services = [
   {
     id: "signage",
     icon: (
-      <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+      <svg className="w-5 h-5 sm:w-7 sm:h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
         <path d="M4 6h16M4 6v12a2 2 0 002 2h12a2 2 0 002-2V6M4 6l2-4h12l2 4" />
         <path d="M9 10v6M15 10v6M9 13h6" />
       </svg>
@@ -61,6 +59,7 @@ const services = [
     stats: { value: "#1", label: "Requested Service" },
     image: "https://images.unsplash.com/photo-1563906267088-b029e7101114?w=600&h=800&fit=crop",
     featured: true,
+    color: "cyan",
     gallery: [
       "https://images.unsplash.com/photo-1563906267088-b029e7101114?w=200&h=150&fit=crop",
       "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=200&h=150&fit=crop",
@@ -70,14 +69,12 @@ const services = [
       "https://images.unsplash.com/photo-1497215842964-222b430dc094?w=200&h=150&fit=crop",
       "https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=200&h=150&fit=crop",
       "https://images.unsplash.com/photo-1551135049-8a33b5883817?w=200&h=150&fit=crop",
-      "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=200&h=150&fit=crop",
-      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=200&h=150&fit=crop",
     ],
   },
   {
     id: "offset",
     icon: (
-      <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+      <svg className="w-5 h-5 sm:w-7 sm:h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
         <rect x="3" y="3" width="18" height="18" rx="2" />
         <path d="M3 9h18M9 21V9" />
         <circle cx="15" cy="15" r="2" />
@@ -85,10 +82,10 @@ const services = [
     ),
     title: "Offset Printing",
     tagline: "Large Quantity Excellence",
-    desc: "Best cost-effective solution for large quantities with complete color control using the Pantone Matching System. Professional support for any type of marketing tools and business promotional medium.",
+    desc: "Best cost-effective solution for large quantities with complete color control using the Pantone Matching System. Professional support for any type of marketing tools.",
     features: [
       "Brochures & Catalogs",
-      "Business Cards & Stationery",
+      "Business Cards",
       "Premium Packaging",
       "Marketing Collateral",
       "Annual Reports",
@@ -96,6 +93,7 @@ const services = [
     ],
     stats: { value: "500K+", label: "Prints Delivered" },
     image: "https://images.unsplash.com/photo-1588666309990-d68f08e3d4a6?w=600&h=800&fit=crop",
+    color: "blue",
     gallery: [
       "https://images.unsplash.com/photo-1588666309990-d68f08e3d4a6?w=200&h=150&fit=crop",
       "https://images.unsplash.com/photo-1586075010923-2dd4570fb338?w=200&h=150&fit=crop",
@@ -103,16 +101,12 @@ const services = [
       "https://images.unsplash.com/photo-1562654501-a0ccc0fc3fb1?w=200&h=150&fit=crop",
       "https://images.unsplash.com/photo-1531266752426-aad472b7bbf4?w=200&h=150&fit=crop",
       "https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=200&h=150&fit=crop",
-      "https://images.unsplash.com/photo-1434626881859-194d67b2b86f?w=200&h=150&fit=crop",
-      "https://images.unsplash.com/photo-1568205631163-5c9c295bcf49?w=200&h=150&fit=crop",
-      "https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=200&h=150&fit=crop",
-      "https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?w=200&h=150&fit=crop",
     ],
   },
   {
     id: "digital",
     icon: (
-      <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+      <svg className="w-5 h-5 sm:w-7 sm:h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
         <rect x="2" y="3" width="20" height="14" rx="2" />
         <path d="M8 21h8M12 17v4" />
         <circle cx="12" cy="10" r="3" />
@@ -131,6 +125,7 @@ const services = [
     ],
     stats: { value: "∞", label: "Size Possibilities" },
     image: "https://images.unsplash.com/photo-1626785774573-4b799315345d?w=600&h=800&fit=crop",
+    color: "magenta",
     gallery: [
       "https://images.unsplash.com/photo-1626785774573-4b799315345d?w=200&h=150&fit=crop",
       "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=200&h=150&fit=crop",
@@ -138,16 +133,12 @@ const services = [
       "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=200&h=150&fit=crop",
       "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=200&h=150&fit=crop",
       "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=200&h=150&fit=crop",
-      "https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?w=200&h=150&fit=crop",
-      "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=200&h=150&fit=crop",
-      "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=200&h=150&fit=crop",
-      "https://images.unsplash.com/photo-1572044162444-ad60f128bdea?w=200&h=150&fit=crop",
     ],
   },
   {
     id: "merchandise",
     icon: (
-      <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+      <svg className="w-5 h-5 sm:w-7 sm:h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
         <path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z" />
         <path d="M3.27 6.96L12 12.01l8.73-5.05M12 22.08V12" />
       </svg>
@@ -165,6 +156,7 @@ const services = [
     ],
     stats: { value: "1000+", label: "Product Options" },
     image: "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?w=600&h=800&fit=crop",
+    color: "orange",
     gallery: [
       "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?w=200&h=150&fit=crop",
       "https://images.unsplash.com/photo-1503602642458-232111445657?w=200&h=150&fit=crop",
@@ -172,10 +164,6 @@ const services = [
       "https://images.unsplash.com/photo-1560393464-5c69a73c5770?w=200&h=150&fit=crop",
       "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=200&h=150&fit=crop",
       "https://images.unsplash.com/photo-1525385133512-2f3bdd039054?w=200&h=150&fit=crop",
-      "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=200&h=150&fit=crop",
-      "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=200&h=150&fit=crop",
-      "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=200&h=150&fit=crop",
-      "https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=200&h=150&fit=crop",
     ],
   },
 ];
@@ -185,62 +173,46 @@ const processSteps = [
     step: "01",
     title: "Consultation",
     desc: "We discuss your project requirements, timeline, and budget to understand your vision completely.",
+    icon: "💬",
   },
   {
     step: "02",
     title: "Design & Proof",
-    desc: "Our team creates detailed proofs for your approval, ensuring perfect color matching and specifications.",
+    desc: "Our team creates detailed proofs for your approval, ensuring perfect color matching.",
+    icon: "🎨",
   },
   {
     step: "03",
     title: "Production",
-    desc: "State-of-the-art equipment and skilled craftsmen bring your project to life with precision.",
+    desc: "State-of-the-art equipment and skilled craftsmen bring your project to life.",
+    icon: "⚙️",
   },
   {
     step: "04",
     title: "Delivery",
-    desc: "Quality checked and delivered on time, with installation services available for signage projects.",
+    desc: "Quality checked and delivered on time, with installation services available.",
+    icon: "🚀",
   },
 ];
 
 const whyChooseUs = [
   {
-    icon: (
-      <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-        <circle cx="12" cy="12" r="10" />
-        <path d="M12 6v6l4 2" />
-      </svg>
-    ),
+    icon: "⏱️",
     title: "On-Time Delivery",
     desc: "We understand deadlines are critical. Our track record speaks for itself.",
   },
   {
-    icon: (
-      <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
-      </svg>
-    ),
+    icon: "🎨",
     title: "Pantone Matching",
     desc: "Complete color control with professional Pantone Matching System.",
   },
   {
-    icon: (
-      <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-        <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
-        <path d="M22 4L12 14.01l-3-3" />
-      </svg>
-    ),
+    icon: "✓",
     title: "Quality Assured",
     desc: "Every project undergoes rigorous quality checks before delivery.",
   },
   {
-    icon: (
-      <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-        <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
-        <circle cx="9" cy="7" r="4" />
-        <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" />
-      </svg>
-    ),
+    icon: "👥",
     title: "Expert Team",
     desc: "13+ years of industry experience at your service.",
   },
@@ -251,51 +223,54 @@ export default function Services() {
   useGsapFadeIn(ref);
 
   return (
-    <div ref={ref}>
-      {/* Hero Section */}
-      <div className="container">
-        <div className="relative bg-primary text-white overflow-hidden">
-          {/* Background Pattern */}
-          <div className="absolute inset-0 opacity-10">
-            <div
-              className="absolute inset-0"
-              style={{
-                backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-              }}
-            />
-          </div>
+    <div ref={ref} className="relative">
+      {/* Background effects */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-1/4 -right-64 w-[500px] h-[500px] bg-cyan/5 rounded-full blur-[150px]" />
+        <div className="absolute bottom-1/4 -left-64 w-[500px] h-[500px] bg-magenta/5 rounded-full blur-[150px]" />
+      </div>
 
-          <div className="relative px-8 py-8 md:px-16 md:py-24 lg:py-32">
+      {/* Hero Section */}
+      <div className="container relative">
+        <div className="relative rounded-3xl overflow-hidden bg-surface border border-border">
+          {/* Background pattern */}
+          <div className="absolute inset-0 bg-grid opacity-30" />
+          <div className="absolute inset-0 bg-gradient-to-br from-cyan/10 via-transparent to-magenta/10" />
+
+          <div className="relative px-8 py-16 md:px-16 md:py-24">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
-                <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 mb-8">
-                  <span className="w-2 h-2 bg-secondary rounded-full animate-pulse" />
-                  <span className="text-xs font-semibold tracking-widest uppercase">
+                <div className="inline-flex items-center gap-2 px-4 py-2 bg-surface-alt/50 backdrop-blur-sm rounded-full border border-border mb-8">
+                  <span className="relative flex h-2 w-2">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-2 w-2 bg-cyan"></span>
+                  </span>
+                  <span className="text-xs font-semibold tracking-widest uppercase text-text-muted">
                     Our Services
                   </span>
                 </div>
 
-                <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-medium mb-6">
-          Complete printing solutions,{" "}
-          <span className="italic text-secondary">one partner</span>
-        </h2>
+                <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-text">
+                  Complete printing solutions,{" "}
+                  <span className="gradient-text">one partner</span>
+                </h2>
 
-                <p className="text-white/70 text-lg leading-relaxed mb-8 max-w-lg">
+                <p className="text-text-muted text-lg leading-relaxed mb-8 max-w-lg">
                   From offset printing to digital, signage to merchandise — we
                   handle every aspect of your printing needs with expertise and
                   care. Your vision, professionally executed.
                 </p>
 
                 <div className="flex flex-wrap gap-4">
-                  <a href="#contact" className="btn bg-secondary hover:bg-white hover:text-primary">
-                    Start Your Project
+                  <a href="#contact" className="btn">
+                    <span>Start Your Project</span>
                   </a>
                   <a
                     href="#process"
-                    className="inline-flex items-center gap-2 text-white/80 hover:text-white font-medium transition-colors"
+                    className="inline-flex items-center gap-2 text-text-muted hover:text-cyan font-medium transition-colors group"
                   >
                     See Our Process
-                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg className="w-4 h-4 transition-transform group-hover:translate-y-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                     </svg>
                   </a>
@@ -312,16 +287,18 @@ export default function Services() {
                 ].map((stat, index) => (
                   <div
                     key={index}
-                    className={`p-6 md:p-8 ${
+                    className={`p-6 md:p-8 rounded-2xl transition-all duration-300 hover:scale-105 ${
                       stat.highlight
-                        ? "bg-secondary text-white"
-                        : "bg-white/5 backdrop-blur-sm border border-white/10"
+                        ? "bg-gradient-to-br from-cyan to-blue text-background"
+                        : "bg-surface-alt/50 backdrop-blur-sm border border-border"
                     }`}
                   >
-                    <p className="font-display text-4xl md:text-5xl font-medium mb-2">
+                    <p className={`font-display text-4xl md:text-5xl font-bold mb-2 ${
+                      stat.highlight ? "" : "gradient-text-alt"
+                    }`}>
                       {stat.value}
                     </p>
-                    <p className={stat.highlight ? "text-white/80" : "text-white/60"}>
+                    <p className={stat.highlight ? "text-background/80" : "text-text-muted"}>
                       {stat.label}
                     </p>
                   </div>
@@ -333,133 +310,159 @@ export default function Services() {
       </div>
 
       {/* Services Grid */}
-      <div className="container py-16 md:py-16">
-        <div className="grid md:grid-cols-2 gap-8 lg:gap-8">
-        {services.map((service) => (
+      <div className="container py-20 md:py-28">
+        <div className="grid md:grid-cols-2 gap-6">
+          {services.map((service) => (
             <article
               key={service.id}
-              className={`group relative overflow-hidden transition-all duration-500 ${
-              service.featured
-                  ? "md:col-span-2 bg-linear-to-br from-secondary/5 via-background to-secondary/10 ring-2 ring-secondary/30"
-                  : "bg-surface border border-border hover:border-secondary/50"
-            }`}
-          >
-            {service.featured && (
-                <div className="absolute top-0 right-0 bg-secondary text-white px-6 py-2 text-xs font-bold tracking-widest uppercase flex items-center gap-2 z-10">
-                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                </svg>
-                Our Specialty
+              className={`group relative rounded-2xl overflow-hidden transition-all duration-500 ${
+                service.featured
+                  ? "md:col-span-2"
+                  : ""
+              }`}
+            >
+              {/* Card background with gradient border effect */}
+              <div className={`absolute inset-0 rounded-2xl transition-opacity duration-500 ${
+                service.featured 
+                  ? "opacity-100" 
+                  : "opacity-0 group-hover:opacity-100"
+              }`}>
+                <div 
+                  className="absolute inset-0 rounded-2xl"
+                  style={{
+                    background: `linear-gradient(135deg, var(--color-${service.color})/20%, transparent 50%)`,
+                  }}
+                />
               </div>
-            )}
 
-              <div className={`grid ${service.featured ? "lg:grid-cols-5" : "md:grid-cols-3"} h-full`}>
-                {/* Image Section */}
-                <div
-                  className={`relative overflow-hidden ${
-                    service.featured ? "lg:col-span-2 aspect-4/3 lg:aspect-auto" : "aspect-square md:aspect-auto"
-                  }`}
-                >
-                  <img
-                    src={service.image}
-                    alt={service.title}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-linear-to-t from-black/60 via-black/20 to-transparent" />
-
-                  {/* Floating Stat */}
-                  <div className="absolute bottom-4 left-4 bg-white/95 backdrop-blur-sm px-4 py-3">
-                    <p className="font-display text-3xl font-medium text-secondary">
-                      {service.stats.value}
-                    </p>
-                    <p className="text-xs text-text-muted uppercase tracking-wider">
-                      {service.stats.label}
-                    </p>
-                  </div>
-                </div>
-
-                {/* Content Section */}
-                <div className={`p-6 lg:p-8 ${service.featured ? "lg:col-span-3" : "md:col-span-2"}`}>
-                  <div className={`flex items-start justify-between ${service.featured ? "mb-6" : "mb-4"}`}>
-                    <div
-                      className={`p-3 ${
-                        service.featured ? "bg-secondary text-white" : "bg-surface-alt text-secondary"
-                      }`}
-                    >
-                      {service.icon}
-                    </div>
-                    <span className="text-xs font-semibold tracking-widest text-secondary uppercase">
-                      {service.tagline}
-              </span>
-                  </div>
-
-              <h3
-                    className={`font-display font-medium text-primary transition-colors duration-300 ${
-                  service.featured
-                        ? "text-3xl md:text-4xl mb-4"
-                        : "text-xl md:text-2xl mb-2 group-hover:text-secondary"
-                }`}
-              >
-                {service.title}
-              </h3>
-
-                  <p className={`text-text-muted leading-relaxed ${service.featured ? "mb-6" : "mb-4 text-sm line-clamp-2"}`}>
-                {service.desc}
-              </p>
-
-                  {/* Features Grid */}
-                  <div className={`grid ${service.featured ? "grid-cols-2 md:grid-cols-3 gap-3 mb-6" : "grid-cols-2 gap-2 mb-4"}`}>
-                    {(service.featured ? service.features : service.features.slice(0, 4)).map((feature) => (
-                      <div key={feature} className="flex items-center gap-2">
-                        <svg
-                          className={`w-4 h-4 shrink-0 ${
-                            service.featured ? "text-secondary" : "text-accent"
-                          }`}
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
+              <div className="relative bg-surface border border-border rounded-2xl overflow-hidden group-hover:border-border-light transition-colors duration-300">
+                {service.featured && (
+                  <div className="absolute top-4 right-4 flex items-center gap-2 px-4 py-2 rounded-full z-10"
+                    style={{
+                      background: `linear-gradient(135deg, var(--color-${service.color}), var(--color-${service.color})/70%)`,
+                    }}
                   >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M5 13l4 4L19 7"
-                          />
-                        </svg>
-                        <span className="text-sm text-text-muted">{feature}</span>
-                      </div>
-                    ))}
+                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                    <span className="text-xs font-bold tracking-wider uppercase">Our Specialty</span>
                   </div>
+                )}
 
-                  <a
-                    href="#contact"
-                    className={`inline-flex items-center gap-2 font-semibold transition-all duration-300 group/link ${
-                      service.featured
-                        ? "text-secondary hover:gap-3"
-                        : "text-primary hover:text-secondary hover:gap-3"
+                <div className={`grid ${service.featured ? "lg:grid-cols-5" : "md:grid-cols-3"} h-full`}>
+                  {/* Image Section */}
+                  <div
+                    className={`relative overflow-hidden w-full ${
+                      service.featured 
+                        ? "lg:col-span-2 aspect-video sm:aspect-[4/3] lg:aspect-auto max-h-[200px] sm:max-h-[280px] lg:max-h-none" 
+                        : "aspect-video sm:aspect-square md:aspect-auto max-h-[180px] sm:max-h-[240px] md:max-h-none"
                     }`}
                   >
-                    Get a Quote
-                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M17 8l4 4m0 0l-4 4m4-4H3"
+                    <img
+                      src={service.image}
+                      alt={service.title}
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     />
-                  </svg>
-                </a>
+                    <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />
 
-                  {/* Image Gallery Marquee */}
-                  {service.gallery && (
-                    <div className={`border-t border-border space-y-2 ${service.featured ? "mt-8 pt-6" : "mt-4 pt-4"}`}>
-                      <p className="text-xs text-text-muted uppercase tracking-widest mb-3">
-                        Project Gallery
+                    {/* Floating Stat */}
+                    <div className="absolute bottom-2 left-2 sm:bottom-4 sm:left-4 bg-surface/90 backdrop-blur-md rounded-lg sm:rounded-xl px-2 py-1.5 sm:px-4 sm:py-3 border border-border">
+                      <p 
+                        className="font-display text-lg sm:text-2xl font-bold"
+                        style={{ color: `var(--color-${service.color})` }}
+                      >
+                        {service.stats.value}
                       </p>
-                      <ImageMarquee images={service.gallery} direction="left" />
-                      <ImageMarquee images={service.gallery.slice().reverse()} direction="right" />
+                      <p className="text-[10px] sm:text-xs text-text-muted">
+                        {service.stats.label}
+                      </p>
                     </div>
-                  )}
+                  </div>
+
+                  {/* Content Section */}
+                  <div className={`p-4 sm:p-6 lg:p-8 ${service.featured ? "lg:col-span-3" : "md:col-span-2"}`}>
+                    <div className={`flex items-start justify-between ${service.featured ? "mb-4 sm:mb-6" : "mb-3 sm:mb-4"}`}>
+                      <div
+                        className="p-2 sm:p-3 rounded-lg sm:rounded-xl"
+                        style={{
+                          background: `linear-gradient(135deg, var(--color-${service.color})/20%, var(--color-${service.color})/5%)`,
+                          color: `var(--color-${service.color})`,
+                        }}
+                      >
+                        {service.icon}
+                      </div>
+                      <span 
+                        className="text-[10px] sm:text-xs font-semibold tracking-widest uppercase"
+                        style={{ color: `var(--color-${service.color})` }}
+                      >
+                        {service.tagline}
+                      </span>
+                    </div>
+
+                    <h3
+                      className={`font-display font-bold text-text transition-colors duration-300 ${
+                        service.featured
+                          ? "text-xl sm:text-2xl md:text-3xl mb-2 sm:mb-4"
+                          : "text-lg sm:text-xl md:text-2xl mb-2 sm:mb-3"
+                      }`}
+                    >
+                      {service.title}
+                    </h3>
+
+                    <p className={`text-text-muted leading-relaxed ${service.featured ? "mb-4 sm:mb-6 text-sm sm:text-base line-clamp-3 sm:line-clamp-none" : "mb-3 sm:mb-4 text-sm line-clamp-2"}`}>
+                      {service.desc}
+                    </p>
+
+                    {/* Features Grid */}
+                    <div className={`grid ${service.featured ? "grid-cols-2 md:grid-cols-3 gap-2 sm:gap-3 mb-4 sm:mb-6" : "grid-cols-2 gap-2 mb-3 sm:mb-4"}`}>
+                      {service.features.slice(0, service.featured ? 6 : 4).map((feature, idx) => (
+                        <div key={feature} className={`flex items-center gap-2 ${service.featured && idx >= 4 ? "hidden md:flex" : ""}`}>
+                          <svg
+                            className="w-4 h-4 shrink-0"
+                            style={{ color: `var(--color-${service.color})` }}
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M5 13l4 4L19 7"
+                            />
+                          </svg>
+                          <span className="text-sm text-text-muted">{feature}</span>
+                        </div>
+                      ))}
+                    </div>
+
+                    <a
+                      href="#contact"
+                      className="inline-flex items-center gap-2 font-semibold transition-all duration-300 group/link"
+                      style={{ color: `var(--color-${service.color})` }}
+                    >
+                      Get a Quote
+                      <svg className="w-4 h-4 transition-transform group-hover/link:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M17 8l4 4m0 0l-4 4m4-4H3"
+                        />
+                      </svg>
+                    </a>
+
+                    {/* Image Gallery Marquee - Hidden on mobile for better UX */}
+                    {service.gallery && (
+                      <div className={`hidden sm:block border-t border-border space-y-2 ${service.featured ? "mt-8 pt-6" : "mt-4 pt-4"}`}>
+                        <p className="text-xs text-text-muted uppercase tracking-widest mb-3">
+                          Project Gallery
+                        </p>
+                        <ImageMarquee images={service.gallery} direction="left" />
+                        <ImageMarquee images={service.gallery.slice().reverse()} direction="right" />
+                      </div>
+                    )}
+                  </div>
                 </div>
               </div>
             </article>
@@ -468,25 +471,24 @@ export default function Services() {
       </div>
 
       {/* Why Choose Us */}
-      <div className="bg-surface-alt border-y border-border">
-        <div className="container py-20 md:py-28">
+      <div className="relative">
+        <div className="absolute inset-0 bg-surface-alt" />
+        <div className="container relative py-20 md:py-28">
           <div className="text-center mb-16">
             <p className="text-subheading mb-4">Why Choose Us</p>
-            <h3 className="text-heading max-w-2xl mx-auto">
-              The <span className="italic text-secondary">SignWorld</span> difference
+            <h3 className="text-heading text-text">
+              The <span className="gradient-text">SignWorld</span> difference
             </h3>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {whyChooseUs.map((item, index) => (
               <div
                 key={index}
-                className="group bg-background p-8 border border-border hover:border-secondary transition-all duration-500 hover:-translate-y-1"
+                className="group bg-surface p-8 rounded-2xl border border-border hover:border-cyan/50 transition-all duration-500 hover:-translate-y-1"
               >
-                <div className="w-14 h-14 bg-secondary/10 flex items-center justify-center text-secondary mb-6 group-hover:bg-secondary group-hover:text-white transition-all duration-300">
-                  {item.icon}
-                </div>
-                <h4 className="font-display text-xl font-medium text-primary mb-3">
+                <div className="text-4xl mb-6">{item.icon}</div>
+                <h4 className="font-display text-xl font-bold text-text mb-3">
                   {item.title}
                 </h4>
                 <p className="text-text-muted text-sm leading-relaxed">
@@ -503,28 +505,33 @@ export default function Services() {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div>
             <p className="text-subheading mb-6">Our Process</p>
-            <h3 className="text-heading mb-6">
+            <h3 className="text-heading text-text mb-6">
               From concept to{" "}
-              <span className="italic text-secondary">completion</span>
+              <span className="gradient-text">completion</span>
             </h3>
-            <p className="text-body-lg mb-8">
+            <p className="text-body-lg mb-10">
               We've refined our process over 13 years to ensure every project
               runs smoothly, on time, and exceeds expectations.
             </p>
 
-            <div className="space-y-0">
+            <div className="space-y-6">
               {processSteps.map((item, index) => (
                 <div
                   key={item.step}
-                  className="group relative pl-8 pb-8 border-l-2 border-border last:border-transparent hover:border-secondary transition-colors duration-300"
+                  className="group relative flex gap-6 p-6 rounded-2xl bg-surface border border-border hover:border-cyan/30 transition-all duration-300"
                 >
-                  {/* Step Number */}
-                  <div className="absolute left-0 top-0 -translate-x-1/2 w-8 h-8 bg-background border-2 border-border group-hover:border-secondary group-hover:bg-secondary flex items-center justify-center text-xs font-bold text-text-muted group-hover:text-white transition-all duration-300">
-                    {item.step}
+                  {/* Step indicator */}
+                  <div className="shrink-0 w-14 h-14 rounded-xl flex items-center justify-center text-2xl bg-surface-alt group-hover:scale-110 transition-transform duration-300">
+                    {item.icon}
                   </div>
 
-                  <div className="pl-4">
-                    <h4 className="font-display text-xl font-medium text-primary mb-2 group-hover:text-secondary transition-colors">
+                  <div>
+                    <div className="flex items-center gap-3 mb-2">
+                      <span className="text-xs font-bold tracking-wider text-cyan">
+                        STEP {item.step}
+                      </span>
+                    </div>
+                    <h4 className="font-display text-lg font-bold text-text mb-1">
                       {item.title}
                     </h4>
                     <p className="text-text-muted text-sm leading-relaxed">
@@ -532,9 +539,9 @@ export default function Services() {
                     </p>
                   </div>
 
-                  {/* Connector Line Animation */}
+                  {/* Connector line */}
                   {index < processSteps.length - 1 && (
-                    <div className="absolute left-0 top-8 bottom-0 w-0.5 -translate-x-1/2 bg-secondary scale-y-0 group-hover:scale-y-100 origin-top transition-transform duration-500" />
+                    <div className="absolute left-10 -bottom-6 w-px h-6 bg-border" />
                   )}
                 </div>
               ))}
@@ -543,24 +550,26 @@ export default function Services() {
 
           {/* Visual Side */}
           <div className="relative">
-            <div className="aspect-square bg-primary relative overflow-hidden">
+            <div className="aspect-square rounded-3xl bg-surface border border-border relative overflow-hidden">
+              {/* Background effects */}
+              <div className="absolute inset-0 bg-grid opacity-30" />
+              <div className="absolute inset-0 bg-gradient-to-br from-cyan/10 via-transparent to-magenta/10" />
+              
               {/* Decorative Elements */}
-              <div className="absolute inset-0 opacity-20">
-                <div className="absolute top-1/4 left-1/4 w-32 h-32 border border-white rotate-45" />
-                <div className="absolute bottom-1/4 right-1/4 w-48 h-48 border border-white rounded-full" />
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 border border-white" />
-              </div>
+              <div className="absolute top-1/4 left-1/4 w-32 h-32 border border-cyan/20 rotate-45 rounded-2xl" />
+              <div className="absolute bottom-1/4 right-1/4 w-48 h-48 border border-magenta/20 rounded-full" />
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 border border-border rounded-3xl" />
 
-              <div className="absolute inset-0 flex items-center justify-center text-white p-12">
+              <div className="absolute inset-0 flex items-center justify-center p-12">
                 <div className="text-center">
-                  <p className="font-display text-7xl md:text-8xl font-medium mb-4">
-                    13<span className="text-secondary">+</span>
+                  <p className="font-display text-7xl md:text-8xl font-bold mb-4 gradient-text">
+                    13+
                   </p>
-                  <p className="text-lg tracking-widest uppercase opacity-70">
+                  <p className="text-lg tracking-widest uppercase text-text-muted">
                     Years of Excellence
                   </p>
-                  <div className="w-16 h-0.5 bg-secondary mx-auto mt-6" />
-                  <p className="mt-6 text-white/60 text-sm max-w-xs mx-auto">
+                  <div className="divider mx-auto mt-6" />
+                  <p className="mt-6 text-text-dim text-sm max-w-xs mx-auto">
                     Over a decade of delivering premium printing solutions to
                     businesses across industries
                   </p>
@@ -569,9 +578,9 @@ export default function Services() {
             </div>
 
             {/* Floating Card */}
-            <div className="absolute -bottom-8 -left-8 bg-secondary text-white p-8 max-w-xs">
-              <p className="text-3xl font-display font-medium mb-2">100%</p>
-              <p className="text-sm text-white/80">
+            <div className="absolute -bottom-6 -left-6 bg-gradient-to-br from-cyan to-blue text-background p-6 rounded-2xl max-w-xs shadow-2xl shadow-cyan/20">
+              <p className="text-3xl font-display font-bold mb-2">100%</p>
+              <p className="text-sm text-background/80">
                 Client satisfaction commitment on every project we undertake
               </p>
             </div>
@@ -581,67 +590,57 @@ export default function Services() {
 
       {/* CTA Section */}
       <div className="container pb-8">
-        <div className="relative bg-linear-to-br from-primary via-primary to-primary/90 text-white overflow-hidden">
-          {/* Background Pattern */}
-          <div className="absolute inset-0 opacity-5">
-            <div
-              className="absolute inset-0"
-              style={{
-                backgroundImage: `repeating-linear-gradient(45deg, transparent, transparent 10px, white 10px, white 11px)`,
-              }}
-            />
-          </div>
+        <div className="relative rounded-3xl overflow-hidden">
+          {/* Background */}
+          <div className="absolute inset-0 bg-surface" />
+          <div className="absolute inset-0 bg-gradient-to-br from-cyan/20 via-magenta/10 to-orange/20" />
+          <div className="absolute inset-0 bg-grid opacity-30" />
 
           <div className="relative px-8 py-16 md:px-16 md:py-24 text-center">
-            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 mb-8">
-              <svg className="w-4 h-4 text-secondary" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z" />
-              </svg>
-              <span className="text-xs font-semibold tracking-widest uppercase">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-surface-alt/50 backdrop-blur-sm rounded-full border border-border mb-8">
+              <span className="text-lg">🚀</span>
+              <span className="text-xs font-semibold tracking-widest uppercase text-text-muted">
                 Ready to Start?
               </span>
             </div>
 
-            <h3 className="font-display text-4xl md:text-5xl lg:text-6xl font-medium mb-6 max-w-3xl mx-auto">
+            <h3 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold mb-6 max-w-3xl mx-auto text-text">
               Have a unique project{" "}
-              <span className="italic text-secondary">in mind?</span>
-        </h3>
+              <span className="gradient-text">in mind?</span>
+            </h3>
 
-            <p className="text-white/70 text-lg mb-10 max-w-2xl mx-auto">
+            <p className="text-text-muted text-lg mb-10 max-w-2xl mx-auto">
               Projects can have small budgets but need big results. Our team is
               ready to discuss your vision and find the perfect solution within
               your timeline and budget.
             </p>
 
             <div className="flex flex-wrap justify-center gap-4">
-        <a
-          href="#contact"
-                className="inline-flex items-center justify-center px-10 py-5 text-sm font-semibold tracking-wider uppercase bg-secondary text-white hover:bg-white hover:text-primary transition-all duration-300"
-                style={{ letterSpacing: "0.15em" }}
-              >
-                Get a Free Quote
+              <a href="#contact" className="btn">
+                <span>Get a Free Quote</span>
               </a>
               <a
                 href="tel:+621234567890"
-                className="inline-flex items-center justify-center gap-2 px-10 py-5 text-sm font-semibold tracking-wider uppercase bg-transparent border-2 border-white/30 text-white hover:bg-white hover:text-primary transition-all duration-300"
-          style={{ letterSpacing: "0.15em" }}
-        >
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-                  />
-                </svg>
-                Call Us Now
+                className="btn-outline"
+              >
+                <span className="flex items-center gap-2">
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                    />
+                  </svg>
+                  Call Us Now
+                </span>
               </a>
             </div>
 
             {/* Trust Badges */}
-            <div className="mt-12 pt-8 border-t border-white/10 flex flex-wrap justify-center gap-8 text-sm text-white/50">
+            <div className="mt-12 pt-8 border-t border-border flex flex-wrap justify-center gap-8 text-sm text-text-dim">
               <span className="flex items-center gap-2">
-                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg className="w-5 h-5 text-cyan" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -652,7 +651,7 @@ export default function Services() {
                 Quality Guaranteed
               </span>
               <span className="flex items-center gap-2">
-                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg className="w-5 h-5 text-magenta" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -663,7 +662,7 @@ export default function Services() {
                 Fast Turnaround
               </span>
               <span className="flex items-center gap-2">
-                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg className="w-5 h-5 text-orange" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
