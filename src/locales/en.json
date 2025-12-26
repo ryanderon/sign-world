@@ -5,6 +5,8 @@
     "portfolio": "Portfolio",
     "products": "Products",
     "clients": "Clients",
+    "printing": "Printing",
+    "merchandise": "Merchandise",
     "freeConsultation": "Free Consultation",
     "consultNow": "Consult Now"
   },
@@ -17,6 +19,11 @@
     "exploreServices": "Explore Services",
     "trustedBy": "Trusted by leading brands",
     "projectsDone": "Projects Done",
+    "alsoExplore": "Need other services?",
+    "printingLink": "Printing Services",
+    "printingDesc": "Digital & offset printing",
+    "merchandiseLink": "Merchandise",
+    "merchandiseDesc": "T-shirts, bags & gifts",
     "services": {
       "customSignage": "Custom Signage",
       "3dLettering": "3D Lettering",
@@ -249,6 +256,172 @@
       "projects": "Projects Completed",
       "clients": "Happy Clients",
       "provinces": "Provinces Covered"
+    }
+  },
+  "moreServices": {
+    "sectionTitle": "More Services",
+    "heading": "One partner,",
+    "headingHighlight": "all solutions.",
+    "description": "Beyond signage, we also offer printing and merchandise services for complete branding needs.",
+    "featured": "Featured",
+    "currentPage": "You're here",
+    "youreHere": "You're here",
+    "items": {
+      "signage": {
+        "title": "Signage & Branding",
+        "desc": "Premium custom signage from 3D lettering, neon boxes, to visual branding for buildings and retail.",
+        "tags": ["Custom Signage", "3D Letters", "Neon Box"],
+        "cta": "View Signage"
+      },
+      "printing": {
+        "title": "Printing Services",
+        "desc": "Digital printing, offset, and installation. From banners to vehicle wraps—we do it all.",
+        "tags": ["Digital Print", "Offset", "Installation"],
+        "cta": "View Printing"
+      },
+      "merchandise": {
+        "title": "Custom Merchandise",
+        "desc": "T-shirts, tote bags, corporate gifts, and custom packaging for events or branding needs.",
+        "tags": ["Apparel", "Promo Items", "Gift Set"],
+        "cta": "View Merchandise"
+      }
+    }
+  },
+  "printing": {
+    "backToHome": "Back to Home",
+    "sectionTitle": "Printing Services",
+    "heading": "Print that",
+    "headingHighlight": "delivers.",
+    "description": "From digital printing to offset—we deliver premium print quality with accurate color precision.",
+    "exploreServices": "Explore Services",
+    "getQuote": "Get a Quote",
+    "learnMore": "Learn More",
+    "categories": {
+      "sectionTitle": "Service Categories",
+      "heading": "Complete",
+      "headingHighlight": "solutions.",
+      "description": "Choose the printing service that fits your needs",
+      "items": {
+        "digital": {
+          "title": "Digital Printing",
+          "desc": "Fast printing, sharp results. Perfect for small batch to medium runs with lightning turnaround.",
+          "features": ["Banner & Poster", "Sticker & Label", "Photo Print", "Canvas Print"]
+        },
+        "offset": {
+          "title": "Offset Printing",
+          "desc": "Mass printing with consistent quality. Ideal for high volume at competitive prices.",
+          "features": ["Brochure & Flyer", "Magazine & Catalog", "Business Cards", "Packaging"]
+        },
+        "installation": {
+          "title": "Printing Installation",
+          "desc": "From print to install—we handle everything. Professional team, clean results.",
+          "features": ["Wall Wrap", "Vehicle Wrap", "Window Film", "Floor Graphics"]
+        }
+      }
+    },
+    "whyUs": {
+      "sectionTitle": "Why Us",
+      "heading": "Quality",
+      "headingHighlight": "first.",
+      "description": "We understand tight deadlines and output quality are equally important. That's why we invest in cutting-edge technology and experienced team.",
+      "features": {
+        "fastTurnaround": {
+          "title": "Fast Turnaround",
+          "desc": "24-hour express available"
+        },
+        "colorAccuracy": {
+          "title": "Color Accuracy",
+          "desc": "Pantone matching system"
+        },
+        "ecoFriendly": {
+          "title": "Eco-Friendly",
+          "desc": "Environmentally safe inks"
+        },
+        "noMinimum": {
+          "title": "No Minimum",
+          "desc": "From 1 sheet OK"
+        }
+      }
+    },
+    "cta": {
+      "title": "Ready to print your project?",
+      "description": "Free consultation—we'll help you choose the best printing solution.",
+      "whatsapp": "Chat WhatsApp",
+      "backToSignage": "View Signage"
+    }
+  },
+  "merchandise": {
+    "backToHome": "Back to Home",
+    "sectionTitle": "Custom Merchandise",
+    "heading": "Merch that",
+    "headingHighlight": "matters.",
+    "description": "Create custom merchandise that makes your brand unforgettable. From t-shirts to corporate gifts—anything is possible.",
+    "exploreProducts": "Explore Products",
+    "getQuote": "Get a Quote",
+    "learnMore": "Learn More",
+    "popular": {
+      "sectionTitle": "Popular Products",
+      "heading": "Best",
+      "headingHighlight": "sellers.",
+      "description": "The most popular merchandise products from our clients"
+    },
+    "categories": {
+      "sectionTitle": "Product Categories",
+      "heading": "Complete",
+      "headingHighlight": "selection.",
+      "description": "From apparel to corporate gifts—everything available",
+      "items": {
+        "apparel": {
+          "title": "Apparel",
+          "desc": "T-shirts, polos, hoodies, jackets—all customizable to your brand design.",
+          "features": ["T-Shirt", "Polo Shirt", "Hoodie", "Jacket"]
+        },
+        "promotional": {
+          "title": "Promotional Items",
+          "desc": "Promotional merchandise that makes your brand stand out at any event.",
+          "features": ["Tote Bag", "Mug & Tumbler", "Umbrella", "Keychain"]
+        },
+        "corporate": {
+          "title": "Corporate Gift",
+          "desc": "Premium gift sets for clients and employees. Elegant packaging, guaranteed quality.",
+          "features": ["Gift Set", "Agenda & Planner", "Pen Set", "Tech Gadget"]
+        },
+        "packaging": {
+          "title": "Custom Packaging",
+          "desc": "Custom packaging that elevates brand experience. From boxes to paper bags.",
+          "features": ["Gift Box", "Paper Bag", "Pouch", "Wrapping"]
+        }
+      }
+    },
+    "whyUs": {
+      "sectionTitle": "Why Us",
+      "heading": "Trusted",
+      "headingHighlight": "partner.",
+      "description": "Thousands of brands have trusted us with their merchandise. Consistent quality, competitive pricing.",
+      "features": {
+        "customDesign": {
+          "title": "Custom Design",
+          "desc": "Design team ready to help"
+        },
+        "qualityPrint": {
+          "title": "Quality Print",
+          "desc": "Screen print, DTF, premium embroidery"
+        },
+        "bulkPricing": {
+          "title": "Bulk Pricing",
+          "desc": "More quantity, more savings"
+        },
+        "fastDelivery": {
+          "title": "Fast Delivery",
+          "desc": "Nationwide shipping"
+        }
+      }
+    },
+    "cta": {
+      "title": "Ready to create merchandise?",
+      "description": "Free consultation—we'll help bring your merchandise vision to life.",
+      "whatsapp": "Chat WhatsApp",
+      "backToSignage": "View Signage"
     }
   }
 }

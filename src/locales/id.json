@@ -5,6 +5,8 @@
     "portfolio": "Portfolio",
     "products": "Produk",
     "clients": "Klien",
+    "printing": "Printing",
+    "merchandise": "Merchandise",
     "freeConsultation": "Konsultasi Gratis",
     "consultNow": "Konsultasi Sekarang"
   },
@@ -17,6 +19,11 @@
     "exploreServices": "Lihat Layanan",
     "trustedBy": "Dipercaya brand-brand ternama",
     "projectsDone": "Proyek Selesai",
+    "alsoExplore": "Butuh layanan lain?",
+    "printingLink": "Printing Services",
+    "printingDesc": "Digital & offset printing",
+    "merchandiseLink": "Merchandise",
+    "merchandiseDesc": "Kaos, tote bag & gift",
     "services": {
       "customSignage": "Custom Signage",
       "3dLettering": "Huruf Timbul 3D",
@@ -175,11 +182,11 @@
       "supportReady": "Support Ready"
     }
   },
-    "footer": {
-      "getInTouch": "Hubungi Kami",
-      "letsCreate": "Mari",
-      "createHighlight": "wujudkan",
-      "together": "bersama.",
+  "footer": {
+    "getInTouch": "Hubungi Kami",
+    "letsCreate": "Mari",
+    "createHighlight": "wujudkan",
+    "together": "bersama.",
     "readyToTransform": "Siap wujudkan signage impianmu? Kami siap bantu dari konsep sampai pemasangan.",
     "features": {
       "freeConsultation": "Konsultasi Gratis",
@@ -249,6 +256,172 @@
       "projects": "Proyek Selesai",
       "clients": "Klien Puas",
       "provinces": "Provinsi Terjangkau"
+    }
+  },
+  "moreServices": {
+    "sectionTitle": "Layanan Lainnya",
+    "heading": "Satu partner,",
+    "headingHighlight": "semua solusi.",
+    "description": "Selain signage, kami juga menyediakan layanan printing dan merchandise untuk kebutuhan branding lengkap.",
+    "featured": "Utama",
+    "currentPage": "Kamu di sini",
+    "youreHere": "Kamu di sini",
+    "items": {
+      "signage": {
+        "title": "Signage & Branding",
+        "desc": "Custom signage premium dari huruf timbul, neon box, sampai visual branding untuk gedung dan retail.",
+        "tags": ["Custom Signage", "Huruf Timbul", "Neon Box"],
+        "cta": "Lihat Signage"
+      },
+      "printing": {
+        "title": "Printing Services",
+        "desc": "Digital printing, offset, dan instalasi. Dari banner sampai vehicle wrap—semua bisa.",
+        "tags": ["Digital Print", "Offset", "Installation"],
+        "cta": "Lihat Printing"
+      },
+      "merchandise": {
+        "title": "Custom Merchandise",
+        "desc": "Kaos, tote bag, corporate gift, dan packaging custom untuk event atau kebutuhan branding.",
+        "tags": ["Apparel", "Promo Items", "Gift Set"],
+        "cta": "Lihat Merchandise"
+      }
+    }
+  },
+  "printing": {
+    "backToHome": "Kembali ke Home",
+    "sectionTitle": "Printing Services",
+    "heading": "Print yang",
+    "headingHighlight": "berkelas.",
+    "description": "Dari digital printing sampai offset—kami deliver hasil cetak premium dengan presisi warna yang akurat.",
+    "exploreServices": "Explore Layanan",
+    "getQuote": "Minta Penawaran",
+    "learnMore": "Selengkapnya",
+    "categories": {
+      "sectionTitle": "Kategori Layanan",
+      "heading": "Solusi",
+      "headingHighlight": "lengkap.",
+      "description": "Pilih layanan printing yang sesuai kebutuhanmu",
+      "items": {
+        "digital": {
+          "title": "Digital Printing",
+          "desc": "Cetak cepat, hasil tajam. Cocok untuk small batch sampai medium run dengan turnaround kilat.",
+          "features": ["Banner & Poster", "Sticker & Label", "Photo Print", "Canvas Print"]
+        },
+        "offset": {
+          "title": "Offset Printing",
+          "desc": "Cetak massal dengan kualitas konsisten. Ideal untuk high volume dengan harga kompetitif.",
+          "features": ["Brosur & Flyer", "Majalah & Katalog", "Kartu Nama", "Packaging"]
+        },
+        "installation": {
+          "title": "Printing Installation",
+          "desc": "Dari print sampai pasang—kami handle semuanya. Tim profesional, hasil rapi.",
+          "features": ["Wall Wrap", "Vehicle Wrap", "Window Film", "Floor Graphics"]
+        }
+      }
+    },
+    "whyUs": {
+      "sectionTitle": "Kenapa Kami",
+      "heading": "Quality",
+      "headingHighlight": "first.",
+      "description": "Kami paham deadline ketat dan quality output sama pentingnya. Makanya kami invest di teknologi terbaru dan tim berpengalaman.",
+      "features": {
+        "fastTurnaround": {
+          "title": "Fast Turnaround",
+          "desc": "Express 24 jam tersedia"
+        },
+        "colorAccuracy": {
+          "title": "Color Accuracy",
+          "desc": "Pantone matching system"
+        },
+        "ecoFriendly": {
+          "title": "Eco-Friendly",
+          "desc": "Tinta ramah lingkungan"
+        },
+        "noMinimum": {
+          "title": "No Minimum",
+          "desc": "Dari 1 lembar OK"
+        }
+      }
+    },
+    "cta": {
+      "title": "Ready cetak proyekmu?",
+      "description": "Konsultasi gratis—kami bantu pilih solusi printing terbaik.",
+      "whatsapp": "Chat WhatsApp",
+      "backToSignage": "Lihat Signage"
+    }
+  },
+  "merchandise": {
+    "backToHome": "Kembali ke Home",
+    "sectionTitle": "Custom Merchandise",
+    "heading": "Merch yang",
+    "headingHighlight": "memorable.",
+    "description": "Bikin merchandise custom yang bikin brand kamu diingat. Dari kaos sampai corporate gift—semua bisa.",
+    "exploreProducts": "Explore Produk",
+    "getQuote": "Minta Penawaran",
+    "learnMore": "Selengkapnya",
+    "popular": {
+      "sectionTitle": "Produk Populer",
+      "heading": "Best",
+      "headingHighlight": "sellers.",
+      "description": "Produk merchandise paling diminati klien kami"
+    },
+    "categories": {
+      "sectionTitle": "Kategori Produk",
+      "heading": "Pilihan",
+      "headingHighlight": "lengkap.",
+      "description": "Dari apparel sampai corporate gift—semua tersedia",
+      "items": {
+        "apparel": {
+          "title": "Apparel",
+          "desc": "Kaos, polo, hoodie, jaket—semua bisa custom sesuai desain brand kamu.",
+          "features": ["T-Shirt", "Polo Shirt", "Hoodie", "Jaket"]
+        },
+        "promotional": {
+          "title": "Promotional Items",
+          "desc": "Merchandise promosi yang bikin brand kamu stand out di event apapun.",
+          "features": ["Tote Bag", "Mug & Tumbler", "Payung", "Gantungan Kunci"]
+        },
+        "corporate": {
+          "title": "Corporate Gift",
+          "desc": "Gift set premium buat klien dan karyawan. Packaging elegan, kualitas terjamin.",
+          "features": ["Gift Set", "Agenda & Planner", "Pen Set", "Tech Gadget"]
+        },
+        "packaging": {
+          "title": "Custom Packaging",
+          "desc": "Packaging custom yang elevate brand experience. Dari box sampai paper bag.",
+          "features": ["Gift Box", "Paper Bag", "Pouch", "Wrapping"]
+        }
+      }
+    },
+    "whyUs": {
+      "sectionTitle": "Kenapa Kami",
+      "heading": "Partner",
+      "headingHighlight": "terpercaya.",
+      "description": "Ribuan brand sudah percayakan merchandise mereka ke kami. Kualitas konsisten, harga kompetitif.",
+      "features": {
+        "customDesign": {
+          "title": "Custom Design",
+          "desc": "Tim desain siap bantu"
+        },
+        "qualityPrint": {
+          "title": "Quality Print",
+          "desc": "Sablon, DTF, bordir premium"
+        },
+        "bulkPricing": {
+          "title": "Bulk Pricing",
+          "desc": "Makin banyak makin hemat"
+        },
+        "fastDelivery": {
+          "title": "Fast Delivery",
+          "desc": "Kirim ke seluruh Indonesia"
+        }
+      }
+    },
+    "cta": {
+      "title": "Ready bikin merchandise?",
+      "description": "Konsultasi gratis—kami bantu wujudkan merchandise impianmu.",
+      "whatsapp": "Chat WhatsApp",
+      "backToSignage": "Lihat Signage"
     }
   }
 }
