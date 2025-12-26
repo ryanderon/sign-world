@@ -1,0 +1,47 @@
+.btn {
+  @apply inline-flex items-center justify-center px-7 py-3.5 font-display text-sm font-semibold;
+  @apply rounded-full transition-all duration-300;
+  @apply text-white;
+  background: linear-gradient(135deg, var(--color-orange) 0%, var(--color-pink) 100%);
+  box-shadow: 0 4px 20px -3px rgba(249, 115, 22, 0.4);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px -4px rgba(236, 72, 153, 0.5);
+  background: linear-gradient(135deg, var(--color-pink) 0%, var(--color-orange) 100%);
+}
+
+.btn-primary {
+  @apply inline-flex items-center justify-center px-7 py-3.5 font-display text-sm font-semibold;
+  @apply rounded-xl transition-all duration-300;
+  @apply bg-primary text-white;
+}
+
+.btn-primary:hover {
+  @apply bg-secondary;
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  @apply inline-flex items-center justify-center px-7 py-3.5 font-display text-sm font-semibold;
+  @apply bg-transparent text-primary rounded-full border-2 border-border;
+  @apply transition-all duration-300;
+}
+
+.btn-outline:hover {
+  @apply border-transparent;
+  background: linear-gradient(135deg, var(--color-teal) 0%, var(--color-blue) 100%);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.btn-ghost {
+  @apply inline-flex items-center justify-center px-5 py-2.5 font-display text-sm font-semibold;
+  @apply bg-transparent text-text-muted rounded-lg;
+  @apply transition-all duration-300;
+}
+
+.btn-ghost:hover {
+  @apply text-primary bg-surface;
+}

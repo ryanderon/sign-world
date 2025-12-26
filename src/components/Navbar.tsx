@@ -1,7 +1,18 @@
 import { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import logo from "../assets/logo.jpg";
+import { GlobeIcon, PhoneIcon, ArrowRightIcon } from "./ui";
+
+const navLinks = [
+  { href: "#home", labelKey: "navbar.home" },
+  { href: "#services", labelKey: "navbar.services" },
+  { href: "#portfolio", labelKey: "navbar.portfolio" },
+  { href: "#products", labelKey: "navbar.products" },
+  { href: "#clients", labelKey: "navbar.clients" },
+];
 
 const Navbar = () => {
+  const { t, i18n } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -13,26 +24,21 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const navLinks = [
-    { href: "#home", label: "Beranda" },
-    { href: "#services", label: "Layanan" },
-    { href: "#portfolio", label: "Portfolio" },
-    { href: "#products", label: "Produk" },
-    { href: "#clients", label: "Klien" },
-  ];
+  const toggleLanguage = () => {
+    const newLang = i18n.language === "id" ? "en" : "id";
+    i18n.changeLanguage(newLang);
+  };
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
-      {/* Main Navbar */}
       <nav
         className={`transition-all duration-500 ${
           isScrolled 
-            ? "bg-white/95 backdrop-blur-lg shadow-sm border-b border-border" 
+            ? "bg-white/95 backdrop-blur-lg shadow-sm" 
             : "bg-transparent"
         }`}
       >
         <div className="container py-4 flex justify-between items-center">
-          {/* Logo */}
           <a href="/" className="flex items-center gap-3 group">
             <div className="relative w-10 h-10 rounded-lg overflow-hidden ring-2 ring-border transition-all duration-300 group-hover:ring-accent">
               <img src={logo} alt="SignWorld" className="w-full h-full object-cover" />
@@ -47,7 +53,6 @@ const Navbar = () => {
             </div>
           </a>
 
-          {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-1">
             {navLinks.map((link) => (
               <a
@@ -55,31 +60,33 @@ const Navbar = () => {
                 href={link.href}
                 className="relative px-4 py-2 text-sm font-medium text-text-muted hover:text-primary transition-colors duration-300"
               >
-                {link.label}
+                {t(link.labelKey)}
               </a>
             ))}
           </div>
 
-          {/* CTA Section */}
           <div className="hidden lg:flex items-center gap-4">
+            <button
+              onClick={toggleLanguage}
+              className="flex items-center gap-1.5 px-3 py-1.5 text-sm font-medium text-text-muted hover:text-primary transition-colors rounded-lg hover:bg-surface"
+            >
+              <GlobeIcon className="w-4 h-4" />
+              <span className="uppercase">{i18n.language}</span>
+            </button>
+
             <a 
-              href="tel:+6282261617724" 
+              href="tel:+6282200000000" 
               className="flex items-center gap-2 text-sm font-medium text-text-muted hover:text-accent transition-colors"
             >
-              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-              </svg>
-              <span>+62 822-6161-7724</span>
+              <PhoneIcon className="w-4 h-4" />
+              <span>+62 822-0000-0000</span>
             </a>
             <a href="#contact" className="btn">
-              Konsultasi Gratis
-              <svg className="w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
+              {t("navbar.freeConsultation")}
+              <ArrowRightIcon className="w-4 h-4 ml-2" />
             </a>
           </div>
 
-          {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="lg:hidden relative w-10 h-10 flex flex-col items-center justify-center gap-1.5 rounded-lg hover:bg-surface transition-colors"
@@ -107,7 +114,6 @@ const Navbar = () => {
           </button>
         </div>
 
-        {/* Mobile Menu */}
         <div
           className={`lg:hidden overflow-hidden transition-all duration-400 ${
             isOpen ? "max-h-[500px]" : "max-h-0"
@@ -121,22 +127,29 @@ const Navbar = () => {
                 className="text-base font-medium text-text-muted hover:text-primary py-3 px-4 rounded-lg hover:bg-surface transition-all duration-300"
                 onClick={() => setIsOpen(false)}
               >
-                {link.label}
+                {t(link.labelKey)}
               </a>
             ))}
+            
+            <button
+              onClick={toggleLanguage}
+              className="flex items-center gap-2 text-base font-medium text-text-muted hover:text-primary py-3 px-4 rounded-lg hover:bg-surface transition-all duration-300"
+            >
+              <GlobeIcon className="w-5 h-5" />
+              {i18n.language === "id" ? "English" : "Bahasa Indonesia"}
+            </button>
+
             <div className="pt-4 mt-2 border-t border-border space-y-3">
-              <a href="tel:+6282261617724" className="flex items-center gap-3 text-text-muted px-4 py-2">
-                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                </svg>
-                +62 822-6161-7724
+              <a href="tel:+6282200000000" className="flex items-center gap-3 text-text-muted px-4 py-2">
+                <PhoneIcon className="w-5 h-5" />
+                +62 822-0000-0000
               </a>
               <a
                 href="#contact"
                 className="btn w-full text-center justify-center"
                 onClick={() => setIsOpen(false)}
               >
-                Konsultasi Sekarang
+                {t("navbar.consultNow")}
               </a>
             </div>
           </div>

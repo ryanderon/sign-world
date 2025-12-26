@@ -1,0 +1,254 @@
+{
+  "navbar": {
+    "home": "Home",
+    "services": "Layanan",
+    "portfolio": "Portfolio",
+    "products": "Produk",
+    "clients": "Klien",
+    "freeConsultation": "Konsultasi Gratis",
+    "consultNow": "Konsultasi Sekarang"
+  },
+  "hero": {
+    "badge": "#1 Signage Partner",
+    "title1": "Brand Kamu.",
+    "title2": "Lebih Hidup.",
+    "subtitle": "Signage premium yang bikin ruang jadi beda. Dari konsep sampai pasang—presisi di setiap detail.",
+    "startProject": "Mulai Proyek",
+    "exploreServices": "Lihat Layanan",
+    "trustedBy": "Dipercaya brand-brand ternama",
+    "projectsDone": "Proyek Selesai",
+    "services": {
+      "customSignage": "Custom Signage",
+      "3dLettering": "Huruf Timbul 3D",
+      "ledNeonBox": "LED Neon Box",
+      "visualBranding": "Visual Branding"
+    }
+  },
+  "services": {
+    "sectionTitle": "Yang Kami Kerjakan",
+    "heading": "Signage yang",
+    "headingHighlight": "bicara.",
+    "description": "Dari toko retail sampai gedung kantor—kami bikin visual identity yang nggak gampang dilupakan.",
+    "expertiseTitle": "Expertise Kami",
+    "expertiseHeading": "Semua soal",
+    "expertiseHighlight": "signage.",
+    "expertiseDesc": "Satu partner. Solusi lengkap. Tanpa ribet.",
+    "learnMore": "Selengkapnya",
+    "whyChooseUs": {
+      "customEverything": {
+        "title": "100% Custom",
+        "desc": "Sesuai DNA brand kamu"
+      },
+      "precisionCraft": {
+        "title": "Presisi Tinggi",
+        "desc": "Tech modern, detail sempurna"
+      },
+      "qualityAssured": {
+        "title": "Kualitas Dijamin",
+        "desc": "QC ketat sebelum kirim"
+      }
+    },
+    "items": {
+      "customSignage": {
+        "title": "Custom Signage",
+        "tagline": "Dibuat khusus buat kamu",
+        "desc": "Signage yang dibuat sesuai karakter brand kamu. No template. Pure original.",
+        "features": ["Desain Eksklusif", "Konsultasi Gratis", "Revisi Unlimited"]
+      },
+      "3dLettering": {
+        "title": "Huruf Timbul 3D",
+        "tagline": "Dimensi yang stand out",
+        "desc": "Huruf timbul premium yang eye-catching. Brand kamu, dalam 3 dimensi.",
+        "features": ["Stainless Steel", "Akrilik", "Kuningan"]
+      },
+      "acrylicSignage": {
+        "title": "Signage Akrilik",
+        "tagline": "Clean & modern",
+        "desc": "Signage minimalis yang powerful. Brand presence yang crystal clear.",
+        "features": ["Tahan UV", "Awet", "Elegan"]
+      },
+      "ledNeonBox": {
+        "title": "LED Neon Box",
+        "tagline": "Light up the night",
+        "desc": "Display yang bikin orang berhenti dan lihat. Hemat energi, nyala terus.",
+        "features": ["Hemat Energi", "Weatherproof", "Custom Size"]
+      },
+      "visualBranding": {
+        "title": "Visual Branding",
+        "tagline": "Total transformation",
+        "desc": "Solusi visual identity dari A-Z. Setiap sudut, perfectly branded.",
+        "features": ["Wall Graphics", "Booth Pameran", "Office Branding"]
+      },
+      "acrylicDisplays": {
+        "title": "Display Akrilik",
+        "tagline": "Showcase excellence",
+        "desc": "Display modern buat retail, menu, info. Elegan di setiap detail.",
+        "features": ["Retail Display", "Menu Board", "Info Stand"]
+      }
+    },
+    "materialOptions": "Pilihan Material",
+    "materialOptionsDesc": "Akrilik, stainless, aluminium, kuningan & more"
+  },
+  "process": {
+    "sectionTitle": "Cara Kerjanya",
+    "heading": "Simple.",
+    "headingHighlight": "Seamless.",
+    "description": "Dari ide ke pemasangan dalam 4 step mudah",
+    "getStarted": "Mulai Sekarang",
+    "steps": {
+      "consult": {
+        "title": "Konsultasi",
+        "desc": "Ceritain visi kamu. Kami dengar, pahami, kasih saran."
+      },
+      "design": {
+        "title": "Desain",
+        "desc": "Kami buatkan mockup sampai kamu bilang 'perfect'."
+      },
+      "produce": {
+        "title": "Produksi",
+        "desc": "Manufacturing presisi pakai material premium."
+      },
+      "install": {
+        "title": "Pasang",
+        "desc": "Instalasi profesional. Hasil flawless."
+      }
+    }
+  },
+  "cta": {
+    "transformSpace": "Ready upgrade brand kamu?",
+    "createTogether": "Yuk bikin signage yang remarkable bareng.",
+    "getQuote": "Minta Penawaran",
+    "callUs": "Telepon Kami"
+  },
+  "products": {
+    "sectionTitle": "Material",
+    "heading": "Material",
+    "headingHighlight": "premium.",
+    "description": "Kami pakai material terbaik buat durability, estetika, dan perfect fit di setiap environment.",
+    "materials": {
+      "acrylic": { "name": "Akrilik", "desc": "Crystal clear" },
+      "stainlessSteel": { "name": "Stainless Steel", "desc": "Rust-proof, elegan" },
+      "galvanized": { "name": "Galvanis", "desc": "Kuat & ekonomis" },
+      "aluminum": { "name": "Aluminium", "desc": "Ringan & modern" },
+      "pvc": { "name": "PVC", "desc": "Versatile & waterproof" },
+      "brass": { "name": "Kuningan", "desc": "Timeless luxury" }
+    },
+    "warranty": "Tahun Garansi",
+    "authentic": "Authentic",
+    "support": "Support",
+    "benefits": {
+      "noMinimum": { "title": "No Minimum Order", "desc": "Dari 1 piece sampai ribuan" },
+      "freeConsultation": { "title": "Konsultasi Gratis", "desc": "Expert guidance, always" },
+      "nationwide": { "title": "Kirim Seluruh Indonesia", "desc": "Sampai aman, guaranteed" },
+      "flexiblePayment": { "title": "Bayar Fleksibel", "desc": "Card, e-wallet, transfer" }
+    },
+    "readyToOrder": "Ready to Order",
+    "acrylicSigns": "Acrylic signs.",
+    "readyNow": "Siap sekarang.",
+    "readyDesc": "Butuh office sign, door plate, atau wayfinding? Browse koleksi signage akrilik premium kami.",
+    "features": {
+      "customDesign": "Custom design on request",
+      "anySize": "Any size, any color",
+      "templates": "Ready-to-use templates",
+      "fastProduction": "Fast production, premium quality"
+    },
+    "viewCatalog": "Lihat Katalog"
+  },
+  "clients": {
+    "sectionTitle": "Klien Kami",
+    "heading": "Trusted by",
+    "headingHighlight": "leaders.",
+    "description": "Dari retail giants sampai corporate headquarters",
+    "andMore": "Dan masih banyak lagi dari berbagai industri...",
+    "testimonials": {
+      "sectionTitle": "Testimoni",
+      "heading": "Client",
+      "headingHighlight": "love.",
+      "rating": "dari 100+ review klien",
+      "satisfaction": "Kepuasan klien adalah north star kami. Setiap proyek, setiap detail—crafted for excellence.",
+      "startProject": "Mulai Proyek"
+    },
+    "stats": {
+      "trustedBrands": "Trusted Brands",
+      "yearsExperience": "Tahun Experience",
+      "projectsDone": "Proyek Done",
+      "supportReady": "Support Ready"
+    }
+  },
+    "footer": {
+      "getInTouch": "Hubungi Kami",
+      "letsCreate": "Mari",
+      "createHighlight": "wujudkan",
+      "together": "bersama.",
+    "readyToTransform": "Siap wujudkan signage impianmu? Kami siap bantu dari konsep sampai pemasangan.",
+    "features": {
+      "freeConsultation": "Konsultasi Gratis",
+      "fastResponse": "Fast Response",
+      "competitivePricing": "Harga Kompetitif",
+      "qualityGuaranteed": "Kualitas Guaranteed"
+    },
+    "contact": {
+      "whatsapp": "WhatsApp",
+      "email": "Email",
+      "location": "Lokasi"
+    },
+    "links": {
+      "services": "Layanan",
+      "products": "Produk",
+      "company": "Company",
+      "items": {
+        "customSignage": "Custom Signage",
+        "3dLettering": "Huruf Timbul 3D",
+        "acrylicSignage": "Signage Akrilik",
+        "ledNeonBox": "LED Neon Box",
+        "visualBranding": "Visual Branding",
+        "premiumMaterials": "Material Premium",
+        "readyMadeSigns": "Ready-Made Signs",
+        "ledSolutions": "LED Solutions",
+        "acrylicDisplays": "Acrylic Display",
+        "aboutUs": "About Us",
+        "portfolio": "Portfolio",
+        "testimonials": "Testimonials",
+        "contact": "Contact"
+      }
+    },
+    "brand": {
+      "tagline": "Signage & Branding",
+      "description": "Partner terpercaya untuk signage dan visual branding premium. Melayani seluruh Indonesia."
+    },
+    "copyright": "© {{year}} SignWorld. All rights reserved.",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service"
+  },
+  "about": {
+    "sectionTitle": "About Us",
+    "heading": "Partner terpercaya untuk",
+    "headingHighlight": "quality printing",
+    "content1": "Sejak 2011, kami fokus deliver produk cetak berkualitas tinggi. Kami paham setiap proyek itu unik, dengan challenge-nya masing-masing.",
+    "content2": "Tim kami punya experience luas di proyek berbagai skala dan complexity. Kami pastikan proyekmu berjalan smooth.",
+    "content3": "Kalau kamu pikir sesuatu nggak mungkin karena waktu, budget, ukuran, atau material—let us see what we can do.",
+    "yearsOfExcellence": "Years of Excellence",
+    "values": {
+      "deadlineFocused": {
+        "title": "Deadline Focused",
+        "desc": "On-time delivery sama pentingnya dengan quality output"
+      },
+      "colorAccuracy": {
+        "title": "Color Accuracy",
+        "desc": "Pantone matching system untuk warna yang presisi"
+      }
+    },
+    "letsTalk": "Let's Talk"
+  },
+  "portfolio": {
+    "sectionTitle": "Karya Kami",
+    "heading": "Dibuat dengan",
+    "headingHighlight": "presisi.",
+    "description": "Klik gambar manapun untuk explore portfolio kami",
+    "stats": {
+      "projects": "Proyek Selesai",
+      "clients": "Klien Puas",
+      "provinces": "Provinsi Terjangkau"
+    }
+  }
+}

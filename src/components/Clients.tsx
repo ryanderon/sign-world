@@ -1,5 +1,7 @@
 import { useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { useGsapFadeIn } from "../hooks/useGsapFadeIn";
+import { SectionHeader, StarRating, GradientIcon, ArrowRightIcon } from "./ui";
 
 const clients = [
   { name: "BCA", logo: "BCA" },
@@ -23,8 +25,10 @@ const testimonials = [
     role: "Brand Manager, PT. Retail Nusantara",
     avatar: "DR",
     rating: 5,
-    title: "Exceeded every expectation",
-    content: "Professional, responsive, and detail-oriented. They delivered signage for 50+ outlets on time with consistent quality. A true partner.",
+    titleId: "Melampaui setiap ekspektasi",
+    titleEn: "Exceeded every expectation",
+    contentId: "Profesional, responsif, dan detail-oriented. Mereka mengirimkan signage untuk 50+ outlet tepat waktu dengan kualitas konsisten. Partner sejati.",
+    contentEn: "Professional, responsive, and detail-oriented. They delivered signage for 50+ outlets on time with consistent quality. A true partner.",
   },
   {
     id: 2,
@@ -32,8 +36,10 @@ const testimonials = [
     role: "Facility Manager, Hotel Grand Pacific",
     avatar: "AH",
     rating: 5,
-    title: "Hospitality-grade excellence",
-    content: "They understand luxury standards. Our stainless steel lobby signage is stunning—minimal maintenance, maximum impact.",
+    titleId: "Keunggulan kelas hospitality",
+    titleEn: "Hospitality-grade excellence",
+    contentId: "Mereka memahami standar kemewahan. Signage stainless steel lobby kami memukau—perawatan minimal, dampak maksimal.",
+    contentEn: "They understand luxury standards. Our stainless steel lobby signage is stunning—minimal maintenance, maximum impact.",
   },
   {
     id: 3,
@@ -41,8 +47,10 @@ const testimonials = [
     role: "Marketing Director, PT. Mitra Teknologi",
     avatar: "NW",
     rating: 5,
-    title: "Complete branding solution",
-    content: "From lobby signs to wayfinding—they handled our entire new office. The result perfectly reflects our corporate identity.",
+    titleId: "Solusi branding lengkap",
+    titleEn: "Complete branding solution",
+    contentId: "Dari sign lobby hingga wayfinding—mereka menangani seluruh kantor baru kami. Hasilnya mencerminkan identitas korporat kami dengan sempurna.",
+    contentEn: "From lobby signs to wayfinding—they handled our entire new office. The result perfectly reflects our corporate identity.",
   },
   {
     id: 4,
@@ -50,37 +58,36 @@ const testimonials = [
     role: "Operations Director, Fast Food Chain",
     avatar: "BS",
     rating: 5,
-    title: "Reliable at scale",
-    content: "Three years, 100+ outlets nationwide. Consistent quality, reliable delivery. They're our go-to signage partner.",
+    titleId: "Andal dalam skala besar",
+    titleEn: "Reliable at scale",
+    contentId: "Tiga tahun, 100+ outlet nasional. Kualitas konsisten, pengiriman andal. Mereka partner signage andalan kami.",
+    contentEn: "Three years, 100+ outlets nationwide. Consistent quality, reliable delivery. They're our go-to signage partner.",
   },
 ];
 
-const stats = [
-  { number: "100+", label: "Trusted Brands" },
-  { number: "13+", label: "Years Experience" },
-  { number: "1000+", label: "Projects Done" },
-  { number: "24/7", label: "Support Ready" },
-];
-
 export default function Clients() {
+  const { t, i18n } = useTranslation();
   const ref = useRef<HTMLDivElement>(null!);
   const [activeTestimonial, setActiveTestimonial] = useState(0);
   useGsapFadeIn(ref);
 
+  const stats = [
+    { number: "100+", labelKey: "trustedBrands" },
+    { number: "13+", labelKey: "yearsExperience" },
+    { number: "1000+", labelKey: "projectsDone" },
+    { number: "24/7", labelKey: "supportReady" },
+  ];
+
   return (
     <div ref={ref} className="relative bg-white">
-      {/* Clients Logo Section */}
       <div id="clients" className="py-20 md:py-28 bg-surface">
         <div className="container">
-          <div className="section-header">
-            <span className="text-subheading">Our Clients</span>
-            <h2 className="text-heading text-primary">
-              Trusted by <span className="text-gradient">leaders.</span>
-            </h2>
-            <p>From retail giants to corporate headquarters</p>
-          </div>
+          <SectionHeader
+            subheading={t("clients.sectionTitle")}
+            heading={<>{t("clients.heading")} <span className="text-gradient">{t("clients.headingHighlight")}</span></>}
+            description={t("clients.description")}
+          />
 
-          {/* Logos Grid */}
           <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
             {clients.map((client) => (
               <div key={client.name} className="client-logo hover:bg-white">
@@ -91,55 +98,43 @@ export default function Clients() {
             ))}
           </div>
 
-          {/* More clients indicator */}
           <div className="text-center mt-8">
             <span className="text-text-muted text-sm">
-              And many more across diverse industries...
+              {t("clients.andMore")}
             </span>
           </div>
         </div>
       </div>
 
-      {/* Testimonials Section */}
       <div className="py-20 md:py-28">
         <div className="container">
           <div className="grid lg:grid-cols-5 gap-12 items-start">
-            {/* Left: Header & Rating */}
             <div className="lg:col-span-2 lg:sticky lg:top-32">
-              <span className="text-subheading mb-4 block">Testimonials</span>
+              <span className="text-subheading mb-4 block">{t("clients.testimonials.sectionTitle")}</span>
               <h3 className="text-heading text-primary mb-6">
-                Client <span className="text-gradient-warm">love.</span>
+                {t("clients.testimonials.heading")} <span className="text-gradient-warm">{t("clients.testimonials.headingHighlight")}</span>
               </h3>
               
-              {/* Overall Rating */}
               <div className="flex items-center gap-4 mb-6 p-4 rounded-xl" style={{ background: 'linear-gradient(135deg, rgba(0,180,180,0.08) 0%, rgba(59,130,246,0.08) 100%)' }}>
                 <div className="font-display text-5xl font-bold text-gradient">4.9</div>
                 <div>
-                  <div className="stars mb-1 flex gap-0.5">
-                    {[...Array(5)].map((_, i) => (
-                      <svg key={i} className="w-5 h-5 text-yellow" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                      </svg>
-                    ))}
+                  <div className="mb-1">
+                    <StarRating rating={5} />
                   </div>
-                  <p className="text-sm text-text-muted">from 100+ client reviews</p>
+                  <p className="text-sm text-text-muted">{t("clients.testimonials.rating")}</p>
                 </div>
               </div>
 
               <p className="text-text-muted leading-relaxed mb-8">
-                Client satisfaction is our north star. Every project, 
-                every detail—crafted for excellence.
+                {t("clients.testimonials.satisfaction")}
               </p>
 
               <a href="#contact" className="btn">
-                Start Your Project
-                <svg className="w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
+                {t("clients.testimonials.startProject")}
+                <ArrowRightIcon className="w-4 h-4 ml-2" />
               </a>
             </div>
 
-            {/* Right: Testimonial Cards */}
             <div className="lg:col-span-3 space-y-4">
               {testimonials.map((testimonial, index) => (
                 <div
@@ -151,19 +146,11 @@ export default function Clients() {
                   }`}
                   onClick={() => setActiveTestimonial(index)}
                 >
-                  {/* Header */}
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex items-center gap-3">
-                      <div 
-                        className="w-11 h-11 rounded-full flex items-center justify-center text-white font-display font-bold text-sm"
-                        style={{ 
-                          background: index % 2 === 0 
-                            ? 'linear-gradient(135deg, #00b4b4 0%, #3b82f6 100%)'
-                            : 'linear-gradient(135deg, #f97316 0%, #ec4899 100%)'
-                        }}
-                      >
+                      <GradientIcon variant={index % 2 === 0 ? "teal-blue" : "orange-pink"} size="sm" className="rounded-full text-sm font-bold">
                         {testimonial.avatar}
-                      </div>
+                      </GradientIcon>
                       <div>
                         <h4 className="font-display font-semibold text-primary text-sm">
                           {testimonial.name}
@@ -171,21 +158,14 @@ export default function Clients() {
                         <p className="text-xs text-text-muted">{testimonial.role}</p>
                       </div>
                     </div>
-                    <div className="flex gap-0.5">
-                      {[...Array(testimonial.rating)].map((_, i) => (
-                        <svg key={i} className="w-4 h-4 text-yellow" fill="currentColor" viewBox="0 0 20 20">
-                          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                        </svg>
-                      ))}
-                    </div>
+                    <StarRating rating={testimonial.rating} size="sm" />
                   </div>
 
-                  {/* Content */}
                   <h5 className="font-display font-semibold text-primary mb-2">
-                    "{testimonial.title}"
+                    "{i18n.language === 'id' ? testimonial.titleId : testimonial.titleEn}"
                   </h5>
                   <p className="text-text-muted text-sm leading-relaxed">
-                    {testimonial.content}
+                    {i18n.language === 'id' ? testimonial.contentId : testimonial.contentEn}
                   </p>
                 </div>
               ))}
@@ -194,12 +174,11 @@ export default function Clients() {
         </div>
       </div>
 
-      {/* Stats Section */}
       <div className="py-16" style={{ background: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 100%)' }}>
         <div className="container">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
-              <div key={stat.label} className="text-center">
+              <div key={stat.labelKey} className="text-center">
                 <p 
                   className="font-display text-4xl md:text-5xl font-bold mb-2"
                   style={{ 
@@ -213,13 +192,12 @@ export default function Clients() {
                 >
                   {stat.number}
                 </p>
-                <p className="text-white/60 text-sm">{stat.label}</p>
+                <p className="text-white/60 text-sm">{t(`clients.stats.${stat.labelKey}`)}</p>
               </div>
             ))}
           </div>
         </div>
       </div>
-
     </div>
   );
 }

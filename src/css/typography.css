@@ -1,0 +1,61 @@
+.text-display {
+  @apply font-display text-4xl md:text-6xl lg:text-7xl font-extrabold;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+}
+
+.text-heading {
+  @apply font-display text-3xl md:text-4xl lg:text-5xl font-bold;
+  letter-spacing: -0.025em;
+}
+
+.text-subheading {
+  @apply font-display text-xs font-bold tracking-[0.15em] uppercase;
+  background: linear-gradient(135deg, var(--color-teal) 0%, var(--color-blue) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-body-lg {
+  @apply text-lg md:text-xl text-text-muted leading-relaxed;
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, var(--color-teal) 0%, var(--color-blue) 50%, var(--color-purple) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-warm {
+  background: linear-gradient(135deg, var(--color-orange) 0%, var(--color-pink) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-full {
+  background: linear-gradient(90deg, var(--color-teal) 0%, var(--color-blue) 25%, var(--color-purple) 50%, var(--color-pink) 75%, var(--color-orange) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.link-underline {
+  @apply relative inline-block;
+}
+
+.link-underline::after {
+  content: '';
+  @apply absolute bottom-0 left-0 w-0 h-[2px] bg-accent;
+  @apply transition-all duration-300;
+}
+
+.link-underline:hover::after {
+  @apply w-full;
+}
+
+.divider {
+  @apply w-16 h-1 bg-accent rounded-full;
+}

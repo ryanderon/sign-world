@@ -1,0 +1,254 @@
+{
+  "navbar": {
+    "home": "Home",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "products": "Products",
+    "clients": "Clients",
+    "freeConsultation": "Free Consultation",
+    "consultNow": "Consult Now"
+  },
+  "hero": {
+    "badge": "#1 Signage Partner",
+    "title1": "Your Brand.",
+    "title2": "Amplified.",
+    "subtitle": "Premium signage solutions that transform spaces and elevate brands. From concept to installation—crafted with precision.",
+    "startProject": "Start Your Project",
+    "exploreServices": "Explore Services",
+    "trustedBy": "Trusted by leading brands",
+    "projectsDone": "Projects Done",
+    "services": {
+      "customSignage": "Custom Signage",
+      "3dLettering": "3D Lettering",
+      "ledNeonBox": "LED Neon Box",
+      "visualBranding": "Visual Branding"
+    }
+  },
+  "services": {
+    "sectionTitle": "What We Do",
+    "heading": "Signage that",
+    "headingHighlight": "speaks.",
+    "description": "From retail storefronts to corporate headquarters—we craft visual identities that leave lasting impressions.",
+    "expertiseTitle": "Our Expertise",
+    "expertiseHeading": "Everything",
+    "expertiseHighlight": "signage.",
+    "expertiseDesc": "One partner. Complete solutions. Zero hassle.",
+    "learnMore": "Learn More",
+    "whyChooseUs": {
+      "customEverything": {
+        "title": "Custom Everything",
+        "desc": "Tailored to your brand's DNA"
+      },
+      "precisionCraft": {
+        "title": "Precision Craft",
+        "desc": "Modern tech, meticulous detail"
+      },
+      "qualityAssured": {
+        "title": "Quality Assured",
+        "desc": "Rigorous QC before delivery"
+      }
+    },
+    "items": {
+      "customSignage": {
+        "title": "Custom Signage",
+        "tagline": "Designed for you",
+        "desc": "Bespoke signage crafted to your brand's unique character. No templates. Pure originality.",
+        "features": ["Exclusive Design", "Free Consultation", "Unlimited Revisions"]
+      },
+      "3dLettering": {
+        "title": "3D Lettering",
+        "tagline": "Dimension that stands out",
+        "desc": "Premium raised letters that command attention. Your brand, in three dimensions.",
+        "features": ["Stainless Steel", "Acrylic", "Brass"]
+      },
+      "acrylicSignage": {
+        "title": "Acrylic Signage",
+        "tagline": "Modern clarity",
+        "desc": "Sleek, minimalist signage that speaks volumes. Crystal-clear brand presence.",
+        "features": ["UV Resistant", "Long-lasting", "Elegant"]
+      },
+      "ledNeonBox": {
+        "title": "LED Neon Box",
+        "tagline": "Light up the night",
+        "desc": "Eye-catching illuminated displays. Energy-efficient brilliance that never sleeps.",
+        "features": ["Energy Efficient", "Weatherproof", "Custom Sizes"]
+      },
+      "visualBranding": {
+        "title": "Visual Branding",
+        "tagline": "Complete transformation",
+        "desc": "End-to-end visual identity solutions. Every touchpoint, perfectly branded.",
+        "features": ["Wall Graphics", "Exhibition Booths", "Office Branding"]
+      },
+      "acrylicDisplays": {
+        "title": "Acrylic Displays",
+        "tagline": "Showcase excellence",
+        "desc": "Modern display solutions for retail, menus, and information. Elegance in every detail.",
+        "features": ["Retail Display", "Menu Boards", "Info Stands"]
+      }
+    },
+    "materialOptions": "Material Options",
+    "materialOptionsDesc": "Acrylic, stainless, aluminum, brass & more"
+  },
+  "process": {
+    "sectionTitle": "How It Works",
+    "heading": "Simple.",
+    "headingHighlight": "Seamless.",
+    "description": "From idea to installation in four easy steps",
+    "getStarted": "Get Started",
+    "steps": {
+      "consult": {
+        "title": "Consult",
+        "desc": "Share your vision. We listen, understand, and advise."
+      },
+      "design": {
+        "title": "Design",
+        "desc": "We craft mockups until you say 'perfect'."
+      },
+      "produce": {
+        "title": "Produce",
+        "desc": "Precision manufacturing with premium materials."
+      },
+      "install": {
+        "title": "Install",
+        "desc": "Professional installation. Flawless finish."
+      }
+    }
+  },
+  "cta": {
+    "transformSpace": "Ready to elevate your brand?",
+    "createTogether": "Let's create remarkable signage together.",
+    "getQuote": "Get a Quote",
+    "callUs": "Call Us"
+  },
+  "products": {
+    "sectionTitle": "Materials",
+    "heading": "Premium",
+    "headingHighlight": "materials.",
+    "description": "We work with the finest materials to ensure durability, aesthetics, and perfect fit for every environment.",
+    "materials": {
+      "acrylic": { "name": "Acrylic", "desc": "Crystal clear" },
+      "stainlessSteel": { "name": "Stainless Steel", "desc": "Rust-proof elegance" },
+      "galvanized": { "name": "Galvanized", "desc": "Strong & economical" },
+      "aluminum": { "name": "Aluminum", "desc": "Light & modern" },
+      "pvc": { "name": "PVC", "desc": "Versatile & waterproof" },
+      "brass": { "name": "Brass", "desc": "Timeless luxury" }
+    },
+    "warranty": "Year Warranty",
+    "authentic": "Authentic",
+    "support": "Support",
+    "benefits": {
+      "noMinimum": { "title": "No Minimum Order", "desc": "From one piece to thousands" },
+      "freeConsultation": { "title": "Free Consultation", "desc": "Expert guidance, always" },
+      "nationwide": { "title": "Nationwide Delivery", "desc": "Safe arrival, guaranteed" },
+      "flexiblePayment": { "title": "Flexible Payment", "desc": "Cards, e-wallets, transfers" }
+    },
+    "readyToOrder": "Ready to Order",
+    "acrylicSigns": "Acrylic signs.",
+    "readyNow": "Ready now.",
+    "readyDesc": "Need office signs, door plates, or wayfinding solutions? Browse our collection of ready-made premium acrylic signage.",
+    "features": {
+      "customDesign": "Custom design on request",
+      "anySize": "Choose any size or color",
+      "templates": "Ready-to-use templates available",
+      "fastProduction": "Fast production, premium quality"
+    },
+    "viewCatalog": "View Catalog"
+  },
+  "clients": {
+    "sectionTitle": "Our Clients",
+    "heading": "Trusted by",
+    "headingHighlight": "leaders.",
+    "description": "From retail giants to corporate headquarters",
+    "andMore": "And many more across diverse industries...",
+    "testimonials": {
+      "sectionTitle": "Testimonials",
+      "heading": "Client",
+      "headingHighlight": "love.",
+      "rating": "from 100+ client reviews",
+      "satisfaction": "Client satisfaction is our north star. Every project, every detail—crafted for excellence.",
+      "startProject": "Start Your Project"
+    },
+    "stats": {
+      "trustedBrands": "Trusted Brands",
+      "yearsExperience": "Years Experience",
+      "projectsDone": "Projects Done",
+      "supportReady": "Support Ready"
+    }
+  },
+  "footer": {
+    "getInTouch": "Get in Touch",
+    "letsCreate": "Let's",
+    "createHighlight": "create",
+    "together": "together.",
+    "readyToTransform": "Ready to bring your signage vision to life? We are ready to help from concept to installation.",
+    "features": {
+      "freeConsultation": "Free Consultation",
+      "fastResponse": "Fast Response",
+      "competitivePricing": "Competitive Pricing",
+      "qualityGuaranteed": "Quality Guaranteed"
+    },
+    "contact": {
+      "whatsapp": "WhatsApp",
+      "email": "Email",
+      "location": "Location"
+    },
+    "links": {
+      "services": "Services",
+      "products": "Products",
+      "company": "Company",
+      "items": {
+        "customSignage": "Custom Signage",
+        "3dLettering": "3D Lettering",
+        "acrylicSignage": "Acrylic Signage",
+        "ledNeonBox": "LED Neon Box",
+        "visualBranding": "Visual Branding",
+        "premiumMaterials": "Premium Materials",
+        "readyMadeSigns": "Ready-Made Signs",
+        "ledSolutions": "LED Solutions",
+        "acrylicDisplays": "Acrylic Displays",
+        "aboutUs": "About Us",
+        "portfolio": "Portfolio",
+        "testimonials": "Testimonials",
+        "contact": "Contact"
+      }
+    },
+    "brand": {
+      "tagline": "Signage & Branding",
+      "description": "Your trusted partner for premium signage and visual branding solutions. Serving all of Indonesia."
+    },
+    "copyright": "© {{year}} SignWorld. All rights reserved.",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service"
+  },
+  "about": {
+    "sectionTitle": "About Us",
+    "heading": "Your trusted partner for",
+    "headingHighlight": "quality printing",
+    "content1": "Since 2011, we have strived to offer the highest quality printed products in the marketplace. We understand every project is different, and has its own pressures.",
+    "content2": "Our team has extensive experience working on projects ranging in scale and complexity, and we pride ourselves on ensuring your project runs as smoothly as possible.",
+    "content3": "If you think something isn't possible due to time, budget, size, material or finish — let us see what we can do.",
+    "yearsOfExcellence": "Years of Excellence",
+    "values": {
+      "deadlineFocused": {
+        "title": "Deadline Focused",
+        "desc": "Meeting deadlines is as important as output quality"
+      },
+      "colorAccuracy": {
+        "title": "Color Accuracy",
+        "desc": "Pantone matching system for precise color control"
+      }
+    },
+    "letsTalk": "Let's Talk"
+  },
+  "portfolio": {
+    "sectionTitle": "Our Work",
+    "heading": "Crafted with",
+    "headingHighlight": "precision.",
+    "description": "Click any image to explore our portfolio",
+    "stats": {
+      "projects": "Projects Completed",
+      "clients": "Happy Clients",
+      "provinces": "Provinces Covered"
+    }
+  }
+}

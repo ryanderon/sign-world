@@ -1,0 +1,80 @@
+.badge {
+  @apply inline-flex items-center gap-2 px-3 py-1.5 text-xs font-semibold;
+  @apply rounded-full text-white;
+  background: linear-gradient(135deg, var(--color-teal) 0%, var(--color-blue) 100%);
+}
+
+.badge-outline {
+  @apply inline-flex items-center gap-2 px-3 py-1.5 text-xs font-medium;
+  @apply rounded-full border border-border/60 text-text-muted;
+  @apply transition-all duration-300;
+}
+
+.badge-outline:hover {
+  @apply border-transparent text-white;
+  background: linear-gradient(135deg, var(--color-purple) 0%, var(--color-pink) 100%);
+}
+
+.stars {
+  @apply flex gap-0.5 text-accent;
+}
+
+.pulse-indicator {
+  @apply relative flex h-3 w-3;
+}
+
+.pulse-indicator::before {
+  content: '';
+  @apply absolute inset-0 rounded-full;
+  background: linear-gradient(135deg, var(--color-teal) 0%, var(--color-blue) 100%);
+  animation: pulse-ring 1.5s ease-out infinite;
+}
+
+.pulse-indicator::after {
+  content: '';
+  @apply absolute inset-0 rounded-full;
+  background: linear-gradient(135deg, var(--color-teal) 0%, var(--color-blue) 100%);
+}
+
+.img-reveal {
+  @apply overflow-hidden rounded-2xl;
+}
+
+.img-reveal img {
+  @apply transition-transform duration-700;
+}
+
+.img-reveal:hover img {
+  transform: scale(1.05);
+}
+
+.hover-lift {
+  @apply transition-transform duration-300;
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-surface);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-text-dim);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-muted);
+}

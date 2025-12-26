@@ -1,0 +1,100 @@
+.card {
+  @apply bg-white p-8 rounded-2xl;
+  @apply border border-border;
+  @apply transition-all duration-400;
+}
+
+.card:hover {
+  @apply border-accent/20;
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -15px rgba(0,0,0,0.1);
+}
+
+.service-card {
+  @apply relative bg-white rounded-2xl border border-border overflow-hidden;
+  @apply transition-all duration-400;
+}
+
+.service-card:hover {
+  @apply shadow-xl border-transparent;
+  transform: translateY(-6px);
+}
+
+.service-card::after {
+  content: '';
+  @apply absolute bottom-0 left-0 right-0 h-1;
+  background: linear-gradient(90deg, var(--color-teal) 0%, var(--color-blue) 25%, var(--color-purple) 50%, var(--color-pink) 75%, var(--color-orange) 100%);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s var(--ease-smooth);
+}
+
+.service-card:hover::after {
+  transform: scaleX(1);
+}
+
+.feature-card {
+  @apply relative bg-white p-6 rounded-xl border border-border;
+  @apply transition-all duration-300;
+}
+
+.feature-card:hover {
+  @apply border-accent/30 shadow-lg;
+}
+
+.feature-icon {
+  @apply w-12 h-12 rounded-xl flex items-center justify-center mb-4;
+  @apply text-white;
+  background: linear-gradient(135deg, var(--color-teal) 0%, var(--color-cyan) 100%);
+}
+
+.testimonial-card {
+  @apply bg-white p-6 rounded-2xl border border-border;
+  @apply transition-all duration-300;
+}
+
+.testimonial-card:hover {
+  @apply shadow-xl border-accent/20;
+}
+
+.stat-card {
+  @apply text-center p-6 rounded-2xl bg-white border border-border;
+  @apply transition-all duration-300;
+}
+
+.stat-card:hover {
+  @apply border-accent/30 shadow-lg;
+  transform: translateY(-4px);
+}
+
+.stat-number {
+  @apply font-display text-4xl md:text-5xl font-extrabold;
+  background: linear-gradient(135deg, var(--color-teal) 0%, var(--color-blue) 50%, var(--color-purple) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.process-step {
+  @apply relative bg-white p-8 rounded-2xl border border-border;
+  @apply transition-all duration-300;
+}
+
+.process-step:hover {
+  @apply border-accent/30 shadow-xl;
+}
+
+.step-number {
+  @apply inline-flex items-center justify-center w-10 h-10 rounded-full;
+  @apply text-white font-display font-bold text-sm;
+  background: linear-gradient(135deg, var(--color-teal) 0%, var(--color-blue) 100%);
+}
+
+.client-logo {
+  @apply flex items-center justify-center p-6 rounded-xl bg-surface;
+  @apply transition-all duration-300;
+}
+
+.client-logo:hover {
+  @apply bg-white shadow-md;
+}

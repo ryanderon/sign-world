@@ -1,0 +1,42 @@
+.container {
+  @apply max-w-7xl mx-auto px-5 md:px-8 lg:px-12;
+}
+
+.container-wide {
+  @apply max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12;
+}
+
+.section {
+  @apply py-20 md:py-28;
+}
+
+.section-lg {
+  @apply py-28 md:py-36;
+}
+
+.section-header {
+  @apply text-center max-w-3xl mx-auto mb-16;
+}
+
+.section-header .text-subheading {
+  @apply mb-4;
+}
+
+.section-header h2 {
+  @apply mb-6;
+}
+
+.section-header p {
+  @apply text-text-muted text-lg;
+}
+
+.hero-content {
+  @apply pt-32 pb-20;
+}
+
+@media (min-width: 768px) {
+  .hero-content {
+    @apply pt-40 pb-28;
+    min-height: 100vh;
+  }
+}

@@ -1,0 +1,50 @@
+.gradient-hero {
+  background: linear-gradient(135deg, #fafbfc 0%, #f1f5f9 50%, #e0f2fe 100%);
+}
+
+.gradient-accent {
+  background: linear-gradient(135deg, var(--color-orange) 0%, var(--color-yellow) 100%);
+}
+
+.gradient-dark {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+}
+
+.gradient-vibrant {
+  background: linear-gradient(135deg, var(--color-teal) 0%, var(--color-blue) 25%, var(--color-purple) 50%, var(--color-pink) 75%, var(--color-orange) 100%);
+}
+
+.gradient-teal-blue {
+  background: linear-gradient(135deg, var(--color-teal) 0%, var(--color-blue) 100%);
+}
+
+.gradient-orange-yellow {
+  background: linear-gradient(135deg, var(--color-orange) 0%, var(--color-yellow) 100%);
+}
+
+.gradient-pink-purple {
+  background: linear-gradient(135deg, var(--color-pink) 0%, var(--color-purple) 100%);
+}
+
+.bg-grid-pattern {
+  background-image: 
+    linear-gradient(rgba(0,0,0,0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,0,0,0.02) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+.bg-dot-pattern {
+  background-image: radial-gradient(rgba(0,0,0,0.08) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.decoration-grid {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background-image: 
+    linear-gradient(var(--color-accent) 2px, transparent 2px),
+    linear-gradient(90deg, var(--color-accent) 2px, transparent 2px);
+  background-size: 20px 20px;
+  opacity: 0.15;
+}
