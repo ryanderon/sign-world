@@ -169,27 +169,27 @@ export default function ImageMarquee() {
         <div className="marquee-row">
           <div className="marquee-track animate-marquee">
             {[...portfolioImages[0], ...portfolioImages[0]].map((image, index) => (
-              <div
-                key={`row1-${index}`}
+                <div
+                  key={`row1-${index}`}
                 onClick={() => handleImageClick(image, 0, index % portfolioImages[0].length)}
-                className="marquee-item group"
-              >
-                <img
-                  src={image.src}
-                  alt={image.alt}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                  loading="lazy"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300" />
+                  className="marquee-item group"
+                >
+                  <img
+                    src={image.src}
+                    alt={image.alt}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300" />
 
-                <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
-                  <span className="inline-block px-2 py-1 rounded text-white text-xs font-medium mb-2" style={{ background: 'linear-gradient(135deg, #f97316 0%, #ec4899 100%)' }}>
-                    {image.category}
-                  </span>
+                  <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
+                    <span className="inline-block px-2 py-1 rounded text-white text-xs font-medium mb-2" style={{ background: 'linear-gradient(135deg, #f97316 0%, #ec4899 100%)' }}>
+                      {image.category}
+                    </span>
                   <p className="text-white font-semibold text-sm">{image.alt}</p>
-                </div>
+                  </div>
 
-                <div className="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-all duration-300 transform scale-75 group-hover:scale-100">
+                  <div className="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-all duration-300 transform scale-75 group-hover:scale-100">
                   <ZoomIcon />
                 </div>
               </div>
@@ -200,27 +200,27 @@ export default function ImageMarquee() {
         <div className="marquee-row">
           <div className="marquee-track animate-marquee-reverse">
             {[...portfolioImages[1], ...portfolioImages[1]].map((image, index) => (
-              <div
-                key={`row2-${index}`}
+                <div
+                  key={`row2-${index}`}
                 onClick={() => handleImageClick(image, 1, index % portfolioImages[1].length)}
-                className="marquee-item group"
-              >
-                <img
-                  src={image.src}
-                  alt={image.alt}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                  loading="lazy"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300" />
+                  className="marquee-item group"
+                >
+                  <img
+                    src={image.src}
+                    alt={image.alt}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300" />
 
-                <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
-                  <span className="inline-block px-2 py-1 rounded text-white text-xs font-medium mb-2" style={{ background: 'linear-gradient(135deg, #00b4b4 0%, #3b82f6 100%)' }}>
-                    {image.category}
-                  </span>
+                  <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
+                    <span className="inline-block px-2 py-1 rounded text-white text-xs font-medium mb-2" style={{ background: 'linear-gradient(135deg, #00b4b4 0%, #3b82f6 100%)' }}>
+                      {image.category}
+                    </span>
                   <p className="text-white font-semibold text-sm">{image.alt}</p>
-                </div>
+                  </div>
 
-                <div className="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-all duration-300 transform scale-75 group-hover:scale-100">
+                  <div className="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-all duration-300 transform scale-75 group-hover:scale-100">
                   <ZoomIcon />
                 </div>
               </div>

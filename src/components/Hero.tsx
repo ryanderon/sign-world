@@ -71,7 +71,7 @@ export default function Hero() {
       
       <div className="absolute inset-0 bg-grid-pattern opacity-30" />
 
-      <div className="relative container pt-32 pb-20 md:pt-40 md:pb-28 h-screen">
+      <div className="relative container pt-24 pb-20 md:pt-30 md:pb-28 h-screen">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center min-h-[70vh]">
           <div className="max-w-xl">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/70 backdrop-blur-sm rounded-full mb-8 border border-teal/30 shadow-sm">
@@ -100,11 +100,11 @@ export default function Hero() {
 
             <div ref={ctaRef} className="space-y-6">
               <div className="flex flex-wrap gap-4">
-                <a href="#contact" className="btn">
+              <a href="#contact" className="btn">
                   {t("hero.startProject")}
                   <ArrowRightIcon className="w-4 h-4 ml-2" />
-                </a>
-                <a href="#services" className="btn-outline">
+              </a>
+              <a href="#services" className="btn-outline">
                   {t("hero.exploreServices")}
                 </a>
               </div>
@@ -113,7 +113,7 @@ export default function Hero() {
                 <p className="text-xs font-semibold text-text-muted uppercase tracking-wider mb-3">
                   {t("hero.alsoExplore")}
                 </p>
-                <div className="flex flex-wrap gap-3">
+                <div className="flex gap-2 lg:flex-row flex-col">
                   <Link 
                     to="/printing" 
                     className="group inline-flex items-center gap-3 px-4 py-3 rounded-xl bg-white shadow-md border border-orange/20 hover:border-orange/40 hover:shadow-lg transition-all duration-300"
@@ -124,7 +124,7 @@ export default function Hero() {
                       </svg>
                     </div>
                     <div className="text-left">
-                      <span className="block font-semibold text-primary text-sm">{t("hero.printingLink")}</span>
+                      <span className="block font-semibold text-primary text-sm">Printing</span>
                       <span className="block text-xs text-text-muted">{t("hero.printingDesc")}</span>
                     </div>
                     <ArrowRightIcon className="w-4 h-4 text-orange opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
