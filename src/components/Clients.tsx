@@ -98,6 +98,7 @@ export default function Clients() {
               <div key={index+1} className="client-logo hover:bg-white">
                 <img
                   src={client}
+                  loading="lazy"
                   alt={`client-${index}`}
                 />
               </div>
