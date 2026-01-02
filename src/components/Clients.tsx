@@ -2,21 +2,9 @@ import { useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useGsapFadeIn } from "../hooks/useGsapFadeIn";
 import { SectionHeader, StarRating, GradientIcon, ArrowRightIcon } from "./ui";
+import { getImageList } from "../helper";
 
-const clients = [
-  { name: "BCA", logo: "BCA" },
-  { name: "AEON Mall", logo: "AEON" },
-  { name: "Unilever", logo: "UNILEVER" },
-  { name: "KFC Indonesia", logo: "KFC" },
-  { name: "Huawei", logo: "HUAWEI" },
-  { name: "Indomaret", logo: "INDOMARET" },
-  { name: "Plaza Senayan", logo: "SENAYAN" },
-  { name: "Erajaya Group", logo: "ERAJAYA" },
-  { name: "Astra International", logo: "ASTRA" },
-  { name: "WIKA", logo: "WIKA" },
-  { name: "MAP Group", logo: "MAP" },
-  { name: "KawanLama", logo: "KAWANLAMA" },
-];
+ 
 
 const testimonials = [
   {
@@ -27,8 +15,10 @@ const testimonials = [
     rating: 5,
     titleId: "Melampaui setiap ekspektasi",
     titleEn: "Exceeded every expectation",
-    contentId: "Profesional, responsif, dan detail-oriented. Mereka mengirimkan signage untuk 50+ outlet tepat waktu dengan kualitas konsisten. Partner sejati.",
-    contentEn: "Professional, responsive, and detail-oriented. They delivered signage for 50+ outlets on time with consistent quality. A true partner.",
+    contentId:
+      "Profesional, responsif, dan detail-oriented. Mereka mengirimkan signage untuk 50+ outlet tepat waktu dengan kualitas konsisten. Partner sejati.",
+    contentEn:
+      "Professional, responsive, and detail-oriented. They delivered signage for 50+ outlets on time with consistent quality. A true partner.",
   },
   {
     id: 2,
@@ -38,8 +28,10 @@ const testimonials = [
     rating: 5,
     titleId: "Keunggulan kelas hospitality",
     titleEn: "Hospitality-grade excellence",
-    contentId: "Mereka memahami standar kemewahan. Signage stainless steel lobby kami memukau—perawatan minimal, dampak maksimal.",
-    contentEn: "They understand luxury standards. Our stainless steel lobby signage is stunning—minimal maintenance, maximum impact.",
+    contentId:
+      "Mereka memahami standar kemewahan. Signage stainless steel lobby kami memukau—perawatan minimal, dampak maksimal.",
+    contentEn:
+      "They understand luxury standards. Our stainless steel lobby signage is stunning—minimal maintenance, maximum impact.",
   },
   {
     id: 3,
@@ -49,8 +41,10 @@ const testimonials = [
     rating: 5,
     titleId: "Solusi branding lengkap",
     titleEn: "Complete branding solution",
-    contentId: "Dari sign lobby hingga wayfinding—mereka menangani seluruh kantor baru kami. Hasilnya mencerminkan identitas korporat kami dengan sempurna.",
-    contentEn: "From lobby signs to wayfinding—they handled our entire new office. The result perfectly reflects our corporate identity.",
+    contentId:
+      "Dari sign lobby hingga wayfinding—mereka menangani seluruh kantor baru kami. Hasilnya mencerminkan identitas korporat kami dengan sempurna.",
+    contentEn:
+      "From lobby signs to wayfinding—they handled our entire new office. The result perfectly reflects our corporate identity.",
   },
   {
     id: 4,
@@ -60,8 +54,10 @@ const testimonials = [
     rating: 5,
     titleId: "Andal dalam skala besar",
     titleEn: "Reliable at scale",
-    contentId: "Tiga tahun, 100+ outlet nasional. Kualitas konsisten, pengiriman andal. Mereka partner signage andalan kami.",
-    contentEn: "Three years, 100+ outlets nationwide. Consistent quality, reliable delivery. They're our go-to signage partner.",
+    contentId:
+      "Tiga tahun, 100+ outlet nasional. Kualitas konsisten, pengiriman andal. Mereka partner signage andalan kami.",
+    contentEn:
+      "Three years, 100+ outlets nationwide. Consistent quality, reliable delivery. They're our go-to signage partner.",
   },
 ];
 
@@ -78,22 +74,32 @@ export default function Clients() {
     { number: "24/7", labelKey: "supportReady" },
   ];
 
+  const clients = getImageList("clients");
+
   return (
     <div ref={ref} className="relative bg-white">
       <div id="clients" className="py-20 md:py-28 bg-surface">
         <div className="container">
           <SectionHeader
             subheading={t("clients.sectionTitle")}
-            heading={<>{t("clients.heading")} <span className="text-gradient">{t("clients.headingHighlight")}</span></>}
+            heading={
+              <>
+                {t("clients.heading")}{" "}
+                <span className="text-gradient">
+                  {t("clients.headingHighlight")}
+                </span>
+              </>
+            }
             description={t("clients.description")}
           />
 
-          <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
-            {clients.map((client) => (
-              <div key={client.name} className="client-logo hover:bg-white">
-                <span className="font-display font-bold text-sm md:text-base text-text-dim group-hover:text-primary transition-colors">
-                  {client.logo}
-                </span>
+          <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-4">
+            {clients.map((client, index) => (
+              <div key={index+1} className="client-logo hover:bg-white">
+                <img
+                  src={client}
+                  alt={`client-${index}`}
+                />
               </div>
             ))}
           </div>
@@ -110,18 +116,33 @@ export default function Clients() {
         <div className="container">
           <div className="grid lg:grid-cols-5 gap-12 items-start">
             <div className="lg:col-span-2 lg:sticky lg:top-32">
-              <span className="text-subheading mb-4 block">{t("clients.testimonials.sectionTitle")}</span>
+              <span className="text-subheading mb-4 block">
+                {t("clients.testimonials.sectionTitle")}
+              </span>
               <h3 className="text-heading text-primary mb-6">
-                {t("clients.testimonials.heading")} <span className="text-gradient-warm">{t("clients.testimonials.headingHighlight")}</span>
+                {t("clients.testimonials.heading")}{" "}
+                <span className="text-gradient-warm">
+                  {t("clients.testimonials.headingHighlight")}
+                </span>
               </h3>
-              
-              <div className="flex items-center gap-4 mb-6 p-4 rounded-xl" style={{ background: 'linear-gradient(135deg, rgba(0,180,180,0.08) 0%, rgba(59,130,246,0.08) 100%)' }}>
-                <div className="font-display text-5xl font-bold text-gradient">4.9</div>
+
+              <div
+                className="flex items-center gap-4 mb-6 p-4 rounded-xl"
+                style={{
+                  background:
+                    "linear-gradient(135deg, rgba(0,180,180,0.08) 0%, rgba(59,130,246,0.08) 100%)",
+                }}
+              >
+                <div className="font-display text-5xl font-bold text-gradient">
+                  4.9
+                </div>
                 <div>
                   <div className="mb-1">
                     <StarRating rating={5} />
                   </div>
-                  <p className="text-sm text-text-muted">{t("clients.testimonials.rating")}</p>
+                  <p className="text-sm text-text-muted">
+                    {t("clients.testimonials.rating")}
+                  </p>
                 </div>
               </div>
 
@@ -140,32 +161,44 @@ export default function Clients() {
                 <div
                   key={testimonial.id}
                   className={`testimonial-card cursor-pointer transition-all ${
-                    activeTestimonial === index 
-                      ? "ring-2 ring-teal border-transparent shadow-lg" 
+                    activeTestimonial === index
+                      ? "ring-2 ring-teal border-transparent shadow-lg"
                       : "hover:shadow-md"
                   }`}
                   onClick={() => setActiveTestimonial(index)}
                 >
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex items-center gap-3">
-                      <GradientIcon variant={index % 2 === 0 ? "teal-blue" : "orange-pink"} size="sm" className="rounded-full text-sm font-bold">
+                      <GradientIcon
+                        variant={index % 2 === 0 ? "teal-blue" : "orange-pink"}
+                        size="sm"
+                        className="rounded-full text-sm font-bold"
+                      >
                         {testimonial.avatar}
                       </GradientIcon>
                       <div>
                         <h4 className="font-display font-semibold text-primary text-sm">
                           {testimonial.name}
                         </h4>
-                        <p className="text-xs text-text-muted">{testimonial.role}</p>
+                        <p className="text-xs text-text-muted">
+                          {testimonial.role}
+                        </p>
                       </div>
                     </div>
                     <StarRating rating={testimonial.rating} size="sm" />
                   </div>
 
                   <h5 className="font-display font-semibold text-primary mb-2">
-                    "{i18n.language === 'id' ? testimonial.titleId : testimonial.titleEn}"
+                    "
+                    {i18n.language === "id"
+                      ? testimonial.titleId
+                      : testimonial.titleEn}
+                    "
                   </h5>
                   <p className="text-text-muted text-sm leading-relaxed">
-                    {i18n.language === 'id' ? testimonial.contentId : testimonial.contentEn}
+                    {i18n.language === "id"
+                      ? testimonial.contentId
+                      : testimonial.contentEn}
                   </p>
                 </div>
               ))}
@@ -174,25 +207,33 @@ export default function Clients() {
         </div>
       </div>
 
-      <div className="py-16" style={{ background: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 100%)' }}>
+      <div
+        className="py-16"
+        style={{
+          background: "linear-gradient(135deg, #1a1a2e 0%, #16213e 100%)",
+        }}
+      >
         <div className="container">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <div key={stat.labelKey} className="text-center">
-                <p 
+                <p
                   className="font-display text-4xl md:text-5xl font-bold mb-2"
-                  style={{ 
-                    background: index % 2 === 0 
-                      ? 'linear-gradient(135deg, #00b4b4 0%, #3b82f6 100%)'
-                      : 'linear-gradient(135deg, #f97316 0%, #ec4899 100%)',
-                    WebkitBackgroundClip: 'text',
-                    WebkitTextFillColor: 'transparent',
-                    backgroundClip: 'text'
+                  style={{
+                    background:
+                      index % 2 === 0
+                        ? "linear-gradient(135deg, #00b4b4 0%, #3b82f6 100%)"
+                        : "linear-gradient(135deg, #f97316 0%, #ec4899 100%)",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                    backgroundClip: "text",
                   }}
                 >
                   {stat.number}
                 </p>
-                <p className="text-white/60 text-sm">{t(`clients.stats.${stat.labelKey}`)}</p>
+                <p className="text-white/60 text-sm">
+                  {t(`clients.stats.${stat.labelKey}`)}
+                </p>
               </div>
             ))}
           </div>

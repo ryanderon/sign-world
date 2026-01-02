@@ -181,11 +181,11 @@ const Navbar = () => {
 
             <div className="pt-4 mt-2 border-t border-border space-y-3">
               <a
-                href="tel:+6282200000000"
+                href="tel:+6282121755446"
                 className="flex items-center gap-3 text-text-muted px-4 py-2"
               >
                 <PhoneIcon className="w-5 h-5" />
-                +62 822-0000-0000
+                +62 821-2175-5446
               </a>
               <a
                 href="#contact"

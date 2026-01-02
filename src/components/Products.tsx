@@ -2,6 +2,7 @@ import { useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { useGsapFadeIn } from "../hooks/useGsapFadeIn";
 import { GradientIcon, ArrowRightIcon, CheckIcon } from "./ui";
+import { importImages } from "../helper";
 
 const benefitIcons = [
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
@@ -80,7 +81,7 @@ export default function Products() {
             <div className="relative hidden lg:block">
               <div className="rounded-2xl overflow-hidden shadow-xl ring-1 ring-black/5">
                 <img
-                  src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=700&h=500&fit=crop"
+                  src={importImages("signage", "7.jpeg")}
                   alt="High Quality Signage"
                   className="w-full h-[400px] object-cover"
                 />
@@ -138,14 +139,14 @@ export default function Products() {
               <div className="space-y-4">
                 <div className="img-reveal aspect-4/3">
                   <img
-                    src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=400&h=300&fit=crop"
+                    src={importImages("signage", "37.jpeg")}
                     alt="Signage"
                     className="w-full h-full object-cover"
                   />
                 </div>
                 <div className="img-reveal aspect-square">
                   <img
-                    src="https://images.unsplash.com/photo-1497215842964-222b430dc094?w=400&h=400&fit=crop"
+                    src={importImages("signage", "10.jpeg")}
                     alt="Signage"
                     className="w-full h-full object-cover"
                   />
@@ -154,7 +155,7 @@ export default function Products() {
               <div className="pt-8">
                 <div className="img-reveal aspect-3/4">
                   <img
-                    src="https://images.unsplash.com/photo-1551135049-8a33b5883817?w=400&h=500&fit=crop"
+                    src={importImages("signage", "6.jpeg")}
                     alt="Signage"
                     className="w-full h-full object-cover"
                   />

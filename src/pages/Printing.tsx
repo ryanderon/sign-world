@@ -10,13 +10,13 @@ import {
   CheckIcon,
 } from "../components/ui";
 import MoreServices from "../components/MoreServices";
+import { importImages } from "../helper";
 
 const printingCategories = [
   {
     id: "digital",
     translationKey: "digital",
-    image:
-      "https://images.unsplash.com/photo-1562654501-a0ccc0fc1d67?w=600&h=400&fit=crop",
+    image: importImages("printing", "15.jpeg"),
     icon: (
       <svg
         className="w-6 h-6"
@@ -36,8 +36,7 @@ const printingCategories = [
   {
     id: "offset",
     translationKey: "offset",
-    image:
-      "https://images.unsplash.com/photo-1586339949916-3e9457bef6d3?w=600&h=400&fit=crop",
+    image: importImages("printing", "12.jpeg"),
     icon: (
       <svg
         className="w-6 h-6"
@@ -57,8 +56,7 @@ const printingCategories = [
   {
     id: "installation",
     translationKey: "installation",
-    image:
-      "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=600&h=400&fit=crop",
+    image: importImages("printing", "16.jpeg"),
     icon: (
       <svg
         className="w-6 h-6"
@@ -77,36 +75,30 @@ const printingCategories = [
   },
 ];
 
-const printingHeroImages = [
-  "https://images.unsplash.com/photo-1562654501-a0ccc0fc1d67?w=600&h=400&fit=crop",
-  "https://images.unsplash.com/photo-1586339949916-3e9457bef6d3?w=400&h=300&fit=crop",
-  "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=400&h=300&fit=crop",
-  "https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=400&h=500&fit=crop",
-];
-
+ 
 const portfolioImages = [
   {
-    src: "https://images.unsplash.com/photo-1586339949916-3e9457bef6d3?w=400&h=300&fit=crop",
+    src: importImages("printing", "12.jpeg"),
     alt: "Offset Printing",
   },
   {
-    src: "https://images.unsplash.com/photo-1562654501-a0ccc0fc1d67?w=400&h=300&fit=crop",
+    src: importImages("printing", "15.jpeg"),
     alt: "Digital Printing",
   },
   {
-    src: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=400&h=300&fit=crop",
+    src: importImages("printing", "16.jpeg"),
     alt: "Installation",
   },
   {
-    src: "https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=400&h=300&fit=crop",
+    src: importImages("printing", "17.png"),
     alt: "Large Format",
   },
   {
-    src: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop",
+    src: importImages("printing", "20.jpeg"),
     alt: "Vehicle Wrap",
   },
   {
-    src: "https://images.unsplash.com/photo-1572044162444-ad60f128bdea?w=400&h=300&fit=crop",
+    src: importImages("printing", "21.jpeg"),
     alt: "Banner Print",
   },
 ];
@@ -212,7 +204,7 @@ export default function Printing() {
               <div className="grid grid-cols-12 grid-rows-6 gap-3 h-[520px]">
                 <div className="hero-img col-span-7 row-span-4 rounded-2xl overflow-hidden shadow-lg ring-1 ring-black/5">
                   <img
-                    src={printingHeroImages[0]}
+                    src={importImages("printing", "13.jpeg")}
                     alt="Digital Printing"
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                   />
@@ -220,7 +212,7 @@ export default function Printing() {
 
                 <div className="hero-img col-span-5 row-span-3 rounded-2xl overflow-hidden shadow-lg ring-1 ring-black/5">
                   <img
-                    src={printingHeroImages[3]}
+                    src={importImages("printing", "5.jpeg")}
                     alt="Large Format Printing"
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                   />
@@ -228,7 +220,7 @@ export default function Printing() {
 
                 <div className="hero-img col-span-4 row-span-2 rounded-2xl overflow-hidden shadow-lg ring-1 ring-black/5">
                   <img
-                    src={printingHeroImages[1]}
+                    src={importImages("printing", "14.jpeg")}
                     alt="Offset Printing"
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                   />
@@ -249,7 +241,7 @@ export default function Printing() {
 
                 <div className="hero-img col-span-5 row-span-3 rounded-2xl overflow-hidden shadow-lg ring-1 ring-black/5">
                   <img
-                    src={printingHeroImages[2]}
+                    src={importImages("printing", "19.jpeg")}
                     alt="Installation Service"
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                   />
@@ -433,7 +425,7 @@ export default function Printing() {
               </div>
               <div className="flex flex-wrap gap-4 md:justify-end">
                 <a
-                  href="https://wa.me/6282200000000"
+                  href="https://wa.me/6282121755446"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-6 py-3 bg-white text-orange font-semibold rounded-full hover:bg-white/90 transition-colors"

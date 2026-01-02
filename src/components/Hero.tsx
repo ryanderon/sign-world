@@ -3,14 +3,8 @@ import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { gsap } from "gsap";
 import { ArrowRightIcon } from "./ui";
-
-const heroImages = [
-  "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&h=400&fit=crop",
-  "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400&h=300&fit=crop",
-  "https://images.unsplash.com/photo-1497215842964-222b430dc094?w=400&h=300&fit=crop",
-  "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400&h=500&fit=crop",
-];
-
+import { importImages } from "../helper";
+ 
 const trustedBrands = ["BCA", "AEON", "Unilever", "KFC", "Huawei"];
 
 export default function Hero() {
@@ -141,7 +135,7 @@ export default function Hero() {
             <div className="grid grid-cols-12 grid-rows-6 gap-3 h-[520px]">
               <div className="hero-img col-span-7 row-span-4 rounded-2xl overflow-hidden shadow-lg ring-1 ring-black/5">
                 <img
-                  src={heroImages[0]}
+                  src={importImages("signage", "1.jpeg")}
                   alt="Professional Signage"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                 />
@@ -149,7 +143,7 @@ export default function Hero() {
               
               <div className="hero-img col-span-5 row-span-3 rounded-2xl overflow-hidden shadow-lg ring-1 ring-black/5">
                 <img
-                  src={heroImages[3]}
+                  src={importImages("signage", "2.jpeg")}
                   alt="Building Signage"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                 />
@@ -157,7 +151,7 @@ export default function Hero() {
               
               <div className="hero-img col-span-4 row-span-2 rounded-2xl overflow-hidden shadow-lg ring-1 ring-black/5">
                 <img
-                  src={heroImages[1]}
+                  src={importImages("signage", "4.jpeg")}
                   alt="Office Branding"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                 />
@@ -170,7 +164,7 @@ export default function Hero() {
               
               <div className="hero-img col-span-5 row-span-3 rounded-2xl overflow-hidden shadow-lg ring-1 ring-black/5">
                 <img
-                  src={heroImages[2]}
+                  src={importImages("signage", "3.jpeg")}
                   alt="Reception Branding"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                 />

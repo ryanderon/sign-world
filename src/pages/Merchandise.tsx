@@ -10,13 +10,14 @@ import {
   CheckIcon,
 } from "../components/ui";
 import MoreServices from "../components/MoreServices";
+import { getImageList, importImages } from "../helper";
 
 const merchandiseCategories = [
   {
     id: "apparel",
     translationKey: "apparel",
     image:
-      "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600&h=400&fit=crop",
+      importImages("merchandise", "5.jpeg"),
     icon: (
       <svg
         className="w-6 h-6"
@@ -37,7 +38,7 @@ const merchandiseCategories = [
     id: "promotional",
     translationKey: "promotional",
     image:
-      "https://images.unsplash.com/photo-1531973576160-7125cd663d86?w=600&h=400&fit=crop",
+        importImages("merchandise", "1.jpeg"),
     icon: (
       <svg
         className="w-6 h-6"
@@ -58,7 +59,7 @@ const merchandiseCategories = [
     id: "corporate",
     translationKey: "corporate",
     image:
-      "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=600&h=400&fit=crop",
+      importImages("merchandise", "3.jpeg"),
     icon: (
       <svg
         className="w-6 h-6"
@@ -79,7 +80,7 @@ const merchandiseCategories = [
     id: "packaging",
     translationKey: "packaging",
     image:
-      "https://images.unsplash.com/photo-1605732562742-3023a888e56e?w=600&h=400&fit=crop",
+      importImages("merchandise", "14.jpeg"),
     icon: (
       <svg
         className="w-6 h-6"
@@ -109,32 +110,32 @@ const popularProducts = [
   {
     name: "T-Shirts",
     image:
-      "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=300&h=300&fit=crop",
+      importImages("merchandise", "5.jpeg"),
   },
   {
-    name: "Tote Bags",
+    name: "Bags",
     image:
-      "https://images.unsplash.com/photo-1544816155-12df9643f363?w=300&h=300&fit=crop",
+      importImages("merchandise", "2.jpeg"),
   },
   {
     name: "Mugs",
     image:
-      "https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?w=300&h=300&fit=crop",
+      importImages("merchandise", "7.jpeg"),
   },
   {
-    name: "Caps",
+    name: "Tumbler",
     image:
-      "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?w=300&h=300&fit=crop",
+      importImages("merchandise", "12.jpeg"),
   },
   {
-    name: "Notebooks",
+    name: "Flash Drives",
     image:
-      "https://images.unsplash.com/photo-1531346878377-a5be20888e57?w=300&h=300&fit=crop",
+      importImages("merchandise", "8.jpeg"),
   },
   {
     name: "Keychains",
     image:
-      "https://images.unsplash.com/photo-1622434641406-a158123450f9?w=300&h=300&fit=crop",
+        importImages("merchandise", "6.jpeg"),
   },
 ];
 
@@ -145,6 +146,8 @@ export default function Merchandise() {
   const subtitleRef = useRef<HTMLParagraphElement>(null!);
   const ctaRef = useRef<HTMLDivElement>(null!);
   const imageRef = useRef<HTMLDivElement>(null!);
+
+  const merchandise = getImageList("merchandise");
   useGsapFadeIn(ref);
 
   useEffect(() => {
@@ -238,7 +241,7 @@ export default function Merchandise() {
               <div className="grid grid-cols-12 grid-rows-6 gap-3 h-[520px]">
                 <div className="hero-img col-span-7 row-span-4 rounded-2xl overflow-hidden shadow-lg ring-1 ring-black/5">
                   <img
-                    src={merchandiseHeroImages[0]}
+                    src={importImages("merchandise", "1.jpeg")}
                     alt="Custom Apparel"
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                   />
@@ -246,7 +249,7 @@ export default function Merchandise() {
 
                 <div className="hero-img col-span-5 row-span-3 rounded-2xl overflow-hidden shadow-lg ring-1 ring-black/5">
                   <img
-                    src={merchandiseHeroImages[3]}
+                    src={importImages("merchandise", "11.png")}
                     alt="Custom Mugs"
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                   />
@@ -254,7 +257,7 @@ export default function Merchandise() {
 
                 <div className="hero-img col-span-4 row-span-2 rounded-2xl overflow-hidden shadow-lg ring-1 ring-black/5">
                   <img
-                    src={merchandiseHeroImages[1]}
+                    src={importImages("merchandise", "8.jpeg")}
                     alt="Promotional Items"
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                   />
@@ -274,7 +277,7 @@ export default function Merchandise() {
 
                 <div className="hero-img col-span-5 row-span-3 rounded-2xl overflow-hidden shadow-lg ring-1 ring-black/5">
                   <img
-                    src={merchandiseHeroImages[2]}
+                    src={importImages("merchandise", "5.jpeg")}
                     alt="Corporate Gifts"
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                   />
@@ -414,15 +417,15 @@ export default function Merchandise() {
                 <div className="space-y-4">
                   <div className="rounded-2xl overflow-hidden shadow-lg">
                     <img
-                      src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&h=500&fit=crop"
-                      alt="Custom T-Shirt"
+                      src={importImages("merchandise", "7.jpeg")}
+                      alt="Custom Mug"
                       className="w-full h-64 object-cover"
                     />
                   </div>
                   <div className="rounded-2xl overflow-hidden shadow-lg">
                     <img
-                      src="https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?w=400&h=300&fit=crop"
-                      alt="Custom Mug"
+                      src={importImages("merchandise", "5.jpeg")}
+                      alt="Custom T-Shirt"
                       className="w-full h-40 object-cover"
                     />
                   </div>
@@ -430,15 +433,14 @@ export default function Merchandise() {
                 <div className="space-y-4 pt-8">
                   <div className="rounded-2xl overflow-hidden shadow-lg">
                     <img
-                      src="https://images.unsplash.com/photo-1544816155-12df9643f363?w=400&h=300&fit=crop"
-                      alt="Custom Bag"
+                      src={importImages("merchandise", "6.jpeg")}
                       className="w-full h-40 object-cover"
                     />
                   </div>
                   <div className="rounded-2xl overflow-hidden shadow-lg">
                     <img
-                      src="https://images.unsplash.com/photo-1531346878377-a5be20888e57?w=400&h=500&fit=crop"
-                      alt="Custom Notebook"
+                      src={importImages("merchandise", "11.png")}
+                      alt="Custom Doll"
                       className="w-full h-64 object-cover"
                     />
                   </div>
@@ -519,7 +521,7 @@ export default function Merchandise() {
               </div>
               <div className="flex flex-wrap gap-4 md:justify-end">
                 <a
-                  href="https://wa.me/6282200000000"
+                  href="https://wa.me/6282121755446"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-6 py-3 bg-white text-purple font-semibold rounded-full hover:bg-white/90 transition-colors"
