@@ -198,14 +198,14 @@ export default function Services() {
 
   return (
     <div ref={ref} className="relative bg-white">
-      <div className="py-20 md:py-28 bg-surface">
+      <div className="py-20 md:py-28 bg-surface" role="region" aria-labelledby="services-heading">
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <span className="text-subheading mb-4 block">
                 {t("services.sectionTitle")}
               </span>
-              <h2 className="text-heading text-primary mb-6">
+              <h2 id="services-heading" className="text-heading text-primary mb-6">
                 {t("services.heading")}{" "}
                 <span className="text-gradient">
                   {t("services.headingHighlight")}
@@ -261,7 +261,7 @@ export default function Services() {
         </div>
       </div>
 
-      <div id="services" className="py-20 md:py-28">
+      <div id="services" className="py-20 md:py-28" role="region" aria-labelledby="expertise-heading">
         <div className="container">
           <SectionHeader
             subheading={t("services.expertiseTitle")}

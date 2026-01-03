@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://sign-world-ten.vercel.com/sitemap.xml
+

@@ -57,10 +57,13 @@ function Lightbox({ image, onClose, onPrev, onNext }: LightboxProps) {
   if (!image) return null;
 
   return (
-    <div
-      className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 backdrop-blur-sm"
-      onClick={onClose}
-    >
+      <div
+        className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 backdrop-blur-sm"
+        onClick={onClose}
+        role="dialog"
+        aria-modal="true"
+        aria-label={image.alt}
+      >
       <button
         onClick={onClose}
         className="absolute top-6 right-6 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-colors z-10"
@@ -186,6 +189,7 @@ export default function ImageMarquee() {
     <section
       id="portfolio"
       className="py-20 md:py-28 bg-surface overflow-hidden"
+      aria-label={t("portfolio.sectionTitle")}
     >
       <div className="container mb-12">
         <SectionHeader

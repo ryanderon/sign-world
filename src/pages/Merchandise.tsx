@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { gsap } from "gsap";
 import { useGsapFadeIn } from "../hooks/useGsapFadeIn";
+import { useSEO } from "../hooks/useSEO";
+import StructuredData from "../components/StructuredData";
 import {
   SectionHeader,
   GradientIcon,
@@ -140,7 +142,7 @@ const popularProducts = [
 ];
 
 export default function Merchandise() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const ref = useRef<HTMLDivElement>(null!);
   const titleRef = useRef<HTMLHeadingElement>(null!);
   const subtitleRef = useRef<HTMLParagraphElement>(null!);
@@ -149,6 +151,19 @@ export default function Merchandise() {
 
   const merchandise = getImageList("merchandise");
   useGsapFadeIn(ref);
+
+  useSEO({
+    title: i18n.language === "id"
+      ? "Custom Merchandise & Promotional Items | SignWorld"
+      : "Custom Merchandise & Promotional Items | SignWorld",
+    description: i18n.language === "id"
+      ? t("merchandise.description")
+      : t("merchandise.description"),
+    keywords: i18n.language === "id"
+      ? "custom merchandise, kaos custom, tote bag custom, mug custom, corporate gift, promotional items, merchandise jakarta"
+      : "custom merchandise, custom t-shirts, custom bags, custom mugs, corporate gifts, promotional items, merchandise jakarta",
+    canonical: typeof window !== "undefined" ? `${window.location.origin}/merchandise` : "",
+  });
 
   useEffect(() => {
     const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
@@ -180,7 +195,8 @@ export default function Merchandise() {
 
   return (
     <div ref={ref} className="relative">
-      <section>
+      <StructuredData type="BreadcrumbList" />
+      <section role="main" aria-label={t("merchandise.sectionTitle")}>
         <div className="aurora-bg">
           <div className="aurora-orb-1" />
           <div className="aurora-orb-2" />
@@ -434,6 +450,7 @@ export default function Merchandise() {
                   <div className="rounded-2xl overflow-hidden shadow-lg">
                     <img
                       src={importImages("merchandise", "6.jpeg")}
+                      alt="Custom Keychain"
                       className="w-full h-40 object-cover"
                     />
                   </div>

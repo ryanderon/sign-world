@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { gsap } from "gsap";
 import { useGsapFadeIn } from "../hooks/useGsapFadeIn";
+import { useSEO } from "../hooks/useSEO";
+import StructuredData from "../components/StructuredData";
 import {
   SectionHeader,
   GradientIcon,
@@ -80,13 +82,26 @@ const portfolioImages = [
 ];
 
 export default function Printing() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const ref = useRef<HTMLDivElement>(null!);
   const titleRef = useRef<HTMLHeadingElement>(null!);
   const subtitleRef = useRef<HTMLParagraphElement>(null!);
   const ctaRef = useRef<HTMLDivElement>(null!);
   const imageRef = useRef<HTMLDivElement>(null!);
   useGsapFadeIn(ref);
+
+  useSEO({
+    title: i18n.language === "id"
+      ? "Layanan Printing Professional | SignWorld"
+      : "Professional Printing Services | SignWorld",
+    description: i18n.language === "id"
+      ? t("printing.description")
+      : t("printing.description"),
+    keywords: i18n.language === "id"
+      ? "digital printing, offset printing, large format printing, banner printing, vehicle wrap, printing jakarta, printing indonesia"
+      : "digital printing, offset printing, large format printing, banner printing, vehicle wrap, printing jakarta, printing indonesia",
+    canonical: typeof window !== "undefined" ? `${window.location.origin}/printing` : "",
+  });
 
   useEffect(() => {
     const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
@@ -118,7 +133,8 @@ export default function Printing() {
 
   return (
     <div ref={ref} className="relative">
-      <section>
+      <StructuredData type="BreadcrumbList" />
+      <section role="main" aria-label={t("printing.sectionTitle")}>
         <div className="aurora-bg">
           <div className="aurora-orb-1" />
           <div className="aurora-orb-2" />
@@ -228,7 +244,7 @@ export default function Printing() {
         </div>
       </section>
 
-      <section id="categories" className="py-20 md:py-28 bg-surface">
+      <section id="categories" className="py-20 md:py-28 bg-surface" aria-label={t("printing.categories.sectionTitle")}>
         <div className="container">
           <SectionHeader
             subheading={t("printing.categories.sectionTitle")}

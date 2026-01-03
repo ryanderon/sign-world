@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://sign-world-ten.vercel.com/</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sign-world-ten.vercel.com/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://sign-world-ten.vercel.com/?lang=id"/>
+  </url>
+  <url>
+    <loc>https://sign-world-ten.vercel.com/printing</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sign-world-ten.vercel.com/printing?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://sign-world-ten.vercel.com/printing?lang=id"/>
+  </url>
+  <url>
+    <loc>https://sign-world-ten.vercel.com/merchandise</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sign-world-ten.vercel.com/merchandise?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://sign-world-ten.vercel.com/merchandise?lang=id"/>
+  </url>
+  <url>
+    <loc>https://sign-world-ten.vercel.com/printing-installation</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sign-world-ten.vercel.com/printing-installation?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://sign-world-ten.vercel.com/printing-installation?lang=id"/>
+  </url>
+</urlset>
+

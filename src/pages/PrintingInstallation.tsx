@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { gsap } from "gsap";
 import { useGsapFadeIn } from "../hooks/useGsapFadeIn";
+import { useSEO } from "../hooks/useSEO";
+import StructuredData from "../components/StructuredData";
 import {
   SectionHeader,
   GradientIcon,
@@ -203,13 +205,26 @@ const portfolioImages = [
 ];
 
 export default function PrintingInstallation() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const ref = useRef<HTMLDivElement>(null!);
   const titleRef = useRef<HTMLHeadingElement>(null!);
   const subtitleRef = useRef<HTMLParagraphElement>(null!);
   const ctaRef = useRef<HTMLDivElement>(null!);
   const imageRef = useRef<HTMLDivElement>(null!);
   useGsapFadeIn(ref);
+
+  useSEO({
+    title: i18n.language === "id"
+      ? "Jasa Pemasangan Professional | SignWorld"
+      : "Professional Installation Services | SignWorld",
+    description: i18n.language === "id"
+      ? t("printingInstallation.description")
+      : t("printingInstallation.description"),
+    keywords: i18n.language === "id"
+      ? "jasa pemasangan, pemasangan baliho, pemasangan billboard, pemasangan banner, pemasangan signage, installation jakarta"
+      : "installation services, billboard installation, banner installation, signage installation, installation jakarta, installation indonesia",
+    canonical: typeof window !== "undefined" ? `${window.location.origin}/printing-installation` : "",
+  });
 
   useEffect(() => {
     const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
@@ -241,7 +256,8 @@ export default function PrintingInstallation() {
 
   return (
     <div ref={ref} className="relative">
-      <section>
+      <StructuredData type="BreadcrumbList" />
+      <section role="main" aria-label={t("printingInstallation.sectionTitle")}>
         <div className="aurora-bg">
           <div className="aurora-orb-1" />
           <div className="aurora-orb-2" />

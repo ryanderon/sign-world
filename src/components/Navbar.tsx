@@ -45,13 +45,15 @@ const Navbar = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50">
+    <header className="fixed top-0 left-0 right-0 z-50" role="banner">
       <nav
         className={`transition-all duration-500 ${
           isScrolled
             ? "bg-white/95 backdrop-blur-lg shadow-sm"
             : "bg-transparent"
         }`}
+        role="navigation"
+        aria-label={t("navbar.home")}
       >
         <div className="container py-4 flex justify-between items-center">
           <Link to="/" className="flex items-center gap-3 group">
@@ -105,10 +107,11 @@ const Navbar = () => {
           </div>
 
           <div className="hidden lg:flex items-center gap-4">
-            <button
-              onClick={toggleLanguage}
-              className="flex items-center gap-1.5 px-3 py-1.5 text-sm font-medium text-text-muted hover:text-primary transition-colors rounded-lg hover:bg-surface"
-            >
+          <button
+            onClick={toggleLanguage}
+            className="flex items-center gap-1.5 px-3 py-1.5 text-sm font-medium text-text-muted hover:text-primary transition-colors rounded-lg hover:bg-surface"
+            aria-label={t("navbar.freeConsultation")}
+          >
               <GlobeIcon className="w-4 h-4" />
               <span className="uppercase">{i18n.language}</span>
             </button>
@@ -177,6 +180,7 @@ const Navbar = () => {
             <button
               onClick={toggleLanguage}
               className="flex items-center gap-2 text-base font-medium text-text-muted hover:text-primary py-3 px-4 rounded-lg hover:bg-surface transition-all duration-300"
+              aria-label={`Switch to ${i18n.language === "id" ? "English" : "Bahasa Indonesia"}`}
             >
               <GlobeIcon className="w-5 h-5" />
               {i18n.language === "id" ? "English" : "Bahasa Indonesia"}

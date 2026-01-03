@@ -55,6 +55,7 @@ export default function Hero() {
       ref={containerRef}
       id="home"
       className="relative min-h-screen overflow-x-clip"
+      aria-label={t("hero.badge")}
     >
       <div className="aurora-bg">
         <div className="aurora-orb-1" />
