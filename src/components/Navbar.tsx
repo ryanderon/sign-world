@@ -9,6 +9,7 @@ const navLinks = [
   { href: "/#services", labelKey: "navbar.services", isAnchor: true },
   { href: "/#portfolio", labelKey: "navbar.portfolio", isAnchor: true },
   { href: "/printing", labelKey: "navbar.printing", isAnchor: false },
+  { href: "/printing-installation", labelKey: "navbar.printingInstallation", isAnchor: false },
   { href: "/merchandise", labelKey: "navbar.merchandise", isAnchor: false },
 ];
 
@@ -72,33 +73,35 @@ const Navbar = () => {
           </Link>
 
           <div className="hidden lg:flex items-center gap-1">
-            {navLinks.map((link) =>
-              link.isAnchor ? (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  onClick={() => handleAnchorClick(link.href)}
-                  className="relative px-4 py-2 text-sm font-medium text-text-muted hover:text-primary transition-colors duration-300"
-                >
-                  {t(link.labelKey)}
-                </a>
-              ) : (
-                <Link
-                  key={link.href}
-                  to={link.href}
-                  className={`relative px-4 py-2 text-sm font-medium transition-colors duration-300 ${
-                    isActivePath(link.href)
-                      ? "text-primary"
-                      : "text-text-muted hover:text-primary"
-                  }`}
-                >
-                  {t(link.labelKey)}
-                  {isActivePath(link.href) && (
-                    <span className="absolute bottom-0 left-4 right-4 h-0.5 bg-gradient-to-r from-teal to-blue rounded-full" />
-                  )}
-                </Link>
-              )
-            )}
+            {navLinks
+              .filter((link) => link.href !== "/printing-installation")
+              .map((link) =>
+                link.isAnchor ? (
+                  <a
+                    key={link.href}
+                    href={link.href}
+                    onClick={() => handleAnchorClick(link.href)}
+                    className="relative px-4 py-2 text-sm font-medium text-text-muted hover:text-primary transition-colors duration-300"
+                  >
+                    {t(link.labelKey)}
+                  </a>
+                ) : (
+                  <Link
+                    key={link.href}
+                    to={link.href}
+                    className={`relative px-4 py-2 text-sm font-medium transition-colors duration-300 ${
+                      isActivePath(link.href)
+                        ? "text-primary"
+                        : "text-text-muted hover:text-primary"
+                    }`}
+                  >
+                    {t(link.labelKey)}
+                    {isActivePath(link.href) && (
+                      <span className="absolute bottom-0 left-4 right-4 h-0.5 bg-gradient-to-r from-teal to-blue rounded-full" />
+                    )}
+                  </Link>
+                )
+              )}
           </div>
 
           <div className="hidden lg:flex items-center gap-4">
@@ -141,7 +144,7 @@ const Navbar = () => {
 
         <div
           className={`lg:hidden overflow-hidden transition-all duration-400 ${
-            isOpen ? "max-h-[500px]" : "max-h-0"
+            isOpen ? "max-h-[600px]" : "max-h-0"
           }`}
         >
           <div className="container py-4 flex flex-col gap-1 bg-white border-t border-border">

@@ -6,6 +6,7 @@
     "products": "Products",
     "clients": "Clients",
     "printing": "Printing",
+    "printingInstallation": "Installation",
     "merchandise": "Merchandise",
     "freeConsultation": "Free Consultation",
     "consultNow": "Consult Now"
@@ -275,9 +276,15 @@
       },
       "printing": {
         "title": "Printing Services",
-        "desc": "Digital printing, offset, and installation. From banners to vehicle wraps—we do it all.",
-        "tags": ["Digital Print", "Offset", "Installation"],
+        "desc": "Digital printing and offset. From banners to vehicle wraps—we do it all.",
+        "tags": ["Digital Print", "Offset"],
         "cta": "View Printing"
+      },
+      "printingInstallation": {
+        "title": "Printing Installation",
+        "desc": "Professional installation services for umbul-umbul, billboards, banners, stickers, signage and more.",
+        "tags": ["Installation", "Umbul-umbul", "Billboard"],
+        "cta": "View Installation"
       },
       "merchandise": {
         "title": "Custom Merchandise",
@@ -311,11 +318,6 @@
           "title": "Offset Printing",
           "desc": "Mass printing with consistent quality. Ideal for high volume at competitive prices.",
           "features": ["Brochure & Flyer", "Magazine & Catalog", "Business Cards", "Packaging"]
-        },
-        "installation": {
-          "title": "Printing Installation",
-          "desc": "From print to install—we handle everything. Professional team, clean results.",
-          "features": ["Wall Wrap", "Vehicle Wrap", "Window Film", "Floor Graphics"]
         }
       }
     },
@@ -420,6 +422,86 @@
     "cta": {
       "title": "Ready to create merchandise?",
       "description": "Free consultation—we'll help bring your merchandise vision to life.",
+      "whatsapp": "Chat WhatsApp",
+      "backToSignage": "View Signage"
+    }
+  },
+  "printingInstallation": {
+    "backToHome": "Back to Home",
+    "sectionTitle": "Installation Services",
+    "heading": "Installation that",
+    "headingHighlight": "lasts.",
+    "description": "Professional installation services for all your printed materials. From umbul-umbul to billboards—we handle it all with precision.",
+    "exploreServices": "Explore Services",
+    "getQuote": "Get a Quote",
+    "learnMore": "Learn More",
+    "categories": {
+      "sectionTitle": "Installation Types",
+      "heading": "What we",
+      "headingHighlight": "install.",
+      "description": "Professional installation for various printed materials",
+      "items": {
+        "umbulUmbul": {
+          "title": "Umbul-umbul",
+          "desc": "Professional installation of umbul-umbul flags for events and promotions."
+        },
+        "baliho": {
+          "title": "Baliho",
+          "desc": "Expert installation of baliho advertising boards with secure mounting."
+        },
+        "billboard": {
+          "title": "Billboard",
+          "desc": "Large format billboard installation with professional equipment and expertise."
+        },
+        "banner": {
+          "title": "Banner / Spanduk",
+          "desc": "Installation of banners and spanduk for events, promotions, and advertising."
+        },
+        "giantBanner": {
+          "title": "Giant Banner",
+          "desc": "Large scale giant banner installation for maximum visibility and impact."
+        },
+        "sticker": {
+          "title": "Sticker",
+          "desc": "Precise sticker installation for vehicles, windows, walls, and various surfaces."
+        },
+        "signage": {
+          "title": "Signage",
+          "desc": "Professional signage installation including indoor and outdoor displays."
+        },
+        "other": {
+          "title": "Other",
+          "desc": "Custom installation services for various printed materials and signage needs."
+        }
+      }
+    },
+    "whyUs": {
+      "sectionTitle": "Why Us",
+      "heading": "Professional",
+      "headingHighlight": "expertise.",
+      "description": "Our experienced installation team ensures every project is completed with precision, safety, and attention to detail.",
+      "features": {
+        "professionalTeam": {
+          "title": "Professional Team",
+          "desc": "Experienced installers with proper tools"
+        },
+        "qualityMaterials": {
+          "title": "Quality Materials",
+          "desc": "Using only the best mounting materials"
+        },
+        "onTimeDelivery": {
+          "title": "On-Time Delivery",
+          "desc": "We respect your deadlines"
+        },
+        "warranty": {
+          "title": "Installation Warranty",
+          "desc": "Guaranteed workmanship quality"
+        }
+      }
+    },
+    "cta": {
+      "title": "Ready for installation?",
+      "description": "Free consultation—we'll help you with professional installation services.",
       "whatsapp": "Chat WhatsApp",
       "backToSignage": "View Signage"
     }

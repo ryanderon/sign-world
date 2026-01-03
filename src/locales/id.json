@@ -6,6 +6,7 @@
     "products": "Produk",
     "clients": "Klien",
     "printing": "Printing",
+    "printingInstallation": "Jasa Pemasangan",
     "merchandise": "Merchandise",
     "freeConsultation": "Konsultasi Gratis",
     "consultNow": "Konsultasi Sekarang"
@@ -275,9 +276,15 @@
       },
       "printing": {
         "title": "Printing Services",
-        "desc": "Digital printing, offset, dan instalasi. Dari banner sampai vehicle wrap—semua bisa.",
-        "tags": ["Digital Print", "Offset", "Installation"],
+        "desc": "Digital printing dan offset. Dari banner sampai vehicle wrap—semua bisa.",
+        "tags": ["Digital Print", "Offset"],
         "cta": "Lihat Printing"
+      },
+      "printingInstallation": {
+        "title": "Jasa Pemasangan",
+        "desc": "Layanan pemasangan profesional untuk umbul-umbul, baliho, billboard, spanduk, stiker, signage dan lainnya.",
+        "tags": ["Pemasangan", "Umbul-umbul", "Baliho"],
+        "cta": "Lihat Jasa Pemasangan"
       },
       "merchandise": {
         "title": "Custom Merchandise",
@@ -311,11 +318,6 @@
           "title": "Offset Printing",
           "desc": "Cetak massal dengan kualitas konsisten. Ideal untuk high volume dengan harga kompetitif.",
           "features": ["Brosur & Flyer", "Majalah & Katalog", "Kartu Nama", "Packaging"]
-        },
-        "installation": {
-          "title": "Printing Installation",
-          "desc": "Dari print sampai pasang—kami handle semuanya. Tim profesional, hasil rapi.",
-          "features": ["Wall Wrap", "Vehicle Wrap", "Window Film", "Floor Graphics"]
         }
       }
     },
@@ -420,6 +422,86 @@
     "cta": {
       "title": "Ready bikin merchandise?",
       "description": "Konsultasi gratis—kami bantu wujudkan merchandise impianmu.",
+      "whatsapp": "Chat WhatsApp",
+      "backToSignage": "Lihat Signage"
+    }
+  },
+  "printingInstallation": {
+    "backToHome": "Kembali ke Home",
+    "sectionTitle": "Jasa Pemasangan",
+    "heading": "Pemasangan yang",
+    "headingHighlight": "profesional.",
+    "description": "Layanan pemasangan profesional untuk semua material cetak kamu. Dari umbul-umbul sampai billboard—kami handle dengan presisi.",
+    "exploreServices": "Explore Layanan",
+    "getQuote": "Minta Penawaran",
+    "learnMore": "Selengkapnya",
+    "categories": {
+      "sectionTitle": "Jenis Pemasangan",
+      "heading": "Yang kami",
+      "headingHighlight": "pasang.",
+      "description": "Pemasangan profesional untuk berbagai material cetak",
+      "items": {
+        "umbulUmbul": {
+          "title": "Umbul-umbul",
+          "desc": "Pemasangan profesional umbul-umbul untuk event dan promosi."
+        },
+        "baliho": {
+          "title": "Baliho",
+          "desc": "Pemasangan baliho dengan mounting yang aman dan profesional."
+        },
+        "billboard": {
+          "title": "Billboard",
+          "desc": "Pemasangan billboard format besar dengan peralatan dan keahlian profesional."
+        },
+        "banner": {
+          "title": "Spanduk / Banner",
+          "desc": "Pemasangan spanduk dan banner untuk event, promosi, dan iklan."
+        },
+        "giantBanner": {
+          "title": "Giant Banner",
+          "desc": "Pemasangan giant banner skala besar untuk visibilitas dan impact maksimal."
+        },
+        "sticker": {
+          "title": "Stiker",
+          "desc": "Pemasangan stiker presisi untuk kendaraan, kaca, dinding, dan berbagai permukaan."
+        },
+        "signage": {
+          "title": "Signage",
+          "desc": "Pemasangan signage profesional termasuk display indoor dan outdoor."
+        },
+        "other": {
+          "title": "Lainnya",
+          "desc": "Layanan pemasangan custom untuk berbagai material cetak dan kebutuhan signage."
+        }
+      }
+    },
+    "whyUs": {
+      "sectionTitle": "Kenapa Kami",
+      "heading": "Expertise",
+      "headingHighlight": "profesional.",
+      "description": "Tim pemasangan berpengalaman kami memastikan setiap proyek selesai dengan presisi, keamanan, dan perhatian pada detail.",
+      "features": {
+        "professionalTeam": {
+          "title": "Tim Profesional",
+          "desc": "Installer berpengalaman dengan tools lengkap"
+        },
+        "qualityMaterials": {
+          "title": "Material Berkualitas",
+          "desc": "Pakai material mounting terbaik"
+        },
+        "onTimeDelivery": {
+          "title": "On-Time Delivery",
+          "desc": "Kami respect deadline kamu"
+        },
+        "warranty": {
+          "title": "Garansi Pemasangan",
+          "desc": "Kualitas pengerjaan terjamin"
+        }
+      }
+    },
+    "cta": {
+      "title": "Ready untuk pemasangan?",
+      "description": "Konsultasi gratis—kami bantu dengan layanan pemasangan profesional.",
       "whatsapp": "Chat WhatsApp",
       "backToSignage": "Lihat Signage"
     }

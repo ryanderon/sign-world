@@ -79,7 +79,7 @@ export default function Footer() {
               </div>
             </div>
 
-            <div className="bg-white p-8 rounded-2xl border border-border shadow-lg">
+            <div className="bg-white p-8 rounded-2xl border border-border shadow-lg break-all">
               <div className="space-y-4">
                 <a
                   href="https://wa.me/6282121755446"
