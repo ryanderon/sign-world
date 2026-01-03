@@ -243,11 +243,11 @@ export default function Printing() {
             description={t("printing.categories.description")}
           />
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="flex flex-wrap justify-center gap-8">
             {printingCategories.map((category) => (
               <article
                 key={category.id}
-                className="group relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500"
+                className="group relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 w-full md:w-[calc((100%-4rem)/3)]"
               >
                 <div className="relative h-48 overflow-hidden">
                   <img
