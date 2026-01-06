@@ -38,7 +38,7 @@ const installationTypes = [
   {
     id: "baliho",
     translationKey: "baliho",
-    image: importImages("installing", "4.jpeg"),
+    image: importImages("installing", "2.jpeg"),
     icon: (
       <svg
         className="w-6 h-6"
@@ -58,7 +58,7 @@ const installationTypes = [
   {
     id: "billboard",
     translationKey: "billboard",
-    image: importImages("installing", "3.jpeg"),
+    image: importImages("installing", "1.jpeg"),
     icon: (
       <svg
         className="w-6 h-6"
