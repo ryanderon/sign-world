@@ -4,13 +4,11 @@ import { useGsapFadeIn } from "../hooks/useGsapFadeIn";
 import { SectionHeader, StarRating, GradientIcon, ArrowRightIcon } from "./ui";
 import { getImageList } from "../helper";
 
- 
-
 const testimonials = [
   {
     id: 1,
     name: "Dian Rachmawati",
-    role: "Brand Manager, PT. Retail Nusantara",
+    role: "Brand Manager",
     avatar: "DR",
     rating: 5,
     titleId: "Melampaui setiap ekspektasi",
@@ -23,7 +21,7 @@ const testimonials = [
   {
     id: 2,
     name: "Andi Hermawan",
-    role: "Facility Manager, Hotel Grand Pacific",
+    role: "Facility Manager",
     avatar: "AH",
     rating: 5,
     titleId: "Keunggulan kelas hospitality",
@@ -36,7 +34,7 @@ const testimonials = [
   {
     id: 3,
     name: "Novita Widjaja",
-    role: "Marketing Director, PT. Mitra Teknologi",
+    role: "Marketing Director",
     avatar: "NW",
     rating: 5,
     titleId: "Solusi branding lengkap",
@@ -95,12 +93,8 @@ export default function Clients() {
 
           <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-4">
             {clients.map((client, index) => (
-              <div key={index+1} className="client-logo hover:bg-white">
-                <img
-                  src={client}
-                  loading="lazy"
-                  alt={`client-${index}`}
-                />
+              <div key={index + 1} className="client-logo hover:bg-white">
+                <img src={client} loading="lazy" alt={`client-${index}`} />
               </div>
             ))}
           </div>

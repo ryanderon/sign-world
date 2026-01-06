@@ -18,7 +18,7 @@ const installationTypes = [
   {
     id: "umbul-umbul",
     translationKey: "umbulUmbul",
-    image: importImages("installing", "1.jpeg"),
+    image: importImages("installing", "7.jpeg"),
     icon: (
       <svg
         className="w-6 h-6"
@@ -38,7 +38,7 @@ const installationTypes = [
   {
     id: "baliho",
     translationKey: "baliho",
-    image: importImages("installing", "2.jpeg"),
+    image: importImages("installing", "4.jpeg"),
     icon: (
       <svg
         className="w-6 h-6"
@@ -78,7 +78,7 @@ const installationTypes = [
   {
     id: "banner",
     translationKey: "banner",
-    image: importImages("installing", "4.jpeg"),
+    image: importImages("installing", "15.jpeg"),
     icon: (
       <svg
         className="w-6 h-6"
@@ -118,7 +118,7 @@ const installationTypes = [
   {
     id: "sticker",
     translationKey: "sticker",
-    image: importImages("installing", "6.jpeg"),
+    image: importImages("wrapping", "image102.jpeg"),
     icon: (
       <svg
         className="w-6 h-6"
@@ -138,7 +138,7 @@ const installationTypes = [
   {
     id: "signage",
     translationKey: "signage",
-    image: importImages("installing", "7.jpeg"),
+    image: importImages("signage", "42.jpeg"),
     icon: (
       <svg
         className="w-6 h-6"
@@ -158,7 +158,7 @@ const installationTypes = [
   {
     id: "other",
     translationKey: "other",
-    image: importImages("installing", "8.jpeg"),
+    image: importImages("wrapping", "image94.jpeg"),
     icon: (
       <svg
         className="w-6 h-6"
