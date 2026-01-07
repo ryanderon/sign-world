@@ -10,12 +10,25 @@ export default defineConfig({
     tailwindcss(),
     sitemapPlugin({
       hostname: "https://sign-world.id",
-      routes: [
-        "/",
-        "/merchandise",
+      dynamicRoutes: [
         "/printing",
+        "/merchandise",
         "/printing-installation",
       ],
-    } as any),
+      changefreq: {
+        "/": "weekly",
+        "/printing": "monthly",
+        "/merchandise": "monthly",
+        "/printing-installation": "monthly",
+      },
+      priority: {
+        "/": 1.0,
+        "/printing": 0.8,
+        "/merchandise": 0.8,
+        "/printing-installation": 0.8,
+      },
+      readable: true,
+      generateRobotsTxt: false, // We already have robots.txt
+    }),
   ],
 });
