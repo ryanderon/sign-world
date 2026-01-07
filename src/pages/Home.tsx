@@ -13,14 +13,14 @@ export default function Home() {
   
   useSEO({
     title: i18n.language === "id" 
-      ? "SignWorld | Signage & Visual Branding Professional"
-      : "SignWorld | Signage & Visual Branding Professional",
+      ? "Signage Jakarta | SignWorld - Jasa Signage & Visual Branding Professional"
+      : "Signage Jakarta | SignWorld - Professional Signage & Visual Branding",
     description: i18n.language === "id"
-      ? "Solusi Professional Signage & Visual Branding. Custom signage, huruf timbul, signage akrilik, dan visual branding untuk brand Anda."
-      : "Premium signage solutions that transform spaces and elevate brands. From concept to installation—crafted with precision.",
+      ? "Signage di Jakarta terpercaya. Jasa signage, neon lightbox jakarta, jasa pemasangan baliho, custom signage akrilik, dan visual branding profesional. Hubungi SignWorld sekarang!"
+      : "Professional signage solutions in Jakarta. Custom signage, neon lightbox, installation services, acrylic signage, and visual branding. Contact SignWorld today!",
     keywords: i18n.language === "id"
-      ? "signage, huruf timbul, signage akrilik, visual branding, neon box, LED lightbox, custom signage, 3D lettering, signage jakarta, signage indonesia"
-      : "signage, 3D lettering, acrylic signage, visual branding, neon box, LED lightbox, custom signage, signage jakarta, signage indonesia",
+      ? "signage di jakarta, jasa pemasangan baliho, jasa pemasangan, neon lightbox jakarta, signage jakarta, custom signage jakarta, huruf timbul jakarta, signage akrilik jakarta, jasa pemasangan billboard jakarta, neon box jakarta"
+      : "signage jakarta, custom signage jakarta, neon lightbox jakarta, installation services jakarta, acrylic signage jakarta, signage indonesia",
     canonical: typeof window !== "undefined" ? window.location.origin : "",
   });
 

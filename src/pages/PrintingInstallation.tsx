@@ -215,13 +215,13 @@ export default function PrintingInstallation() {
 
   useSEO({
     title: i18n.language === "id"
-      ? "Jasa Pemasangan Professional | SignWorld"
-      : "Professional Installation Services | SignWorld",
+      ? "Jasa Pemasangan Baliho Jakarta | SignWorld - Pemasangan Professional"
+      : "Installation Services Jakarta | SignWorld - Professional Installation",
     description: i18n.language === "id"
-      ? t("printingInstallation.description")
+      ? "Jasa pemasangan baliho, billboard, banner, dan signage di Jakarta. Tim profesional berpengalaman untuk pemasangan umbul-umbul, baliho, billboard, dan signage. Hubungi SignWorld untuk konsultasi gratis!"
       : t("printingInstallation.description"),
     keywords: i18n.language === "id"
-      ? "jasa pemasangan, pemasangan baliho, pemasangan billboard, pemasangan banner, pemasangan signage, installation jakarta"
+      ? "jasa pemasangan baliho, jasa pemasangan, pemasangan baliho jakarta, pemasangan billboard jakarta, pemasangan banner jakarta, pemasangan signage jakarta, jasa pemasangan umbul-umbul jakarta, installation jakarta"
       : "installation services, billboard installation, banner installation, signage installation, installation jakarta, installation indonesia",
     canonical: typeof window !== "undefined" ? `${window.location.origin}/printing-installation` : "",
   });

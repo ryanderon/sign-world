@@ -26,12 +26,18 @@ export function StructuredData({
         logo: `${baseUrl}/logo.jpg`,
         description:
           i18n.language === "id"
-            ? "Solusi Professional Signage & Visual Branding. Custom signage, huruf timbul, signage akrilik, dan visual branding untuk brand Anda."
-            : "Professional Signage & Visual Branding Solutions. Custom signage, 3D lettering, acrylic signage, and visual branding for your brand.",
+            ? "Signage di Jakarta terpercaya. Jasa signage, neon lightbox jakarta, jasa pemasangan baliho, custom signage akrilik, dan visual branding profesional."
+            : "Professional Signage & Visual Branding Solutions in Jakarta. Custom signage, neon lightbox, installation services, acrylic signage, and visual branding.",
         address: {
           "@type": "PostalAddress",
           addressCountry: "ID",
-          addressLocality: "Indonesia",
+          addressLocality: "Jakarta",
+          addressRegion: "DKI Jakarta",
+          addressLocalityTranslated: {
+            "@type": "PostalAddress",
+            "@language": "en",
+            addressLocality: "Jakarta",
+          },
         },
         contactPoint: [
           {
@@ -59,12 +65,18 @@ export function StructuredData({
         email: "thesignworldadv@gmail.com",
         description:
           i18n.language === "id"
-            ? "Solusi Professional Signage & Visual Branding. Custom signage, huruf timbul, signage akrilik, dan visual branding untuk brand Anda."
-            : "Professional Signage & Visual Branding Solutions. Custom signage, 3D lettering, acrylic signage, and visual branding for your brand.",
+            ? "Signage di Jakarta terpercaya. Jasa signage, neon lightbox jakarta, jasa pemasangan baliho, custom signage akrilik, dan visual branding profesional."
+            : "Professional Signage & Visual Branding Solutions in Jakarta. Custom signage, neon lightbox, installation services, acrylic signage, and visual branding.",
         address: {
           "@type": "PostalAddress",
           addressCountry: "ID",
-          addressLocality: "Indonesia",
+          addressLocality: "Jakarta",
+          addressRegion: "DKI Jakarta",
+          addressLocalityTranslated: {
+            "@type": "PostalAddress",
+            "@language": "en",
+            addressLocality: "Jakarta",
+          },
         },
         priceRange: "$$",
         openingHoursSpecification: {
@@ -80,10 +92,20 @@ export function StructuredData({
           opens: "09:00",
           closes: "18:00",
         },
-        areaServed: {
-          "@type": "Country",
-          name: "Indonesia",
-        },
+        areaServed: [
+          {
+            "@type": "City",
+            name: "Jakarta",
+            containedIn: {
+              "@type": "Country",
+              name: "Indonesia",
+            },
+          },
+          {
+            "@type": "Country",
+            name: "Indonesia",
+          },
+        ],
         sameAs: ["https://wa.me/6282121755446"],
         contactPoint: {
           "@type": "ContactPoint",
@@ -143,14 +165,24 @@ export function StructuredData({
           telephone: "+62-821-2175-5446",
           email: "thesignworldadv@gmail.com",
         },
-        areaServed: {
-          "@type": "Country",
-          name: "Indonesia",
-        },
+        areaServed: [
+          {
+            "@type": "City",
+            name: "Jakarta",
+            containedIn: {
+              "@type": "Country",
+              name: "Indonesia",
+            },
+          },
+          {
+            "@type": "Country",
+            name: "Indonesia",
+          },
+        ],
         description:
           i18n.language === "id"
-            ? "Layanan signage custom, huruf timbul 3D, signage akrilik, LED neon box, visual branding, dan jasa pemasangan profesional."
-            : "Custom signage services, 3D lettering, acrylic signage, LED neon box, visual branding, and professional installation services.",
+            ? "Signage di Jakarta, jasa pemasangan baliho, neon lightbox jakarta, custom signage akrilik, huruf timbul 3D, LED neon box, dan visual branding profesional."
+            : "Signage services in Jakarta, installation services, neon lightbox, custom acrylic signage, 3D lettering, LED neon box, and professional visual branding.",
       };
 
       switch (type) {
