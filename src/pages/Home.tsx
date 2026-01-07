@@ -13,8 +13,8 @@ export default function Home() {
   
   useSEO({
     title: i18n.language === "id" 
-      ? "Signage Jakarta | SignWorld - Jasa Signage & Visual Branding Professional"
-      : "Signage Jakarta | SignWorld - Professional Signage & Visual Branding",
+      ? "Sign World | Signage & Visual Branding Professional di Jakarta"
+      : "Sign World | Professional Signage & Visual Branding in Jakarta",
     description: i18n.language === "id"
       ? "Signage di Jakarta terpercaya. Jasa signage, neon lightbox jakarta, jasa pemasangan baliho, custom signage akrilik, dan visual branding profesional. Hubungi SignWorld sekarang!"
       : "Professional signage solutions in Jakarta. Custom signage, neon lightbox, installation services, acrylic signage, and visual branding. Contact SignWorld today!",
