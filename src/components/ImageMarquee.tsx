@@ -12,18 +12,18 @@ import { getImageList } from "../helper";
 const portfolioImages = [
   getImageList("signage").map((image, index) => ({
     src: image,
-    alt: `Signage ${index + 1}`,
+    alt: `Custom Signage Design ${index + 1} - Professional Signage & Visual Branding by SignWorld`,
     category: "Signage",
   })),
   getImageList("printing").map((image, index) => ({
     src: image,
-    alt: `Printing ${index + 1}`,
+    alt: `Professional Printing Service ${index + 1} - Digital & Offset Printing by SignWorld`,
     category: "Printing",
   })),
 
   getImageList("merchandise").map((image, index) => ({
     src: image,
-    alt: `Merchandise ${index + 1}`,
+    alt: `Custom Merchandise & Promotional Items ${index + 1} - Corporate Gifts by SignWorld`,
     category: "Merchandise",
   })),
 ];
