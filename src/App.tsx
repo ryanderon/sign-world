@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Layout } from "./components/layout";
 import { Home, Printing, Merchandise, PrintingInstallation } from "./pages";
+import { Analytics } from '@vercel/analytics/react';
 
 export default function App() {
   return (
@@ -13,6 +14,7 @@ export default function App() {
           <Route path="/printing-installation" element={<PrintingInstallation />} />
         </Route>
       </Routes>
+      <Analytics />
     </BrowserRouter>
   );
 }
