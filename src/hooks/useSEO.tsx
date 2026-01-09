@@ -15,7 +15,7 @@ export function useSEO({
   title,
   description,
   keywords,
-  ogImage = "/logo.jpg",
+  ogImage = "/favicon.ico",
   ogType = "website",
   canonical,
   noindex = false,
