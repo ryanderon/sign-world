@@ -218,7 +218,7 @@ export default function PrintingInstallation() {
       ? "Jasa Pemasangan Baliho Jakarta | SignWorld - Pemasangan Professional"
       : "Installation Services Jakarta | SignWorld - Professional Installation",
     description: i18n.language === "id"
-      ? "Jasa pemasangan baliho, billboard, banner, dan signage di Jakarta. Tim profesional berpengalaman untuk pemasangan umbul-umbul, baliho, billboard, dan signage. Hubungi SignWorld untuk konsultasi gratis!"
+      ? "Jasa pemasangan baliho, billboard, banner, dan signage di Indonesia. Tim profesional berpengalaman untuk pemasangan umbul-umbul, baliho, billboard, dan signage. Hubungi SignWorld untuk konsultasi gratis!"
       : t("printingInstallation.description"),
     keywords: i18n.language === "id"
       ? "jasa pemasangan baliho, jasa pemasangan, pemasangan baliho jakarta, pemasangan billboard jakarta, pemasangan banner jakarta, pemasangan signage jakarta, jasa pemasangan umbul-umbul jakarta, installation jakarta"

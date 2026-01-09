@@ -26,7 +26,7 @@ export function StructuredData({
         logo: `${baseUrl}/logo.jpg`,
         description:
           i18n.language === "id"
-            ? "Signage di Jakarta terpercaya. Jasa signage, neon lightbox jakarta, jasa pemasangan baliho, custom signage akrilik, dan visual branding profesional."
+            ? "Signage di Indonesia terpercaya. Jasa signage, neon lightbox jakarta, jasa pemasangan baliho, custom signage akrilik, dan visual branding profesional."
             : "Professional Signage & Visual Branding Solutions in Jakarta. Custom signage, neon lightbox, installation services, acrylic signage, and visual branding.",
         address: {
           "@type": "PostalAddress",
@@ -65,7 +65,7 @@ export function StructuredData({
         email: "thesignworldadv@gmail.com",
         description:
           i18n.language === "id"
-            ? "Signage di Jakarta terpercaya. Jasa signage, neon lightbox jakarta, jasa pemasangan baliho, custom signage akrilik, dan visual branding profesional."
+            ? "Signage di Indonesia terpercaya. Jasa signage, neon lightbox jakarta, jasa pemasangan baliho, custom signage akrilik, dan visual branding profesional."
             : "Professional Signage & Visual Branding Solutions in Jakarta. Custom signage, neon lightbox, installation services, acrylic signage, and visual branding.",
         address: {
           "@type": "PostalAddress",
@@ -181,7 +181,7 @@ export function StructuredData({
         ],
         description:
           i18n.language === "id"
-            ? "Signage di Jakarta, jasa pemasangan baliho, neon lightbox jakarta, custom signage akrilik, huruf timbul 3D, LED neon box, dan visual branding profesional."
+            ? "Signage di Indonesia, jasa pemasangan baliho, neon lightbox jakarta, custom signage akrilik, huruf timbul 3D, LED neon box, dan visual branding profesional."
             : "Signage services in Jakarta, installation services, neon lightbox, custom acrylic signage, 3D lettering, LED neon box, and professional visual branding.",
       };
 
