@@ -97,7 +97,7 @@ export default function Hero() {
 
             <div ref={ctaRef} className="space-y-6">
               <div className="flex flex-wrap gap-4">
-                <a href="#contact" className="btn">
+                <a href="#contact" className="btn px-[24px] py-[16px]">
                   {t("hero.startProject")}
                   <ArrowRightIcon className="w-4 h-4 ml-2" />
                 </a>
@@ -107,7 +107,7 @@ export default function Hero() {
               </div>
 
               <div className="flex items-center gap-3 flex-wrap">
-                <span className="text-xs font-medium text-text-muted mr-1">
+                <span className="hidden sm:inline text-xs font-medium text-text-muted mr-1">
                   {t("hero.alsoExplore")}
                 </span>
                 <Link
