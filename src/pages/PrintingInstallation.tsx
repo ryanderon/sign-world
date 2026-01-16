@@ -179,7 +179,7 @@ const installationTypes = [
 
 const portfolioImages = [
   {
-    src: importImages("installing", "1.jpeg"),
+    src: importImages("wrapping", "image103.jpeg"),
     alt: "Umbul-umbul Installation",
   },
   {
@@ -199,7 +199,7 @@ const portfolioImages = [
     alt: "Giant Banner Installation",
   },
   {
-    src: importImages("installing", "6.jpeg"),
+    src: importImages("wrapping", "image101.jpeg"),
     alt: "Sticker Installation",
   },
 ];
@@ -319,7 +319,7 @@ export default function PrintingInstallation() {
               <div className="grid grid-cols-12 grid-rows-6 gap-3 h-[520px]">
                 <div className="hero-img col-span-7 row-span-4 rounded-2xl overflow-hidden shadow-lg ring-1 ring-black/5">
                   <img
-                    src={importImages("installing", "8.jpeg")}
+                    src={importImages("wrapping", "image103.jpeg")}
                     alt="Installation Service"
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                   />
@@ -335,7 +335,7 @@ export default function PrintingInstallation() {
 
                 <div className="hero-img col-span-4 row-span-2 rounded-2xl overflow-hidden shadow-lg ring-1 ring-black/5">
                   <img
-                    src={importImages("installing", "10.jpeg")}
+                    src={importImages("wrapping", "image90.jpeg")}
                     alt="Installation Team"
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                   />
@@ -356,7 +356,7 @@ export default function PrintingInstallation() {
 
                 <div className="hero-img col-span-5 row-span-3 rounded-2xl overflow-hidden shadow-lg ring-1 ring-black/5">
                   <img
-                    src={importImages("installing", "11.jpeg")}
+                    src={importImages("installing", "8.jpeg")}
                     alt="Installation Service"
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                   />

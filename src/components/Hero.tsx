@@ -66,7 +66,7 @@ export default function Hero() {
 
       <div className="absolute inset-0 bg-grid-pattern opacity-30" />
 
-      <div className="relative container pt-24 pb-20 md:pt-30 md:pb-28 h-screen">
+      <div className="relative container pt-24 pb-20 md:pt-30 md:pb-28 min-h-screen">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center min-h-[70vh]">
           <div className="max-w-xl">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/70 backdrop-blur-sm rounded-full mb-8 border border-teal/30 shadow-sm">
@@ -107,7 +107,7 @@ export default function Hero() {
               </div>
 
               <div className="flex items-center gap-3 flex-wrap">
-                <span className="hidden sm:inline text-xs font-medium text-text-muted mr-1">
+                <span className="text-xs font-medium text-text-muted mr-1">
                   {t("hero.alsoExplore")}
                 </span>
                 <Link
@@ -132,7 +132,7 @@ export default function Hero() {
                 </Link>
                 <Link
                   to="/merchandise"
-                  className="group inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-white/80 backdrop-blur-sm border border-purple/30 hover:border-purple/50 hover:bg-white transition-all duration-300 text-sm"
+                  className="group inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-white/80 backdrop-blur-sm border border-purple/30 hover:border-purple/50 hover:bg-white transition-all duration-300 text-sm w-[134px]"
                 >
                   <svg
                     className="w-4 h-4 text-purple shrink-0"
