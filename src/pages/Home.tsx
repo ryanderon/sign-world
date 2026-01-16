@@ -21,7 +21,6 @@ export default function Home() {
     keywords: i18n.language === "id"
       ? "signage di jakarta, jasa pemasangan baliho, jasa pemasangan, neon lightbox jakarta, signage jakarta, custom signage jakarta, huruf timbul jakarta, signage akrilik jakarta, jasa pemasangan billboard jakarta, neon box jakarta"
       : "signage jakarta, custom signage jakarta, neon lightbox jakarta, installation services jakarta, acrylic signage jakarta, signage indonesia",
-    canonical: typeof window !== "undefined" ? window.location.origin : "",
   });
 
   return (

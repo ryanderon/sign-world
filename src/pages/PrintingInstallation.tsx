@@ -223,7 +223,6 @@ export default function PrintingInstallation() {
     keywords: i18n.language === "id"
       ? "jasa pemasangan baliho, jasa pemasangan, pemasangan baliho jakarta, pemasangan billboard jakarta, pemasangan banner jakarta, pemasangan signage jakarta, jasa pemasangan umbul-umbul jakarta, installation jakarta"
       : "installation services, billboard installation, banner installation, signage installation, installation jakarta, installation indonesia",
-    canonical: typeof window !== "undefined" ? `${window.location.origin}/printing-installation` : "",
   });
 
   useEffect(() => {

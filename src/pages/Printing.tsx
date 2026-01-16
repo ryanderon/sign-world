@@ -100,7 +100,6 @@ export default function Printing() {
     keywords: i18n.language === "id"
       ? "digital printing, offset printing, large format printing, banner printing, vehicle wrap, printing jakarta, printing indonesia"
       : "digital printing, offset printing, large format printing, banner printing, vehicle wrap, printing jakarta, printing indonesia",
-    canonical: typeof window !== "undefined" ? `${window.location.origin}/printing` : "",
   });
 
   useEffect(() => {

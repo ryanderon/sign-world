@@ -162,7 +162,6 @@ export default function Merchandise() {
     keywords: i18n.language === "id"
       ? "custom merchandise, kaos custom, tote bag custom, mug custom, corporate gift, promotional items, merchandise jakarta"
       : "custom merchandise, custom t-shirts, custom bags, custom mugs, corporate gifts, promotional items, merchandise jakarta",
-    canonical: typeof window !== "undefined" ? `${window.location.origin}/merchandise` : "",
   });
 
   useEffect(() => {
