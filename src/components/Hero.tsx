@@ -179,7 +179,7 @@ export default function Hero() {
             </div>
           </div>
 
-          <div ref={imageRef} className="hidden lg:block">
+          <div ref={imageRef} className="block">
             <div className="grid grid-cols-12 grid-rows-6 gap-3 h-[520px]">
               <div className="hero-img col-span-7 row-span-4 rounded-2xl overflow-hidden shadow-lg ring-1 ring-black/5">
                 <img
@@ -197,7 +197,7 @@ export default function Hero() {
                 />
               </div>
 
-              <div className="hero-img col-span-4 row-span-2 rounded-2xl overflow-hidden shadow-lg ring-1 ring-black/5">
+              <div className="col-span-5 row-span-3 hero-img lg:col-span-4 lg:row-span-2 rounded-2xl overflow-hidden shadow-lg ring-1 ring-black/5">
                 <img
                   src={importImages("signage", "46.jpeg")}
                   alt="Office Branding"
@@ -205,14 +205,14 @@ export default function Hero() {
                 />
               </div>
 
-              <div className="hero-img col-span-3 row-span-2 rounded-2xl gradient-teal-blue p-4 flex flex-col justify-center items-center text-white shadow-lg">
+              <div className="hidden lg:flex hero-img col-span-3 row-span-2 rounded-2xl gradient-teal-blue p-4 flex-col justify-center items-center text-white shadow-lg">
                 <p className="font-display text-3xl font-bold">1000+</p>
                 <p className="text-sm text-white/80 text-center">
                   {t("hero.projectsDone")}
                 </p>
               </div>
 
-              <div className="hero-img col-span-5 row-span-3 rounded-2xl overflow-hidden shadow-lg ring-1 ring-black/5">
+              <div className="col-span-7 row-span-2 hero-img lg:col-span-5 lg:row-span-3 rounded-2xl overflow-hidden shadow-lg ring-1 ring-black/5">
                 <img
                   src={importImages("signage", "3.jpeg")}
                   alt="Reception Branding"
