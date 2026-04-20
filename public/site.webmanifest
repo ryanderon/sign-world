@@ -1,0 +1,21 @@
+{
+  "name": "SignWorld - Signage & Visual Branding",
+  "short_name": "SignWorld",
+  "description": "Signage di Jakarta terpercaya. Custom signage, huruf timbul 3D, LED neon box, dan visual branding profesional.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

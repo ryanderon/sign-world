@@ -195,6 +195,7 @@ export default function Merchandise() {
   return (
     <div ref={ref} className="relative">
       <StructuredData type="BreadcrumbList" />
+      <StructuredData type="Service" />
       <section role="main" aria-label={t("merchandise.sectionTitle")}>
         <div className="aurora-bg">
           <div className="aurora-orb-1" />

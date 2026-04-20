@@ -133,6 +133,7 @@ export default function Printing() {
   return (
     <div ref={ref} className="relative">
       <StructuredData type="BreadcrumbList" />
+      <StructuredData type="Service" />
       <section role="main" aria-label={t("printing.sectionTitle")}>
         <div className="aurora-bg">
           <div className="aurora-orb-1" />
@@ -211,7 +212,7 @@ export default function Printing() {
 
                 <div className="hero-img col-span-4 row-span-2 rounded-2xl overflow-hidden shadow-lg ring-1 ring-black/5">
                   <img
-                    src={importImages("printing", "14.jpeg")}
+                    src={importImages("printing", "12.jpeg")}
                     alt="Offset Printing"
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                   />

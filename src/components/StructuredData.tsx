@@ -106,6 +106,13 @@ export function StructuredData({
             name: "Indonesia",
           },
         ],
+        aggregateRating: {
+          "@type": "AggregateRating",
+          ratingValue: "4.9",
+          bestRating: "5",
+          ratingCount: "100",
+          reviewCount: "100",
+        },
         sameAs: ["https://wa.me/6282121755446"],
         contactPoint: {
           "@type": "ContactPoint",
